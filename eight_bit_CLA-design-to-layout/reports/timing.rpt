@@ -1,0 +1,61 @@
+Startpoint: Cin (input port clocked by clk)
+Endpoint: Y[0] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.00    2.00 ^ Cin (in)
+   0.34    2.34 v UUT/C1/_15_/Y (sky130_fd_sc_hd__xnor2_1)
+   0.00    2.34 v Y[0] (out)
+           2.34   data arrival time
+
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00   clock reconvergence pessimism
+  -2.00   -2.00   output external delay
+          -2.00   data required time
+---------------------------------------------------------
+          -2.00   data required time
+          -2.34   data arrival time
+---------------------------------------------------------
+           4.34   slack (MET)
+
+
+Startpoint: Cin (input port clocked by clk)
+Endpoint: Y[7] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 v input external delay
+   0.00    2.00 v Cin (in)
+   0.39    2.39 v UUT/C1/_08_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    2.79 v UUT/C1/_10_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    3.18 v UUT/C1/_12_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    3.57 v UUT/C1/_14_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    3.96 v UUT/C2/_08_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    4.35 v UUT/C2/_10_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    4.75 v UUT/C2/_12_/X (sky130_fd_sc_hd__maj3_1)
+   0.87    5.61 ^ UUT/C2/_18_/Y (sky130_fd_sc_hd__xnor2_1)
+   0.00    5.61 ^ Y[7] (out)
+           5.61   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+          -5.61   data arrival time
+---------------------------------------------------------
+           2.39   slack (MET)
+
+
