@@ -1,0 +1,71 @@
+Warning: constraints.sdc line 1, unknown field nets.
+Startpoint: Cin (input port clocked by clk)
+Endpoint: Y[0] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+      Cap      Slew     Delay      Time   Description
+-------------------------------------------------------------------------------
+             0.0000    0.0000    0.0000   clock clk (rise edge)
+                       0.0000    0.0000   clock network delay (ideal)
+                       2.0000    2.0000 ^ input external delay
+   0.0078    0.1000    0.0000    2.0000 ^ Cin (in)
+             0.1000    0.0000    2.0000 ^ UUT/C1/_15_/A (sky130_fd_sc_hd__xnor2_1)
+   0.0500    0.3639    0.3377    2.3377 v UUT/C1/_15_/Y (sky130_fd_sc_hd__xnor2_1)
+             0.3639    0.0000    2.3377 v Y[0] (out)
+                                 2.3377   data arrival time
+
+             0.0000    0.0000    0.0000   clock clk (rise edge)
+                       0.0000    0.0000   clock network delay (ideal)
+                       0.0000    0.0000   clock reconvergence pessimism
+                      -2.0000   -2.0000   output external delay
+                                -2.0000   data required time
+-------------------------------------------------------------------------------
+                                -2.0000   data required time
+                                -2.3377   data arrival time
+-------------------------------------------------------------------------------
+                                 4.3377   slack (MET)
+
+
+Startpoint: Cin (input port clocked by clk)
+Endpoint: Y[7] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+      Cap      Slew     Delay      Time   Description
+-------------------------------------------------------------------------------
+             0.0000    0.0000    0.0000   clock clk (rise edge)
+                       0.0000    0.0000   clock network delay (ideal)
+                       2.0000    2.0000 v input external delay
+   0.0073    0.1000    0.0000    2.0000 v Cin (in)
+             0.1000    0.0000    2.0000 v UUT/C1/_08_/C (sky130_fd_sc_hd__maj3_1)
+   0.0073    0.0915    0.3945    2.3945 v UUT/C1/_08_/X (sky130_fd_sc_hd__maj3_1)
+             0.0915    0.0000    2.3945 v UUT/C1/_10_/C (sky130_fd_sc_hd__maj3_1)
+   0.0073    0.0915    0.3920    2.7865 v UUT/C1/_10_/X (sky130_fd_sc_hd__maj3_1)
+             0.0915    0.0000    2.7865 v UUT/C1/_12_/C (sky130_fd_sc_hd__maj3_1)
+   0.0073    0.0915    0.3920    3.1785 v UUT/C1/_12_/X (sky130_fd_sc_hd__maj3_1)
+             0.0915    0.0000    3.1785 v UUT/C1/_14_/C (sky130_fd_sc_hd__maj3_1)
+   0.0073    0.0915    0.3920    3.5705 v UUT/C1/_14_/X (sky130_fd_sc_hd__maj3_1)
+             0.0915    0.0000    3.5705 v UUT/C2/_08_/C (sky130_fd_sc_hd__maj3_1)
+   0.0073    0.0915    0.3920    3.9625 v UUT/C2/_08_/X (sky130_fd_sc_hd__maj3_1)
+             0.0915    0.0000    3.9625 v UUT/C2/_10_/C (sky130_fd_sc_hd__maj3_1)
+   0.0073    0.0915    0.3920    4.3545 v UUT/C2/_10_/X (sky130_fd_sc_hd__maj3_1)
+             0.0915    0.0000    4.3545 v UUT/C2/_12_/C (sky130_fd_sc_hd__maj3_1)
+   0.0073    0.0915    0.3920    4.7465 v UUT/C2/_12_/X (sky130_fd_sc_hd__maj3_1)
+             0.0915    0.0000    4.7465 v UUT/C2/_18_/A (sky130_fd_sc_hd__xnor2_1)
+   0.0500    1.0749    0.8656    5.6122 ^ UUT/C2/_18_/Y (sky130_fd_sc_hd__xnor2_1)
+             1.0749    0.0000    5.6122 ^ Y[7] (out)
+                                 5.6122   data arrival time
+
+             0.0000   10.0000   10.0000   clock clk (rise edge)
+                       0.0000   10.0000   clock network delay (ideal)
+                       0.0000   10.0000   clock reconvergence pessimism
+                      -2.0000    8.0000   output external delay
+                                 8.0000   data required time
+-------------------------------------------------------------------------------
+                                 8.0000   data required time
+                                -5.6122   data arrival time
+-------------------------------------------------------------------------------
+                                 2.3878   slack (MET)
+
+

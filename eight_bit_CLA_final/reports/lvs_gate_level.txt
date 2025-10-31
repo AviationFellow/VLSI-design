@@ -1,0 +1,83 @@
+
+Circuit 1 cell sky130_fd_sc_hd__xnor2_1 and Circuit 2 cell sky130_fd_sc_hd__xnor2_1 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__xnor2_1 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__xnor2_1 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__xnor2_1        |Circuit 2: sky130_fd_sc_hd__xnor2_1        
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+Y                                          |Y                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__xnor2_1 and sky130_fd_sc_hd__xnor2_1 are equivalent.
+
+Circuit 1 cell sky130_fd_sc_hd__maj3_1 and Circuit 2 cell sky130_fd_sc_hd__maj3_1 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__maj3_1 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__maj3_1 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__maj3_1         |Circuit 2: sky130_fd_sc_hd__maj3_1         
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+C                                          |C                                          
+X                                          |X                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__maj3_1 and sky130_fd_sc_hd__maj3_1 are equivalent.
+Flattening unmatched subcell eb_adder in circuit eb_adder_top (1)(1 instance)
+Flattening unmatched subcell CLA4bit in circuit eb_adder_top (1)(2 instances)
+
+Cell eb_adder_top (0) disconnected node: VDD
+Cell eb_adder_top (0) disconnected node: VSS
+Cell eb_adder_top (1) disconnected node: VDD
+Cell eb_adder_top (1) disconnected node: VSS
+Subcircuit summary:
+Circuit 1: eb_adder_top                    |Circuit 2: eb_adder_top                    
+-------------------------------------------|-------------------------------------------
+sky130_fd_sc_hd__xnor2_1 (16)              |sky130_fd_sc_hd__xnor2_1 (16)              
+sky130_fd_sc_hd__maj3_1 (8)                |sky130_fd_sc_hd__maj3_1 (8)                
+Number of devices: 24                      |Number of devices: 24                      
+Number of nets: 41                         |Number of nets: 41                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: eb_adder_top                    |Circuit 2: eb_adder_top                    
+-------------------------------------------|-------------------------------------------
+Y[7]                                       |Y[7]                                       
+Y[6]                                       |Y[6]                                       
+Y[5]                                       |Y[5]                                       
+Y[4]                                       |Y[4]                                       
+Y[3]                                       |Y[3]                                       
+Y[2]                                       |Y[2]                                       
+Y[1]                                       |Y[1]                                       
+Y[0]                                       |Y[0]                                       
+Cout                                       |Cout                                       
+A[7]                                       |A[7]                                       
+A[6]                                       |A[6]                                       
+A[5]                                       |A[5]                                       
+A[4]                                       |A[4]                                       
+A[3]                                       |A[3]                                       
+A[2]                                       |A[2]                                       
+A[1]                                       |A[1]                                       
+A[0]                                       |A[0]                                       
+B[7]                                       |B[7]                                       
+B[6]                                       |B[6]                                       
+B[5]                                       |B[5]                                       
+B[4]                                       |B[4]                                       
+B[3]                                       |B[3]                                       
+B[2]                                       |B[2]                                       
+B[1]                                       |B[1]                                       
+B[0]                                       |B[0]                                       
+Cin                                        |Cin                                        
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes eb_adder_top and eb_adder_top are equivalent.
+
+Final result: Circuits match uniquely.
+.

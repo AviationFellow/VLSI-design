@@ -1,0 +1,14 @@
+Netgen 1.5.300 compiled on Friday 19 September 2025 09:59:35 PM IST
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Reading netlist file /home/arumukamganesmoorthe/ME/digital_design/eight_bit_CLA/layout/eight_bit_CLA_layout.spice
+Error in SPICE file read: No file /home/arumukamganesmoorthe/ME/digital_design/eight_bit_CLA/layout/eight_bit_CLA_layout.spice
+-1
+    while executing
+"netgen::readnet $file1"
+    (procedure "lvs" line 58)
+    invoked from within
+"lvs {/home/arumukamganesmoorthe/ME/digital_design/eight_bit_CLA/layout/eight_bit_CLA_layout.spice eight_bit_CLA} {/home/arumukamganesmoorthe/ME/digita..."
+    ("eval" body line 1)
+    invoked from within
+"eval $argv"

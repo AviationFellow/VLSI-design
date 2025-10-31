@@ -1,0 +1,37 @@
+Netgen 1.5.300 compiled on Friday 19 September 2025 09:59:35 PM IST
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Reading netlist file /home/arumukamganesmoorthe/ME/digital_design/eight_bit_CLA/layout/eight_bit_CLA_routed_clean.v
+Creating placeholder cell definition for module sky130_fd_sc_hd__xnor2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__maj3_1.
+Reading netlist file /home/arumukamganesmoorthe/ME/digital_design/eight_bit_CLA/synth/eight_bit_CLA_netlist.v
+Creating placeholder cell definition for module sky130_fd_sc_hd__xnor2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__maj3_1.
+
+Reading setup file /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.tech/netgen/sky130A_setup.tcl
+
+Comparison output logged to file /home/arumukamganesmoorthe/ME/digital_design/eight_bit_CLA/reports/lvs_gate_level.txt
+Logging to file "/home/arumukamganesmoorthe/ME/digital_design/eight_bit_CLA/reports/lvs_gate_level.txt" enabled
+Circuit sky130_fd_sc_hd__xnor2_1 contains no devices.
+Circuit sky130_fd_sc_hd__maj3_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'eb_adder_top'
+Circuit eb_adder_top contains 24 device instances.
+  Class: sky130_fd_sc_hd__maj3_1 instances:   8
+  Class: sky130_fd_sc_hd__xnor2_1 instances:  16
+Circuit contains 41 nets, and 2 disconnected pins.
+Contents of circuit 2:  Circuit: 'eb_adder_top'
+Circuit eb_adder_top contains 24 device instances.
+  Class: sky130_fd_sc_hd__maj3_1 instances:   8
+  Class: sky130_fd_sc_hd__xnor2_1 instances:  16
+Circuit contains 41 nets, and 2 disconnected pins.
+
+Circuit 1 contains 24 devices, Circuit 2 contains 24 devices.
+Circuit 1 contains 41 nets,    Circuit 2 contains 41 nets.
+
+
+Final result: 
+Circuits match uniquely.
+.
+Logging to file "/home/arumukamganesmoorthe/ME/digital_design/eight_bit_CLA/reports/lvs_gate_level.txt" disabled
+LVS Done.

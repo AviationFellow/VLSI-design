@@ -1,0 +1,71 @@
+Warning: constraints.sdc line 1, unknown field nets.
+Startpoint: Cin (input port clocked by clk)
+Endpoint: Y[0] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout       Cap      Slew     Delay      Time   Description
+-------------------------------------------------------------------------------------
+                    0.0000    0.0000    0.0000   clock clk (rise edge)
+                              0.0000    0.0000   clock network delay (ideal)
+                              2.0000    2.0000 ^ input external delay
+     2    0.0137    0.1000    0.0000    2.0000 ^ Cin (in)
+                    0.1006    0.0003    2.0003 ^ UUT/C1/_15_/A (sky130_fd_sc_hd__xnor2_1)
+     1    0.0525    0.3827    0.3503    2.3506 v UUT/C1/_15_/Y (sky130_fd_sc_hd__xnor2_1)
+                    0.3827    0.0018    2.3524 v Y[0] (out)
+                                        2.3524   data arrival time
+
+                    0.0000    0.0000    0.0000   clock clk (rise edge)
+                              0.0000    0.0000   clock network delay (ideal)
+                              0.0000    0.0000   clock reconvergence pessimism
+                             -2.0000   -2.0000   output external delay
+                                       -2.0000   data required time
+-------------------------------------------------------------------------------------
+                                       -2.0000   data required time
+                                       -2.3524   data arrival time
+-------------------------------------------------------------------------------------
+                                        4.3524   slack (MET)
+
+
+Startpoint: Cin (input port clocked by clk)
+Endpoint: Y[7] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout       Cap      Slew     Delay      Time   Description
+-------------------------------------------------------------------------------------
+                    0.0000    0.0000    0.0000   clock clk (rise edge)
+                              0.0000    0.0000   clock network delay (ideal)
+                              2.0000    2.0000 v input external delay
+     2    0.0132    0.1000    0.0000    2.0000 v Cin (in)
+                    0.1006    0.0003    2.0003 v UUT/C1/_08_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.0090    0.0970    0.4060    2.4062 v UUT/C1/_08_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0970    0.0002    2.4065 v UUT/C1/_10_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.0096    0.0998    0.4081    2.8146 v UUT/C1/_10_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0998    0.0003    2.8149 v UUT/C1/_12_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.0081    0.0930    0.4000    3.2149 v UUT/C1/_12_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0930    0.0001    3.2150 v UUT/C1/_14_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.0079    0.0925    0.3968    3.6118 v UUT/C1/_14_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0925    0.0001    3.6120 v UUT/C2/_08_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.0089    0.0967    0.4032    4.0152 v UUT/C2/_08_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0967    0.0002    4.0153 v UUT/C2/_10_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.0111    0.1062    0.4151    4.4304 v UUT/C2/_10_/X (sky130_fd_sc_hd__maj3_1)
+                    0.1062    0.0004    4.4308 v UUT/C2/_12_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.0090    0.0970    0.4077    4.8384 v UUT/C2/_12_/X (sky130_fd_sc_hd__maj3_1)
+                    0.0970    0.0002    4.8387 v UUT/C2/_18_/A (sky130_fd_sc_hd__xnor2_1)
+     1    0.0531    1.1313    0.9121    5.7508 ^ UUT/C2/_18_/Y (sky130_fd_sc_hd__xnor2_1)
+                    1.1313    0.0017    5.7525 ^ Y[7] (out)
+                                        5.7525   data arrival time
+
+                    0.0000   10.0000   10.0000   clock clk (rise edge)
+                              0.0000   10.0000   clock network delay (ideal)
+                              0.0000   10.0000   clock reconvergence pessimism
+                             -2.0000    8.0000   output external delay
+                                        8.0000   data required time
+-------------------------------------------------------------------------------------
+                                        8.0000   data required time
+                                       -5.7525   data arrival time
+-------------------------------------------------------------------------------------
+                                        2.2475   slack (MET)
+
+

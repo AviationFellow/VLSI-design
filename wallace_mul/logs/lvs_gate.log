@@ -1,0 +1,256 @@
+Netgen 1.5.300 compiled on Friday 19 September 2025 09:59:35 PM IST
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Reading netlist file /home/arumukamganesmoorthe/ME/digital_design/wallace_mul/layout/wallace_routed_clean.v
+Creating placeholder cell definition for module sky130_fd_sc_hd__clkinv_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__xor2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__and2_0.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o21ai_0.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a21oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__lpflow_isobufsrc_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o31ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__or4_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nand2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nor4_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nor2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__xnor2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nand2b_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o41ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__or3_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__conb_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__maj3_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__lpflow_inputiso1p_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a221oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o21a_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nor3_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o311ai_0.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a311oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o31a_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nor2b_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o311a_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a31oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a21o_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o211ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o211a_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o221ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a22oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a211oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a22o_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o22ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a41oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a311o_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o21bai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o2111ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__xor3_1.
+Reading netlist file /home/arumukamganesmoorthe/ME/digital_design/wallace_mul/synth/wallace_netlist.v
+Creating placeholder cell definition for module sky130_fd_sc_hd__xnor2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__maj3_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__lpflow_inputiso1p_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__and2_0.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nand2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__xor2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o21ai_0.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nor2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nor2b_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o221ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nand2b_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a311o_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a31oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a22oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a21oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a211oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o211ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o22ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a311oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o21bai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__clkinv_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o2111ai_1.
+Empty assignment for net {
+Creating placeholder cell definition for module sky130_fd_sc_hd__a221oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o21a_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nor3_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o311ai_0.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o31a_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__or3_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o311a_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a21o_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o41ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o211a_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a22o_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a41oi_1.
+Empty assignment for net {
+Creating placeholder cell definition for module fa.
+Creating placeholder cell definition for module ha.
+Creating placeholder cell definition for module sky130_fd_sc_hd__xor3_1.
+Verilog placeholder module fa replaced by module definition
+Placeholder pins of cell fa are not compatible and will be left unchanged
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: fa                              
+-------------------------------------------|-------------------------------------------
+a                                          |a                                          
+b                                          |b                                          
+c                                          |c                                          
+s                                          |s                                          
+ca                                         |ca                                         
+---------------------------------------------------------------------------------------
+Verilog placeholder module ha replaced by module definition
+Placeholder pins of cell ha are not compatible and will be left unchanged
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: ha                              
+-------------------------------------------|-------------------------------------------
+a                                          |a                                          
+b                                          |b                                          
+s                                          |s                                          
+ca                                         |ca                                         
+---------------------------------------------------------------------------------------
+Creating placeholder cell definition for module sky130_fd_sc_hd__lpflow_isobufsrc_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o31ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__or4_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nor4_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__conb_1.
+Note:  Implicit pin Cout in instance lastadder of KSA32 in cell wallace1
+Note:  Implicit pin Cout in instance laststage of KSA25 in cell wallace1
+
+Reading setup file /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.tech/netgen/sky130A_setup.tcl
+
+Comparison output logged to file /home/arumukamganesmoorthe/ME/digital_design/wallace_mul/reports/lvs_gate_level.txt
+Logging to file "/home/arumukamganesmoorthe/ME/digital_design/wallace_mul/reports/lvs_gate_level.txt" enabled
+Circuit sky130_fd_sc_hd__xnor2_1 contains no devices.
+Circuit sky130_fd_sc_hd__maj3_1 contains no devices.
+Circuit sky130_fd_sc_hd__lpflow_inputiso1p_1 contains no devices.
+Circuit sky130_fd_sc_hd__and2_0 contains no devices.
+Circuit sky130_fd_sc_hd__nand2_1 contains no devices.
+Circuit sky130_fd_sc_hd__nor2_1 contains no devices.
+Circuit sky130_fd_sc_hd__xor2_1 contains no devices.
+Circuit sky130_fd_sc_hd__a21oi_1 contains no devices.
+Circuit sky130_fd_sc_hd__a221oi_1 contains no devices.
+Circuit sky130_fd_sc_hd__o21a_1 contains no devices.
+Circuit sky130_fd_sc_hd__nor3_1 contains no devices.
+Circuit sky130_fd_sc_hd__o311ai_0 contains no devices.
+Circuit sky130_fd_sc_hd__nand2b_1 contains no devices.
+Circuit sky130_fd_sc_hd__a311oi_1 contains no devices.
+Circuit sky130_fd_sc_hd__o31a_1 contains no devices.
+Circuit sky130_fd_sc_hd__or3_1 contains no devices.
+Circuit sky130_fd_sc_hd__o21ai_0 contains no devices.
+Circuit sky130_fd_sc_hd__nor2b_1 contains no devices.
+Circuit sky130_fd_sc_hd__o311a_1 contains no devices.
+Circuit sky130_fd_sc_hd__a31oi_1 contains no devices.
+Circuit sky130_fd_sc_hd__clkinv_1 contains no devices.
+Circuit sky130_fd_sc_hd__a21o_1 contains no devices.
+Circuit sky130_fd_sc_hd__o41ai_1 contains no devices.
+Circuit sky130_fd_sc_hd__o211ai_1 contains no devices.
+Circuit sky130_fd_sc_hd__o211a_1 contains no devices.
+Circuit sky130_fd_sc_hd__o221ai_1 contains no devices.
+Circuit sky130_fd_sc_hd__a22oi_1 contains no devices.
+Circuit sky130_fd_sc_hd__a211oi_1 contains no devices.
+Circuit sky130_fd_sc_hd__a22o_1 contains no devices.
+Circuit sky130_fd_sc_hd__o22ai_1 contains no devices.
+Circuit sky130_fd_sc_hd__a41oi_1 contains no devices.
+Circuit sky130_fd_sc_hd__a311o_1 contains no devices.
+Circuit sky130_fd_sc_hd__o21bai_1 contains no devices.
+Circuit sky130_fd_sc_hd__o2111ai_1 contains no devices.
+Circuit sky130_fd_sc_hd__xor3_1 contains no devices.
+Circuit sky130_fd_sc_hd__lpflow_isobufsrc_1 contains no devices.
+Circuit sky130_fd_sc_hd__o31ai_1 contains no devices.
+Circuit sky130_fd_sc_hd__or4_1 contains no devices.
+Circuit sky130_fd_sc_hd__nor4_1 contains no devices.
+Circuit sky130_fd_sc_hd__conb_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'wallace1'
+Circuit wallace1 contains 1232 device instances.
+  Class: sky130_fd_sc_hd__a311o_1 instances:   6
+  Class: sky130_fd_sc_hd__a21o_1 instances:   1
+  Class: sky130_fd_sc_hd__nor4_1 instances:   2
+  Class: sky130_fd_sc_hd__clkinv_1 instances:   7
+  Class: sky130_fd_sc_hd__or4_1 instances:   6
+  Class: sky130_fd_sc_hd__nor2b_1 instances:  13
+  Class: sky130_fd_sc_hd__o31a_1 instances:   2
+  Class: sky130_fd_sc_hd__lpflow_isobufsrc_1 instances:  30
+  Class: sky130_fd_sc_hd__o21a_1 instances:   3
+  Class: sky130_fd_sc_hd__nor3_1 instances:   2
+  Class: sky130_fd_sc_hd__o221ai_1 instances:   3
+  Class: sky130_fd_sc_hd__maj3_1 instances: 202
+  Class: sky130_fd_sc_hd__or3_1 instances:   3
+  Class: sky130_fd_sc_hd__xor3_1 instances: 200
+  Class: sky130_fd_sc_hd__o2111ai_1 instances:   1
+  Class: sky130_fd_sc_hd__and2_0 instances:  63
+  Class: sky130_fd_sc_hd__nor2_1 instances: 273
+  Class: sky130_fd_sc_hd__a41oi_1 instances:   1
+  Class: sky130_fd_sc_hd__o211ai_1 instances:   6
+  Class: sky130_fd_sc_hd__a221oi_1 instances:   1
+  Class: sky130_fd_sc_hd__o22ai_1 instances:   3
+  Class: sky130_fd_sc_hd__a22oi_1 instances:   2
+  Class: sky130_fd_sc_hd__o21ai_0 instances:  25
+  Class: sky130_fd_sc_hd__a21oi_1 instances:  14
+  Class: sky130_fd_sc_hd__xor2_1 instances: 128
+  Class: sky130_fd_sc_hd__o311ai_0 instances:   1
+  Class: sky130_fd_sc_hd__o31ai_1 instances:   8
+  Class: sky130_fd_sc_hd__a31oi_1 instances:  16
+  Class: sky130_fd_sc_hd__a211oi_1 instances:   2
+  Class: sky130_fd_sc_hd__nand2_1 instances:  78
+  Class: sky130_fd_sc_hd__lpflow_inputiso1p_1 instances:   9
+  Class: sky130_fd_sc_hd__o21bai_1 instances:   1
+  Class: sky130_fd_sc_hd__o211a_1 instances:   3
+  Class: sky130_fd_sc_hd__conb_1 instances:  34
+  Class: sky130_fd_sc_hd__a22o_1 instances:   1
+  Class: sky130_fd_sc_hd__o41ai_1 instances:   3
+  Class: sky130_fd_sc_hd__a311oi_1 instances:   5
+  Class: sky130_fd_sc_hd__xnor2_1 instances:  56
+  Class: sky130_fd_sc_hd__o311a_1 instances:   2
+  Class: sky130_fd_sc_hd__nand2b_1 instances:  16
+Circuit contains 1264 nets.
+Contents of circuit 2:  Circuit: 'wallace1'
+Circuit wallace1 contains 1232 device instances.
+  Class: sky130_fd_sc_hd__a311o_1 instances:   6
+  Class: sky130_fd_sc_hd__a21o_1 instances:   1
+  Class: sky130_fd_sc_hd__nor4_1 instances:   2
+  Class: sky130_fd_sc_hd__clkinv_1 instances:   7
+  Class: sky130_fd_sc_hd__or4_1 instances:   6
+  Class: sky130_fd_sc_hd__nor2b_1 instances:  13
+  Class: sky130_fd_sc_hd__o31a_1 instances:   2
+  Class: sky130_fd_sc_hd__lpflow_isobufsrc_1 instances:  30
+  Class: sky130_fd_sc_hd__o21a_1 instances:   3
+  Class: sky130_fd_sc_hd__nor3_1 instances:   2
+  Class: sky130_fd_sc_hd__o221ai_1 instances:   3
+  Class: sky130_fd_sc_hd__maj3_1 instances: 202
+  Class: sky130_fd_sc_hd__or3_1 instances:   3
+  Class: sky130_fd_sc_hd__xor3_1 instances: 200
+  Class: sky130_fd_sc_hd__o2111ai_1 instances:   1
+  Class: sky130_fd_sc_hd__and2_0 instances:  63
+  Class: sky130_fd_sc_hd__nor2_1 instances: 273
+  Class: sky130_fd_sc_hd__a41oi_1 instances:   1
+  Class: sky130_fd_sc_hd__o211ai_1 instances:   6
+  Class: sky130_fd_sc_hd__a221oi_1 instances:   1
+  Class: sky130_fd_sc_hd__o22ai_1 instances:   3
+  Class: sky130_fd_sc_hd__a22oi_1 instances:   2
+  Class: sky130_fd_sc_hd__o21ai_0 instances:  25
+  Class: sky130_fd_sc_hd__a21oi_1 instances:  14
+  Class: sky130_fd_sc_hd__xor2_1 instances: 128
+  Class: sky130_fd_sc_hd__o311ai_0 instances:   1
+  Class: sky130_fd_sc_hd__o31ai_1 instances:   8
+  Class: sky130_fd_sc_hd__a31oi_1 instances:  16
+  Class: sky130_fd_sc_hd__a211oi_1 instances:   2
+  Class: sky130_fd_sc_hd__nand2_1 instances:  78
+  Class: sky130_fd_sc_hd__lpflow_inputiso1p_1 instances:   9
+  Class: sky130_fd_sc_hd__o21bai_1 instances:   1
+  Class: sky130_fd_sc_hd__o211a_1 instances:   3
+  Class: sky130_fd_sc_hd__conb_1 instances:  34
+  Class: sky130_fd_sc_hd__a22o_1 instances:   1
+  Class: sky130_fd_sc_hd__o41ai_1 instances:   3
+  Class: sky130_fd_sc_hd__a311oi_1 instances:   5
+  Class: sky130_fd_sc_hd__xnor2_1 instances:  56
+  Class: sky130_fd_sc_hd__o311a_1 instances:   2
+  Class: sky130_fd_sc_hd__nand2b_1 instances:  16
+Circuit contains 1264 nets.
+
+Circuit 1 contains 1232 devices, Circuit 2 contains 1232 devices.
+Circuit 1 contains 1264 nets,    Circuit 2 contains 1264 nets.
+
+
+Final result: 
+Circuits match uniquely.
+.
+Logging to file "/home/arumukamganesmoorthe/ME/digital_design/wallace_mul/reports/lvs_gate_level.txt" disabled
+LVS Done.

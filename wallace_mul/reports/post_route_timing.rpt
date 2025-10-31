@@ -1,0 +1,125 @@
+Warning: constraints.sdc line 1, unknown field nets.
+Startpoint: b[0] (input port clocked by clk)
+Endpoint: out[0] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout       Cap      Slew     Delay      Time   Description
+-------------------------------------------------------------------------------------
+                    0.0000    0.0000    0.0000   clock clk (rise edge)
+                              0.0000    0.0000   clock network delay (ideal)
+                              1.0000    1.0000 ^ input external delay
+    20    0.0837    0.1500    0.0000    1.0000 ^ b[0] (in)
+                    0.1537    0.0019    1.0019 ^ _107_/A (sky130_fd_sc_hd__and2_0)
+     1    0.0051    0.0853    0.1665    1.1683 ^ _107_/X (sky130_fd_sc_hd__and2_0)
+                    0.0853    0.0002    1.1685 ^ inv0/_00_/B (sky130_fd_sc_hd__xor2_1)
+     2    0.0080    0.0566    0.0939    1.2623 v inv0/_00_/X (sky130_fd_sc_hd__xor2_1)
+                    0.0566    0.0002    1.2626 v lastadder/ksa32/_163_/B (sky130_fd_sc_hd__xnor2_1)
+     1    0.0056    0.0783    0.1731    1.4356 ^ lastadder/ksa32/_163_/Y (sky130_fd_sc_hd__xnor2_1)
+                    0.0783    0.0001    1.4358 ^ lastadder/ksa32/_164_/B (sky130_fd_sc_hd__xnor2_1)
+     1    0.0545    0.3969    0.3341    1.7699 v lastadder/ksa32/_164_/Y (sky130_fd_sc_hd__xnor2_1)
+                    0.3969    0.0025    1.7724 v out[0] (out)
+                                        1.7724   data arrival time
+
+                    0.0000    0.0000    0.0000   clock clk (rise edge)
+                              0.0000    0.0000   clock network delay (ideal)
+                              0.0000    0.0000   clock reconvergence pessimism
+                             -1.0000   -1.0000   output external delay
+                                       -1.0000   data required time
+-------------------------------------------------------------------------------------
+                                       -1.0000   data required time
+                                       -1.7724   data arrival time
+-------------------------------------------------------------------------------------
+                                        2.7724   slack (MET)
+
+
+Startpoint: a[0] (input port clocked by clk)
+Endpoint: out[29] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout       Cap      Slew     Delay      Time   Description
+-------------------------------------------------------------------------------------
+                    0.0000    0.0000    0.0000   clock clk (rise edge)
+                              0.0000    0.0000   clock network delay (ideal)
+                              1.0000    1.0000 v input external delay
+    20    0.0959    0.1500    0.0000    1.0000 v a[0] (in)
+                    0.1626    0.0063    1.0063 v _117_/A (sky130_fd_sc_hd__or4_1)
+     4    0.0125    0.1390    0.6296    1.6359 v _117_/X (sky130_fd_sc_hd__or4_1)
+                    0.1390    0.0005    1.6364 v _127_/D (sky130_fd_sc_hd__nor4_1)
+     2    0.0078    0.3924    0.3308    1.9671 ^ _127_/Y (sky130_fd_sc_hd__nor4_1)
+                    0.3924    0.0002    1.9674 ^ _131_/B (sky130_fd_sc_hd__nand2b_1)
+     4    0.0107    0.1254    0.1694    2.1368 v _131_/Y (sky130_fd_sc_hd__nand2b_1)
+                    0.1254    0.0001    2.1370 v _141_/D (sky130_fd_sc_hd__or4_1)
+     5    0.0142    0.1478    0.5080    2.6450 v _141_/X (sky130_fd_sc_hd__or4_1)
+                    0.1478    0.0003    2.6453 v _142_/B (sky130_fd_sc_hd__nand2_1)
+     1    0.0049    0.0723    0.1183    2.7636 ^ _142_/Y (sky130_fd_sc_hd__nand2_1)
+                    0.0723    0.0001    2.7637 ^ _143_/B (sky130_fd_sc_hd__xor2_1)
+    16    0.0853    1.6339    1.2389    4.0026 ^ _143_/X (sky130_fd_sc_hd__xor2_1)
+                    1.6339    0.0065    4.0091 ^ _144_/SLEEP (sky130_fd_sc_hd__lpflow_isobufsrc_1)
+     2    0.0083    0.2588    0.1968    4.2059 v _144_/X (sky130_fd_sc_hd__lpflow_isobufsrc_1)
+                    0.2588    0.0002    4.2061 v s0fa0/fa_array[9].fa0/_1_/B (sky130_fd_sc_hd__xor3_1)
+     2    0.0099    0.1038    0.4766    4.6827 v s0fa0/fa_array[9].fa0/_1_/X (sky130_fd_sc_hd__xor3_1)
+                    0.1038    0.0003    4.6830 v s1fa0/fa_array[8].fa0/_1_/B (sky130_fd_sc_hd__xor3_1)
+     2    0.0110    0.1088    0.4205    5.1035 v s1fa0/fa_array[8].fa0/_1_/X (sky130_fd_sc_hd__xor3_1)
+                    0.1088    0.0005    5.1040 v s2fa0/fa_array[6].fa0/_1_/B (sky130_fd_sc_hd__xor3_1)
+     2    0.0087    0.0985    0.4098    5.5138 v s2fa0/fa_array[6].fa0/_1_/X (sky130_fd_sc_hd__xor3_1)
+                    0.0985    0.0002    5.5140 v s3fa0/fa_array[4].fa0/_1_/B (sky130_fd_sc_hd__xor3_1)
+     2    0.0109    0.1085    0.4181    5.9321 v s3fa0/fa_array[4].fa0/_1_/X (sky130_fd_sc_hd__xor3_1)
+                    0.1085    0.0004    5.9325 v s4fa0/fa_array[1].fa0/_1_/B (sky130_fd_sc_hd__xor3_1)
+     2    0.0091    0.1002    0.4119    6.3444 v s4fa0/fa_array[1].fa0/_1_/X (sky130_fd_sc_hd__xor3_1)
+                    0.1002    0.0004    6.3449 v s5ha0/ha_array[5].ha0/_1_/B (sky130_fd_sc_hd__xor2_1)
+     2    0.0095    0.2300    0.2359    6.5808 ^ s5ha0/ha_array[5].ha0/_1_/X (sky130_fd_sc_hd__xor2_1)
+                    0.2300    0.0004    6.5812 ^ laststage/ksa25/_131_/B (sky130_fd_sc_hd__nor2_1)
+     2    0.0042    0.0591    0.0762    6.6574 v laststage/ksa25/_131_/Y (sky130_fd_sc_hd__nor2_1)
+                    0.0591    0.0001    6.6575 v laststage/ksa25/_139_/B1 (sky130_fd_sc_hd__a311o_1)
+     3    0.0083    0.0805    0.3528    7.0103 v laststage/ksa25/_139_/X (sky130_fd_sc_hd__a311o_1)
+                    0.0805    0.0002    7.0104 v laststage/ksa25/_145_/A3 (sky130_fd_sc_hd__a311o_1)
+     3    0.0096    0.0853    0.3982    7.4086 v laststage/ksa25/_145_/X (sky130_fd_sc_hd__a311o_1)
+                    0.0853    0.0003    7.4089 v laststage/ksa25/_155_/A1 (sky130_fd_sc_hd__a211oi_1)
+     3    0.0153    0.5294    0.4735    7.8824 ^ laststage/ksa25/_155_/Y (sky130_fd_sc_hd__a211oi_1)
+                    0.5294    0.0008    7.8832 ^ laststage/ksa25/_167_/A1 (sky130_fd_sc_hd__o211ai_1)
+     2    0.0081    0.1491    0.2222    8.1053 v laststage/ksa25/_167_/Y (sky130_fd_sc_hd__o211ai_1)
+                    0.1491    0.0002    8.1055 v laststage/ksa25/_178_/A2 (sky130_fd_sc_hd__a311oi_1)
+     2    0.0096    0.3962    0.4431    8.5487 ^ laststage/ksa25/_178_/Y (sky130_fd_sc_hd__a311oi_1)
+                    0.3962    0.0003    8.5490 ^ laststage/ksa25/_183_/B1 (sky130_fd_sc_hd__a21oi_1)
+     2    0.0076    0.1109    0.1197    8.6687 v laststage/ksa25/_183_/Y (sky130_fd_sc_hd__a21oi_1)
+                    0.1109    0.0002    8.6689 v laststage/ksa25/_188_/A2 (sky130_fd_sc_hd__o21ai_0)
+     2    0.0096    0.3175    0.3054    8.9743 ^ laststage/ksa25/_188_/Y (sky130_fd_sc_hd__o21ai_0)
+                    0.3175    0.0003    8.9746 ^ laststage/ksa25/_190_/B (sky130_fd_sc_hd__xor2_1)
+     1    0.0092    0.2251    0.2607    9.2353 ^ laststage/ksa25/_190_/X (sky130_fd_sc_hd__xor2_1)
+                    0.2252    0.0005    9.2358 ^ inv0/_21_/B (sky130_fd_sc_hd__xor2_1)
+     2    0.0067    0.2978    0.2172    9.4530 ^ inv0/_21_/X (sky130_fd_sc_hd__xor2_1)
+                    0.2978    0.0002    9.4532 ^ lastadder/ksa32/_285_/B (sky130_fd_sc_hd__nor2_1)
+     2    0.0049    0.0733    0.0895    9.5427 v lastadder/ksa32/_285_/Y (sky130_fd_sc_hd__nor2_1)
+                    0.0733    0.0001    9.5429 v lastadder/ksa32/_287_/A (sky130_fd_sc_hd__nor2b_1)
+     3    0.0107    0.2173    0.2146    9.7575 ^ lastadder/ksa32/_287_/Y (sky130_fd_sc_hd__nor2b_1)
+                    0.2173    0.0002    9.7577 ^ lastadder/ksa32/_288_/A (sky130_fd_sc_hd__clkinv_1)
+     1    0.0032    0.0641    0.0977    9.8554 v lastadder/ksa32/_288_/Y (sky130_fd_sc_hd__clkinv_1)
+                    0.0641    0.0001    9.8555 v lastadder/ksa32/_292_/B1 (sky130_fd_sc_hd__a211oi_1)
+     3    0.0100    0.3787    0.3657   10.2212 ^ lastadder/ksa32/_292_/Y (sky130_fd_sc_hd__a211oi_1)
+                    0.3787    0.0002   10.2214 ^ lastadder/ksa32/_304_/A1 (sky130_fd_sc_hd__o211a_1)
+     2    0.0074    0.0793    0.2427   10.4641 ^ lastadder/ksa32/_304_/X (sky130_fd_sc_hd__o211a_1)
+                    0.0793    0.0003   10.4644 ^ lastadder/ksa32/_316_/B1 (sky130_fd_sc_hd__o221ai_1)
+     2    0.0059    0.1398    0.1442   10.6086 v lastadder/ksa32/_316_/Y (sky130_fd_sc_hd__o221ai_1)
+                    0.1398    0.0001   10.6087 v lastadder/ksa32/_330_/A2 (sky130_fd_sc_hd__a311oi_1)
+     3    0.0098    0.4022    0.4445   11.0532 ^ lastadder/ksa32/_330_/Y (sky130_fd_sc_hd__a311oi_1)
+                    0.4022    0.0003   11.0535 ^ lastadder/ksa32/_344_/A1 (sky130_fd_sc_hd__o21ai_0)
+     1    0.0056    0.1235    0.1932   11.2467 v lastadder/ksa32/_344_/Y (sky130_fd_sc_hd__o21ai_0)
+                    0.1235    0.0002   11.2469 v lastadder/ksa32/_346_/B (sky130_fd_sc_hd__xnor2_1)
+     1    0.0753    1.5886    1.2347   12.4816 ^ lastadder/ksa32/_346_/Y (sky130_fd_sc_hd__xnor2_1)
+                    1.5886    0.0017   12.4833 ^ out[29] (out)
+                                       12.4833   data arrival time
+
+                    0.0000 1000.0000 1000.0000   clock clk (rise edge)
+                              0.0000 1000.0000   clock network delay (ideal)
+                              0.0000 1000.0000   clock reconvergence pessimism
+                             -1.0000  999.0001   output external delay
+                                      999.0001   data required time
+-------------------------------------------------------------------------------------
+                                      999.0001   data required time
+                                      -12.4833   data arrival time
+-------------------------------------------------------------------------------------
+                                      986.5168   slack (MET)
+
+
