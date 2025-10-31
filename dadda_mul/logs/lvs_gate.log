@@ -1,0 +1,313 @@
+Netgen 1.5.300 compiled on Friday 19 September 2025 09:59:35 PM IST
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Reading netlist file /home/arumukamganesmoorthe/ME/digital_design/dadda_mul/layout/dadda_routed_clean.v
+Creating placeholder cell definition for module sky130_fd_sc_hd__clkinv_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__xor2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__and2_0.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o21ai_0.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a21oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__lpflow_isobufsrc_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o31ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__or4_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nand2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nor4_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nor2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__xnor2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nand2b_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o41ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__or3_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__conb_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__maj3_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__lpflow_inputiso1p_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a221oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o21a_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nor3_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o311ai_0.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a311oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o31a_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nor2b_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o311a_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a31oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a21o_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o211ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o211a_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o221ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a22oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a211oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a22o_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o22ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a41oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__xor3_1.
+Reading netlist file /home/arumukamganesmoorthe/ME/digital_design/dadda_mul/synth/dadda_netlist.v
+Creating placeholder cell definition for module sky130_fd_sc_hd__xnor2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__maj3_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__lpflow_inputiso1p_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__and2_0.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nand2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nor2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__xor2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a21oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a221oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o21a_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nor3_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o311ai_0.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nand2b_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a311oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o31a_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__or3_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o21ai_0.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nor2b_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o311a_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a31oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__clkinv_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a21o_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o41ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o211ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o211a_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o221ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a22oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a211oi_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a22o_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o22ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a41oi_1.
+Empty assignment for net {
+Creating placeholder cell definition for module fa.
+Creating placeholder cell definition for module ha.
+Creating placeholder cell definition for module sky130_fd_sc_hd__lpflow_isobufsrc_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__o31ai_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__or4_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nor4_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__conb_1.
+Note:  Implicit pin Cout in instance finaladder32bit of KSA32 in cell dadda1
+Creating placeholder cell definition for module inv32bits.
+Note:  Implicit pin Cout in instance lastadder of KSA32 in cell dadda1
+Creating placeholder cell definition for module sky130_fd_sc_hd__xor3_1.
+Verilog placeholder module fa replaced by module definition
+Placeholder pins of cell fa are not compatible and will be left unchanged
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: fa                              
+-------------------------------------------|-------------------------------------------
+a                                          |a                                          
+b                                          |b                                          
+c                                          |c                                          
+s                                          |s                                          
+ca                                         |ca                                         
+---------------------------------------------------------------------------------------
+Verilog placeholder module ha replaced by module definition
+Placeholder pins of cell ha are not compatible and will be left unchanged
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: ha                              
+-------------------------------------------|-------------------------------------------
+a                                          |a                                          
+b                                          |b                                          
+s                                          |s                                          
+ca                                         |ca                                         
+---------------------------------------------------------------------------------------
+Verilog placeholder module inv32bits replaced by module definition
+Placeholder pins of cell inv32bits are not compatible and will be left unchanged
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: inv32bits                       
+-------------------------------------------|-------------------------------------------
+i[31]                                      |i[31]                                      
+i[30]                                      |i[30]                                      
+i[29]                                      |i[29]                                      
+i[28]                                      |i[28]                                      
+i[27]                                      |i[27]                                      
+i[26]                                      |i[26]                                      
+i[25]                                      |i[25]                                      
+i[24]                                      |i[24]                                      
+i[23]                                      |i[23]                                      
+i[22]                                      |i[22]                                      
+i[21]                                      |i[21]                                      
+i[20]                                      |i[20]                                      
+i[19]                                      |i[19]                                      
+i[18]                                      |i[18]                                      
+i[17]                                      |i[17]                                      
+i[16]                                      |i[16]                                      
+i[15]                                      |i[15]                                      
+i[14]                                      |i[14]                                      
+i[13]                                      |i[13]                                      
+i[12]                                      |i[12]                                      
+i[11]                                      |i[11]                                      
+i[10]                                      |i[10]                                      
+i[9]                                       |i[9]                                       
+i[8]                                       |i[8]                                       
+i[7]                                       |i[7]                                       
+i[6]                                       |i[6]                                       
+i[5]                                       |i[5]                                       
+i[4]                                       |i[4]                                       
+i[3]                                       |i[3]                                       
+i[2]                                       |i[2]                                       
+i[1]                                       |i[1]                                       
+i[0]                                       |i[0]                                       
+sign                                       |sign                                       
+o[31]                                      |o[31]                                      
+o[30]                                      |o[30]                                      
+o[29]                                      |o[29]                                      
+o[28]                                      |o[28]                                      
+o[27]                                      |o[27]                                      
+o[26]                                      |o[26]                                      
+o[25]                                      |o[25]                                      
+o[24]                                      |o[24]                                      
+o[23]                                      |o[23]                                      
+o[22]                                      |o[22]                                      
+o[21]                                      |o[21]                                      
+o[20]                                      |o[20]                                      
+o[19]                                      |o[19]                                      
+o[18]                                      |o[18]                                      
+o[17]                                      |o[17]                                      
+o[16]                                      |o[16]                                      
+o[15]                                      |o[15]                                      
+o[14]                                      |o[14]                                      
+o[13]                                      |o[13]                                      
+o[12]                                      |o[12]                                      
+o[11]                                      |o[11]                                      
+o[10]                                      |o[10]                                      
+o[9]                                       |o[9]                                       
+o[8]                                       |o[8]                                       
+o[7]                                       |o[7]                                       
+o[6]                                       |o[6]                                       
+o[5]                                       |o[5]                                       
+o[4]                                       |o[4]                                       
+o[3]                                       |o[3]                                       
+o[2]                                       |o[2]                                       
+o[1]                                       |o[1]                                       
+o[0]                                       |o[0]                                       
+---------------------------------------------------------------------------------------
+
+Reading setup file /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.tech/netgen/sky130A_setup.tcl
+
+Comparison output logged to file /home/arumukamganesmoorthe/ME/digital_design/dadda_mul/reports/lvs_gate_level.txt
+Logging to file "/home/arumukamganesmoorthe/ME/digital_design/dadda_mul/reports/lvs_gate_level.txt" enabled
+Circuit sky130_fd_sc_hd__xnor2_1 contains no devices.
+Circuit sky130_fd_sc_hd__maj3_1 contains no devices.
+Circuit sky130_fd_sc_hd__lpflow_inputiso1p_1 contains no devices.
+Circuit sky130_fd_sc_hd__and2_0 contains no devices.
+Circuit sky130_fd_sc_hd__nand2_1 contains no devices.
+Circuit sky130_fd_sc_hd__nor2_1 contains no devices.
+Circuit sky130_fd_sc_hd__xor2_1 contains no devices.
+Circuit sky130_fd_sc_hd__a21oi_1 contains no devices.
+Circuit sky130_fd_sc_hd__a221oi_1 contains no devices.
+Circuit sky130_fd_sc_hd__o21a_1 contains no devices.
+Circuit sky130_fd_sc_hd__nor3_1 contains no devices.
+Circuit sky130_fd_sc_hd__o311ai_0 contains no devices.
+Circuit sky130_fd_sc_hd__nand2b_1 contains no devices.
+Circuit sky130_fd_sc_hd__a311oi_1 contains no devices.
+Circuit sky130_fd_sc_hd__o31a_1 contains no devices.
+Circuit sky130_fd_sc_hd__or3_1 contains no devices.
+Circuit sky130_fd_sc_hd__o21ai_0 contains no devices.
+Circuit sky130_fd_sc_hd__nor2b_1 contains no devices.
+Circuit sky130_fd_sc_hd__o311a_1 contains no devices.
+Circuit sky130_fd_sc_hd__a31oi_1 contains no devices.
+Circuit sky130_fd_sc_hd__clkinv_1 contains no devices.
+Circuit sky130_fd_sc_hd__a21o_1 contains no devices.
+Circuit sky130_fd_sc_hd__o41ai_1 contains no devices.
+Circuit sky130_fd_sc_hd__o211ai_1 contains no devices.
+Circuit sky130_fd_sc_hd__o211a_1 contains no devices.
+Circuit sky130_fd_sc_hd__o221ai_1 contains no devices.
+Circuit sky130_fd_sc_hd__a22oi_1 contains no devices.
+Circuit sky130_fd_sc_hd__a211oi_1 contains no devices.
+Circuit sky130_fd_sc_hd__a22o_1 contains no devices.
+Circuit sky130_fd_sc_hd__o22ai_1 contains no devices.
+Circuit sky130_fd_sc_hd__a41oi_1 contains no devices.
+Circuit sky130_fd_sc_hd__xor3_1 contains no devices.
+Circuit sky130_fd_sc_hd__lpflow_isobufsrc_1 contains no devices.
+Circuit sky130_fd_sc_hd__o31ai_1 contains no devices.
+Circuit sky130_fd_sc_hd__or4_1 contains no devices.
+Circuit sky130_fd_sc_hd__nor4_1 contains no devices.
+Circuit sky130_fd_sc_hd__conb_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'dadda1'
+Circuit dadda1 contains 1208 device instances.
+  Class: sky130_fd_sc_hd__a21o_1 instances:   2
+  Class: sky130_fd_sc_hd__nor4_1 instances:   2
+  Class: sky130_fd_sc_hd__clkinv_1 instances:  10
+  Class: sky130_fd_sc_hd__or4_1 instances:   6
+  Class: sky130_fd_sc_hd__nor2b_1 instances:  22
+  Class: sky130_fd_sc_hd__o31a_1 instances:   4
+  Class: sky130_fd_sc_hd__lpflow_isobufsrc_1 instances:  30
+  Class: sky130_fd_sc_hd__o21a_1 instances:   6
+  Class: sky130_fd_sc_hd__nor3_1 instances:   4
+  Class: sky130_fd_sc_hd__o221ai_1 instances:   4
+  Class: sky130_fd_sc_hd__maj3_1 instances: 198
+  Class: sky130_fd_sc_hd__or3_1 instances:   4
+  Class: sky130_fd_sc_hd__xor3_1 instances: 196
+  Class: sky130_fd_sc_hd__and2_0 instances:  29
+  Class: sky130_fd_sc_hd__nor2_1 instances: 291
+  Class: sky130_fd_sc_hd__a41oi_1 instances:   2
+  Class: sky130_fd_sc_hd__o211ai_1 instances:   8
+  Class: sky130_fd_sc_hd__a221oi_1 instances:   2
+  Class: sky130_fd_sc_hd__o22ai_1 instances:   2
+  Class: sky130_fd_sc_hd__a22oi_1 instances:   2
+  Class: sky130_fd_sc_hd__o21ai_0 instances:  30
+  Class: sky130_fd_sc_hd__a21oi_1 instances:  18
+  Class: sky130_fd_sc_hd__xor2_1 instances:  91
+  Class: sky130_fd_sc_hd__o311ai_0 instances:   2
+  Class: sky130_fd_sc_hd__o31ai_1 instances:   8
+  Class: sky130_fd_sc_hd__a31oi_1 instances:  14
+  Class: sky130_fd_sc_hd__a211oi_1 instances:   2
+  Class: sky130_fd_sc_hd__nand2_1 instances:  82
+  Class: sky130_fd_sc_hd__lpflow_inputiso1p_1 instances:  10
+  Class: sky130_fd_sc_hd__o211a_1 instances:   6
+  Class: sky130_fd_sc_hd__conb_1 instances:  37
+  Class: sky130_fd_sc_hd__a22o_1 instances:   2
+  Class: sky130_fd_sc_hd__o41ai_1 instances:   4
+  Class: sky130_fd_sc_hd__a311oi_1 instances:   4
+  Class: sky130_fd_sc_hd__xnor2_1 instances:  58
+  Class: sky130_fd_sc_hd__o311a_1 instances:   4
+  Class: sky130_fd_sc_hd__nand2b_1 instances:  12
+Circuit contains 1240 nets.
+Contents of circuit 2:  Circuit: 'dadda1'
+Circuit dadda1 contains 1208 device instances.
+  Class: sky130_fd_sc_hd__a21o_1 instances:   2
+  Class: sky130_fd_sc_hd__nor4_1 instances:   2
+  Class: sky130_fd_sc_hd__clkinv_1 instances:  10
+  Class: sky130_fd_sc_hd__or4_1 instances:   6
+  Class: sky130_fd_sc_hd__nor2b_1 instances:  22
+  Class: sky130_fd_sc_hd__o31a_1 instances:   4
+  Class: sky130_fd_sc_hd__lpflow_isobufsrc_1 instances:  30
+  Class: sky130_fd_sc_hd__o21a_1 instances:   6
+  Class: sky130_fd_sc_hd__nor3_1 instances:   4
+  Class: sky130_fd_sc_hd__o221ai_1 instances:   4
+  Class: sky130_fd_sc_hd__maj3_1 instances: 198
+  Class: sky130_fd_sc_hd__or3_1 instances:   4
+  Class: sky130_fd_sc_hd__xor3_1 instances: 196
+  Class: sky130_fd_sc_hd__and2_0 instances:  29
+  Class: sky130_fd_sc_hd__nor2_1 instances: 291
+  Class: sky130_fd_sc_hd__a41oi_1 instances:   2
+  Class: sky130_fd_sc_hd__o211ai_1 instances:   8
+  Class: sky130_fd_sc_hd__a221oi_1 instances:   2
+  Class: sky130_fd_sc_hd__o22ai_1 instances:   2
+  Class: sky130_fd_sc_hd__a22oi_1 instances:   2
+  Class: sky130_fd_sc_hd__o21ai_0 instances:  30
+  Class: sky130_fd_sc_hd__a21oi_1 instances:  18
+  Class: sky130_fd_sc_hd__xor2_1 instances:  91
+  Class: sky130_fd_sc_hd__o311ai_0 instances:   2
+  Class: sky130_fd_sc_hd__o31ai_1 instances:   8
+  Class: sky130_fd_sc_hd__a31oi_1 instances:  14
+  Class: sky130_fd_sc_hd__a211oi_1 instances:   2
+  Class: sky130_fd_sc_hd__nand2_1 instances:  82
+  Class: sky130_fd_sc_hd__lpflow_inputiso1p_1 instances:  10
+  Class: sky130_fd_sc_hd__o211a_1 instances:   6
+  Class: sky130_fd_sc_hd__conb_1 instances:  37
+  Class: sky130_fd_sc_hd__a22o_1 instances:   2
+  Class: sky130_fd_sc_hd__o41ai_1 instances:   4
+  Class: sky130_fd_sc_hd__a311oi_1 instances:   4
+  Class: sky130_fd_sc_hd__xnor2_1 instances:  58
+  Class: sky130_fd_sc_hd__o311a_1 instances:   4
+  Class: sky130_fd_sc_hd__nand2b_1 instances:  12
+Circuit contains 1240 nets.
+
+Circuit 1 contains 1208 devices, Circuit 2 contains 1208 devices.
+Circuit 1 contains 1240 nets,    Circuit 2 contains 1240 nets.
+
+
+Final result: 
+Circuits match uniquely.
+.
+Logging to file "/home/arumukamganesmoorthe/ME/digital_design/dadda_mul/reports/lvs_gate_level.txt" disabled
+LVS Done.

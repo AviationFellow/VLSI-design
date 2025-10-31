@@ -1,0 +1,1049 @@
+
+Magic 8.3 revision 552 - Compiled on Friday 19 September 2025 09:27:01 PM IST.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Processing system .magicrc file
+Loading "/home/arumukamganesmoorthe/ME/digital_design/vedic_mul/scripts/generate_gds.tcl" from command line.
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Reading LEF data from file /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef.
+This action cannot be undone.
+LEF read, Line 82 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 83 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 116 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 118 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 119 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 125 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 126 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 127 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 160 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 168 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 169 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 171 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 172 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 173 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 210 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 211 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 213 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 214 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 215 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 252 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 253 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 255 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 256 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 257 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 294 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 295 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read: Processed 801 lines.
+Reading LEF data from file /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef.
+This action cannot be undone.
+LEF read: Processed 56536 lines.
+Reading DEF data from file /home/arumukamganesmoorthe/ME/digital_design/vedic_mul/layout/vedic_routed.def.
+This action cannot be undone.
+  Processed 3 vias total.
+DEF read, Line 928 (Warning): Character in instance name converted to underscore.
+DEF read, Line 929 (Warning): Character in instance name converted to underscore.
+DEF read, Line 930 (Warning): Character in instance name converted to underscore.
+DEF read, Line 931 (Warning): Character in instance name converted to underscore.
+DEF read, Line 932 (Warning): Character in instance name converted to underscore.
+DEF read, Line 933 (Warning): Character in instance name converted to underscore.
+DEF read, Line 934 (Warning): Character in instance name converted to underscore.
+DEF read, Line 935 (Warning): Character in instance name converted to underscore.
+DEF read, Line 936 (Warning): Character in instance name converted to underscore.
+DEF read, Line 937 (Warning): Character in instance name converted to underscore.
+DEF read, Line 938 (Warning): Character in instance name converted to underscore.
+DEF read, Line 939 (Warning): Character in instance name converted to underscore.
+DEF read, Line 940 (Warning): Character in instance name converted to underscore.
+DEF read, Line 941 (Warning): Character in instance name converted to underscore.
+DEF read, Line 942 (Warning): Character in instance name converted to underscore.
+DEF read, Line 943 (Warning): Character in instance name converted to underscore.
+DEF read, Line 944 (Warning): Character in instance name converted to underscore.
+DEF read, Line 945 (Warning): Character in instance name converted to underscore.
+DEF read, Line 946 (Warning): Character in instance name converted to underscore.
+DEF read, Line 947 (Warning): Character in instance name converted to underscore.
+DEF read, Line 948 (Warning): Character in instance name converted to underscore.
+DEF read, Line 949 (Warning): Character in instance name converted to underscore.
+DEF read, Line 950 (Warning): Character in instance name converted to underscore.
+DEF read, Line 951 (Warning): Character in instance name converted to underscore.
+DEF read, Line 952 (Warning): Character in instance name converted to underscore.
+DEF read, Line 953 (Warning): Character in instance name converted to underscore.
+DEF read, Line 954 (Warning): Character in instance name converted to underscore.
+DEF read, Line 955 (Warning): Character in instance name converted to underscore.
+DEF read, Line 956 (Warning): Character in instance name converted to underscore.
+DEF read, Line 957 (Warning): Character in instance name converted to underscore.
+DEF read, Line 958 (Warning): Character in instance name converted to underscore.
+DEF read, Line 959 (Warning): Character in instance name converted to underscore.
+DEF read, Line 960 (Warning): Character in instance name converted to underscore.
+DEF read, Line 960 (Warning): Character in instance name converted to underscore.
+DEF read, Line 961 (Warning): Character in instance name converted to underscore.
+DEF read, Line 961 (Warning): Character in instance name converted to underscore.
+DEF read, Line 962 (Warning): Character in instance name converted to underscore.
+DEF read, Line 962 (Warning): Character in instance name converted to underscore.
+DEF read, Line 963 (Warning): Character in instance name converted to underscore.
+DEF read, Line 963 (Warning): Character in instance name converted to underscore.
+DEF read, Line 964 (Warning): Character in instance name converted to underscore.
+DEF read, Line 964 (Warning): Character in instance name converted to underscore.
+DEF read, Line 965 (Warning): Character in instance name converted to underscore.
+DEF read, Line 965 (Warning): Character in instance name converted to underscore.
+DEF read, Line 966 (Warning): Character in instance name converted to underscore.
+DEF read, Line 966 (Warning): Character in instance name converted to underscore.
+DEF read, Line 967 (Warning): Character in instance name converted to underscore.
+DEF read, Line 967 (Warning): Character in instance name converted to underscore.
+DEF read, Line 968 (Warning): Character in instance name converted to underscore.
+DEF read, Line 968 (Warning): Character in instance name converted to underscore.
+DEF read, Line 969 (Warning): Character in instance name converted to underscore.
+DEF read, Line 969 (Warning): Character in instance name converted to underscore.
+DEF read, Line 970 (Warning): Character in instance name converted to underscore.
+DEF read, Line 970 (Warning): Character in instance name converted to underscore.
+DEF read, Line 971 (Warning): Character in instance name converted to underscore.
+DEF read, Line 971 (Warning): Character in instance name converted to underscore.
+DEF read, Line 972 (Warning): Character in instance name converted to underscore.
+DEF read, Line 972 (Warning): Character in instance name converted to underscore.
+DEF read, Line 973 (Warning): Character in instance name converted to underscore.
+DEF read, Line 973 (Warning): Character in instance name converted to underscore.
+DEF read, Line 974 (Warning): Character in instance name converted to underscore.
+DEF read, Line 974 (Warning): Character in instance name converted to underscore.
+DEF read, Line 975 (Warning): Character in instance name converted to underscore.
+DEF read, Line 975 (Warning): Character in instance name converted to underscore.
+DEF read, Line 976 (Warning): Character in instance name converted to underscore.
+DEF read, Line 976 (Warning): Character in instance name converted to underscore.
+DEF read, Line 977 (Warning): Character in instance name converted to underscore.
+DEF read, Line 977 (Warning): Character in instance name converted to underscore.
+DEF read, Line 978 (Warning): Character in instance name converted to underscore.
+DEF read, Line 978 (Warning): Character in instance name converted to underscore.
+DEF read, Line 979 (Warning): Character in instance name converted to underscore.
+DEF read, Line 979 (Warning): Character in instance name converted to underscore.
+DEF read, Line 980 (Warning): Character in instance name converted to underscore.
+DEF read, Line 980 (Warning): Character in instance name converted to underscore.
+DEF read, Line 981 (Warning): Character in instance name converted to underscore.
+DEF read, Line 981 (Warning): Character in instance name converted to underscore.
+DEF read, Line 982 (Warning): Character in instance name converted to underscore.
+DEF read, Line 982 (Warning): Character in instance name converted to underscore.
+DEF read, Line 983 (Warning): Character in instance name converted to underscore.
+DEF read, Line 983 (Warning): Character in instance name converted to underscore.
+DEF read, Line 984 (Warning): Character in instance name converted to underscore.
+DEF read, Line 984 (Warning): Character in instance name converted to underscore.
+DEF read, Line 985 (Warning): Character in instance name converted to underscore.
+DEF read, Line 985 (Warning): Character in instance name converted to underscore.
+DEF read, Line 986 (Warning): Character in instance name converted to underscore.
+DEF read, Line 986 (Warning): Character in instance name converted to underscore.
+DEF read, Line 987 (Warning): Character in instance name converted to underscore.
+DEF read, Line 987 (Warning): Character in instance name converted to underscore.
+DEF read, Line 988 (Warning): Character in instance name converted to underscore.
+DEF read, Line 988 (Warning): Character in instance name converted to underscore.
+DEF read, Line 989 (Warning): Character in instance name converted to underscore.
+DEF read, Line 989 (Warning): Character in instance name converted to underscore.
+DEF read, Line 990 (Warning): Character in instance name converted to underscore.
+DEF read, Line 990 (Warning): Character in instance name converted to underscore.
+DEF read, Line 991 (Warning): Character in instance name converted to underscore.
+DEF read, Line 991 (Warning): Character in instance name converted to underscore.
+DEF read, Line 992 (Warning): Character in instance name converted to underscore.
+DEF read, Line 992 (Warning): Character in instance name converted to underscore.
+DEF read, Line 993 (Warning): Character in instance name converted to underscore.
+DEF read, Line 993 (Warning): Character in instance name converted to underscore.
+DEF read:  Further warnings will not be reported.
+  Processed 3898 subcell instances total.
+  Processed 64 pins total.
+  Processed 2 special nets total.
+  Processed 3197 nets total.
+DEF read: Processed 42143 lines.
+DEF Read: encountered 10209 warnings total.
+Cell vedic couldn't be read
+No such file or directory
+Creating new cell
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 3.0
+Library name: sky130_fd_sc_hd
+Reading "sky130_fd_sc_hd__or4bb_4".
+Warning:  cell sky130_fd_sc_hd__or4bb_4 already existed before reading GDS!
+CIF file read warning: Input off lambda grid by 1/2; snapped to grid.
+Reading "sky130_fd_sc_hd__probe_p_8".
+Warning:  cell sky130_fd_sc_hd__probe_p_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__probec_p_8".
+Warning:  cell sky130_fd_sc_hd__probec_p_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfbbn_1".
+Warning:  cell sky130_fd_sc_hd__sdfbbn_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfbbn_2".
+Warning:  cell sky130_fd_sc_hd__sdfbbn_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfbbp_1".
+Warning:  cell sky130_fd_sc_hd__sdfbbp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfrbp_1".
+Warning:  cell sky130_fd_sc_hd__sdfrbp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfrbp_2".
+Warning:  cell sky130_fd_sc_hd__sdfrbp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfrtn_1".
+Warning:  cell sky130_fd_sc_hd__sdfrtn_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfrtp_1".
+Warning:  cell sky130_fd_sc_hd__sdfrtp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfrtp_2".
+Warning:  cell sky130_fd_sc_hd__sdfrtp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfrtp_4".
+Warning:  cell sky130_fd_sc_hd__sdfrtp_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfsbp_1".
+Warning:  cell sky130_fd_sc_hd__sdfsbp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfsbp_2".
+Warning:  cell sky130_fd_sc_hd__sdfsbp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfstp_1".
+Warning:  cell sky130_fd_sc_hd__sdfstp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfstp_2".
+Warning:  cell sky130_fd_sc_hd__sdfstp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfstp_4".
+Warning:  cell sky130_fd_sc_hd__sdfstp_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfxbp_1".
+Warning:  cell sky130_fd_sc_hd__sdfxbp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfxbp_2".
+Warning:  cell sky130_fd_sc_hd__sdfxbp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfxtp_1".
+Warning:  cell sky130_fd_sc_hd__sdfxtp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfxtp_2".
+Warning:  cell sky130_fd_sc_hd__sdfxtp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdfxtp_4".
+Warning:  cell sky130_fd_sc_hd__sdfxtp_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdlclkp_1".
+Warning:  cell sky130_fd_sc_hd__sdlclkp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdlclkp_2".
+Warning:  cell sky130_fd_sc_hd__sdlclkp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sdlclkp_4".
+Warning:  cell sky130_fd_sc_hd__sdlclkp_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sedfxbp_1".
+Warning:  cell sky130_fd_sc_hd__sedfxbp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sedfxbp_2".
+Warning:  cell sky130_fd_sc_hd__sedfxbp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__xnor2_2".
+Warning:  cell sky130_fd_sc_hd__xnor2_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__xnor2_1".
+Warning:  cell sky130_fd_sc_hd__xnor2_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__tapvpwrvgnd_1".
+Warning:  cell sky130_fd_sc_hd__tapvpwrvgnd_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__tapvgnd_1".
+Warning:  cell sky130_fd_sc_hd__tapvgnd_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__tapvgnd2_1".
+Warning:  cell sky130_fd_sc_hd__tapvgnd2_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__tap_2".
+Warning:  cell sky130_fd_sc_hd__tap_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__tap_1".
+Warning:  cell sky130_fd_sc_hd__tap_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sedfxtp_4".
+Warning:  cell sky130_fd_sc_hd__sedfxtp_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sedfxtp_2".
+Warning:  cell sky130_fd_sc_hd__sedfxtp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__sedfxtp_1".
+Warning:  cell sky130_fd_sc_hd__sedfxtp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__xnor2_4".
+Warning:  cell sky130_fd_sc_hd__xnor2_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__xnor3_1".
+Warning:  cell sky130_fd_sc_hd__xnor3_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__xnor3_2".
+Warning:  cell sky130_fd_sc_hd__xnor3_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__xnor3_4".
+Warning:  cell sky130_fd_sc_hd__xnor3_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__xor2_1".
+Warning:  cell sky130_fd_sc_hd__xor2_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__xor2_2".
+Warning:  cell sky130_fd_sc_hd__xor2_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__xor2_4".
+Warning:  cell sky130_fd_sc_hd__xor2_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__xor3_1".
+Warning:  cell sky130_fd_sc_hd__xor3_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__xor3_2".
+Warning:  cell sky130_fd_sc_hd__xor3_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__xor3_4".
+Warning:  cell sky130_fd_sc_hd__xor3_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o41a_2".
+Warning:  cell sky130_fd_sc_hd__o41a_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o41a_4".
+Warning:  cell sky130_fd_sc_hd__o41a_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o41ai_1".
+Warning:  cell sky130_fd_sc_hd__o41ai_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o41ai_2".
+Warning:  cell sky130_fd_sc_hd__o41ai_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o41ai_4".
+Warning:  cell sky130_fd_sc_hd__o41ai_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o211a_1".
+Warning:  cell sky130_fd_sc_hd__o211a_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o211a_2".
+Warning:  cell sky130_fd_sc_hd__o211a_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o211a_4".
+Warning:  cell sky130_fd_sc_hd__o211a_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o211ai_1".
+Warning:  cell sky130_fd_sc_hd__o211ai_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o211ai_2".
+Warning:  cell sky130_fd_sc_hd__o211ai_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o211ai_4".
+Warning:  cell sky130_fd_sc_hd__o211ai_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o221a_1".
+Warning:  cell sky130_fd_sc_hd__o221a_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o221a_2".
+Warning:  cell sky130_fd_sc_hd__o221a_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o221a_4".
+Warning:  cell sky130_fd_sc_hd__o221a_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o221ai_1".
+Warning:  cell sky130_fd_sc_hd__o221ai_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o221ai_2".
+Warning:  cell sky130_fd_sc_hd__o221ai_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o311a_1".
+Warning:  cell sky130_fd_sc_hd__o311a_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o311a_2".
+Warning:  cell sky130_fd_sc_hd__o311a_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o311a_4".
+Warning:  cell sky130_fd_sc_hd__o311a_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o311ai_0".
+Warning:  cell sky130_fd_sc_hd__o311ai_0 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o311ai_1".
+Warning:  cell sky130_fd_sc_hd__o311ai_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o221ai_4".
+Warning:  cell sky130_fd_sc_hd__o221ai_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o311ai_2".
+Warning:  cell sky130_fd_sc_hd__o311ai_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o311ai_4".
+Warning:  cell sky130_fd_sc_hd__o311ai_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o2111a_1".
+Warning:  cell sky130_fd_sc_hd__o2111a_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o2111a_2".
+Warning:  cell sky130_fd_sc_hd__o2111a_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o2111a_4".
+Warning:  cell sky130_fd_sc_hd__o2111a_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o2111ai_1".
+Warning:  cell sky130_fd_sc_hd__o2111ai_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o2111ai_2".
+Warning:  cell sky130_fd_sc_hd__o2111ai_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o2111ai_4".
+Warning:  cell sky130_fd_sc_hd__o2111ai_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or2_0".
+Warning:  cell sky130_fd_sc_hd__or2_0 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or2_1".
+Warning:  cell sky130_fd_sc_hd__or2_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or2_2".
+Warning:  cell sky130_fd_sc_hd__or2_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or2_4".
+Warning:  cell sky130_fd_sc_hd__or2_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or2b_1".
+Warning:  cell sky130_fd_sc_hd__or2b_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or2b_2".
+Warning:  cell sky130_fd_sc_hd__or2b_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or2b_4".
+Warning:  cell sky130_fd_sc_hd__or2b_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or3_1".
+Warning:  cell sky130_fd_sc_hd__or3_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or3_2".
+Warning:  cell sky130_fd_sc_hd__or3_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or3_4".
+Warning:  cell sky130_fd_sc_hd__or3_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or3b_4".
+Warning:  cell sky130_fd_sc_hd__or3b_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or3b_2".
+Warning:  cell sky130_fd_sc_hd__or3b_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or3b_1".
+Warning:  cell sky130_fd_sc_hd__or3b_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or4_4".
+Warning:  cell sky130_fd_sc_hd__or4_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or4_2".
+Warning:  cell sky130_fd_sc_hd__or4_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or4_1".
+Warning:  cell sky130_fd_sc_hd__or4_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or4b_4".
+Warning:  cell sky130_fd_sc_hd__or4b_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or4b_2".
+Warning:  cell sky130_fd_sc_hd__or4b_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or4b_1".
+Warning:  cell sky130_fd_sc_hd__or4b_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or4bb_1".
+Warning:  cell sky130_fd_sc_hd__or4bb_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__or4bb_2".
+Warning:  cell sky130_fd_sc_hd__or4bb_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor3_4".
+Warning:  cell sky130_fd_sc_hd__nor3_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor3b_1".
+Warning:  cell sky130_fd_sc_hd__nor3b_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor3b_2".
+Warning:  cell sky130_fd_sc_hd__nor3b_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor3b_4".
+Warning:  cell sky130_fd_sc_hd__nor3b_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor4_1".
+Warning:  cell sky130_fd_sc_hd__nor4_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor4_2".
+Warning:  cell sky130_fd_sc_hd__nor4_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor4_4".
+Warning:  cell sky130_fd_sc_hd__nor4_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor4b_1".
+Warning:  cell sky130_fd_sc_hd__nor4b_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor4b_2".
+Warning:  cell sky130_fd_sc_hd__nor4b_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor4b_4".
+Warning:  cell sky130_fd_sc_hd__nor4b_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor4bb_1".
+Warning:  cell sky130_fd_sc_hd__nor4bb_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor4bb_2".
+Warning:  cell sky130_fd_sc_hd__nor4bb_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor4bb_4".
+Warning:  cell sky130_fd_sc_hd__nor4bb_4 already existed before reading GDS!
+Moving label "k" from mvpsubdiff to ndiffc in cell sky130_fd_sc_hd__nor4bb_4.
+Reading "sky130_fd_sc_hd__o2bb2a_1".
+Warning:  cell sky130_fd_sc_hd__o2bb2a_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o2bb2a_2".
+Warning:  cell sky130_fd_sc_hd__o2bb2a_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o2bb2a_4".
+Warning:  cell sky130_fd_sc_hd__o2bb2a_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o21ai_4".
+Warning:  cell sky130_fd_sc_hd__o21ai_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o21ai_2".
+Warning:  cell sky130_fd_sc_hd__o21ai_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o21ai_1".
+Warning:  cell sky130_fd_sc_hd__o21ai_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o21ai_0".
+Warning:  cell sky130_fd_sc_hd__o21ai_0 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o21a_4".
+Warning:  cell sky130_fd_sc_hd__o21a_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o21a_2".
+Warning:  cell sky130_fd_sc_hd__o21a_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o21a_1".
+Warning:  cell sky130_fd_sc_hd__o21a_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o2bb2ai_4".
+Warning:  cell sky130_fd_sc_hd__o2bb2ai_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o2bb2ai_2".
+Warning:  cell sky130_fd_sc_hd__o2bb2ai_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o2bb2ai_1".
+Warning:  cell sky130_fd_sc_hd__o2bb2ai_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o21ba_1".
+Warning:  cell sky130_fd_sc_hd__o21ba_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o21ba_2".
+Warning:  cell sky130_fd_sc_hd__o21ba_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o21ba_4".
+Warning:  cell sky130_fd_sc_hd__o21ba_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o21bai_1".
+Warning:  cell sky130_fd_sc_hd__o21bai_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o21bai_2".
+Warning:  cell sky130_fd_sc_hd__o21bai_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o21bai_4".
+Warning:  cell sky130_fd_sc_hd__o21bai_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o22a_1".
+Warning:  cell sky130_fd_sc_hd__o22a_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o22a_2".
+Warning:  cell sky130_fd_sc_hd__o22a_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o22a_4".
+Warning:  cell sky130_fd_sc_hd__o22a_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o22ai_1".
+Warning:  cell sky130_fd_sc_hd__o22ai_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o22ai_2".
+Warning:  cell sky130_fd_sc_hd__o22ai_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o22ai_4".
+Warning:  cell sky130_fd_sc_hd__o22ai_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o31a_1".
+Warning:  cell sky130_fd_sc_hd__o31a_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o31a_2".
+Warning:  cell sky130_fd_sc_hd__o31a_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o31a_4".
+Warning:  cell sky130_fd_sc_hd__o31a_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o31ai_1".
+Warning:  cell sky130_fd_sc_hd__o31ai_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o31ai_2".
+Warning:  cell sky130_fd_sc_hd__o31ai_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o31ai_4".
+Warning:  cell sky130_fd_sc_hd__o31ai_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o32a_1".
+Warning:  cell sky130_fd_sc_hd__o32a_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o32a_2".
+Warning:  cell sky130_fd_sc_hd__o32a_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o32a_4".
+Warning:  cell sky130_fd_sc_hd__o32a_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o32ai_1".
+Warning:  cell sky130_fd_sc_hd__o32ai_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o32ai_2".
+Warning:  cell sky130_fd_sc_hd__o32ai_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o32ai_4".
+Warning:  cell sky130_fd_sc_hd__o32ai_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__o41a_1".
+Warning:  cell sky130_fd_sc_hd__o41a_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_isobufsrc_16".
+Warning:  cell sky130_fd_sc_hd__lpflow_isobufsrc_16 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_isobufsrckapwr_16".
+Warning:  cell sky130_fd_sc_hd__lpflow_isobufsrckapwr_16 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1".
+Warning:  cell sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1 already existed before reading GDS!
+CIF file read warning: CIF style sky130(): units rescaled by factor of 5 / 1
+Reading "sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2".
+Warning:  cell sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4".
+Warning:  cell sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4".
+Warning:  cell sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1".
+Warning:  cell sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2".
+Warning:  cell sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4".
+Warning:  cell sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor2_2".
+Warning:  cell sky130_fd_sc_hd__nor2_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand2_2".
+Warning:  cell sky130_fd_sc_hd__nand2_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__inv_2".
+Warning:  cell sky130_fd_sc_hd__inv_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__conb_1".
+Warning:  cell sky130_fd_sc_hd__conb_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__macro_sparecell".
+Warning:  cell sky130_fd_sc_hd__macro_sparecell already existed before reading GDS!
+Reading "sky130_fd_sc_hd__maj3_1".
+Warning:  cell sky130_fd_sc_hd__maj3_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__maj3_2".
+Warning:  cell sky130_fd_sc_hd__maj3_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__maj3_4".
+Warning:  cell sky130_fd_sc_hd__maj3_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__mux2_1".
+Warning:  cell sky130_fd_sc_hd__mux2_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__mux2_2".
+Warning:  cell sky130_fd_sc_hd__mux2_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__mux2_4".
+Warning:  cell sky130_fd_sc_hd__mux2_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__mux2i_1".
+Warning:  cell sky130_fd_sc_hd__mux2i_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__mux2i_2".
+Warning:  cell sky130_fd_sc_hd__mux2i_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__mux2_8".
+Warning:  cell sky130_fd_sc_hd__mux2_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__mux2i_4".
+Warning:  cell sky130_fd_sc_hd__mux2i_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__mux4_1".
+Warning:  cell sky130_fd_sc_hd__mux4_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__mux4_2".
+Warning:  cell sky130_fd_sc_hd__mux4_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__mux4_4".
+Warning:  cell sky130_fd_sc_hd__mux4_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand2_1".
+Warning:  cell sky130_fd_sc_hd__nand2_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand2_4".
+Warning:  cell sky130_fd_sc_hd__nand2_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand2_8".
+Warning:  cell sky130_fd_sc_hd__nand2_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand2b_1".
+Warning:  cell sky130_fd_sc_hd__nand2b_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand2b_2".
+Warning:  cell sky130_fd_sc_hd__nand2b_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand2b_4".
+Warning:  cell sky130_fd_sc_hd__nand2b_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand3_1".
+Warning:  cell sky130_fd_sc_hd__nand3_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand3_2".
+Warning:  cell sky130_fd_sc_hd__nand3_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand3_4".
+Warning:  cell sky130_fd_sc_hd__nand3_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand3b_1".
+Warning:  cell sky130_fd_sc_hd__nand3b_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand3b_2".
+Warning:  cell sky130_fd_sc_hd__nand3b_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand3b_4".
+Warning:  cell sky130_fd_sc_hd__nand3b_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand4_1".
+Warning:  cell sky130_fd_sc_hd__nand4_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand4_2".
+Warning:  cell sky130_fd_sc_hd__nand4_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand4_4".
+Warning:  cell sky130_fd_sc_hd__nand4_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand4b_1".
+Warning:  cell sky130_fd_sc_hd__nand4b_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand4b_2".
+Warning:  cell sky130_fd_sc_hd__nand4b_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand4bb_1".
+Warning:  cell sky130_fd_sc_hd__nand4bb_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand4bb_2".
+Warning:  cell sky130_fd_sc_hd__nand4bb_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor2_1".
+Warning:  cell sky130_fd_sc_hd__nor2_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor2_4".
+Warning:  cell sky130_fd_sc_hd__nor2_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor2_8".
+Warning:  cell sky130_fd_sc_hd__nor2_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor2b_1".
+Warning:  cell sky130_fd_sc_hd__nor2b_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor2b_2".
+Warning:  cell sky130_fd_sc_hd__nor2b_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor2b_4".
+Warning:  cell sky130_fd_sc_hd__nor2b_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand4b_4".
+Warning:  cell sky130_fd_sc_hd__nand4b_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nand4bb_4".
+Warning:  cell sky130_fd_sc_hd__nand4bb_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor3_1".
+Warning:  cell sky130_fd_sc_hd__nor3_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__nor3_2".
+Warning:  cell sky130_fd_sc_hd__nor3_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__einvn_2".
+Warning:  cell sky130_fd_sc_hd__einvn_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__einvn_4".
+Warning:  cell sky130_fd_sc_hd__einvn_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__einvn_8".
+Warning:  cell sky130_fd_sc_hd__einvn_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__einvp_1".
+Warning:  cell sky130_fd_sc_hd__einvp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__einvp_2".
+Warning:  cell sky130_fd_sc_hd__einvp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__einvp_4".
+Warning:  cell sky130_fd_sc_hd__einvp_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__einvp_8".
+Warning:  cell sky130_fd_sc_hd__einvp_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__fa_1".
+Warning:  cell sky130_fd_sc_hd__fa_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__fa_2".
+Warning:  cell sky130_fd_sc_hd__fa_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__fa_4".
+Warning:  cell sky130_fd_sc_hd__fa_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__fah_1".
+Warning:  cell sky130_fd_sc_hd__fah_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__fahcin_1".
+Warning:  cell sky130_fd_sc_hd__fahcin_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__fahcon_1".
+Warning:  cell sky130_fd_sc_hd__fahcon_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__fill_1".
+Warning:  cell sky130_fd_sc_hd__fill_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__fill_2".
+Warning:  cell sky130_fd_sc_hd__fill_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__fill_4".
+Warning:  cell sky130_fd_sc_hd__fill_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__inv_16".
+Warning:  cell sky130_fd_sc_hd__inv_16 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__inv_12".
+Warning:  cell sky130_fd_sc_hd__inv_12 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__inv_8".
+Warning:  cell sky130_fd_sc_hd__inv_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__inv_6".
+Warning:  cell sky130_fd_sc_hd__inv_6 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__inv_4".
+Warning:  cell sky130_fd_sc_hd__inv_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__inv_1".
+Warning:  cell sky130_fd_sc_hd__inv_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__ha_4".
+Warning:  cell sky130_fd_sc_hd__ha_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__ha_2".
+Warning:  cell sky130_fd_sc_hd__ha_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__ha_1".
+Warning:  cell sky130_fd_sc_hd__ha_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__fill_8".
+Warning:  cell sky130_fd_sc_hd__fill_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_bleeder_1".
+Warning:  cell sky130_fd_sc_hd__lpflow_bleeder_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_clkbufkapwr_1".
+Warning:  cell sky130_fd_sc_hd__lpflow_clkbufkapwr_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_clkbufkapwr_2".
+Warning:  cell sky130_fd_sc_hd__lpflow_clkbufkapwr_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_clkbufkapwr_4".
+Warning:  cell sky130_fd_sc_hd__lpflow_clkbufkapwr_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_clkbufkapwr_8".
+Warning:  cell sky130_fd_sc_hd__lpflow_clkbufkapwr_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_clkbufkapwr_16".
+Warning:  cell sky130_fd_sc_hd__lpflow_clkbufkapwr_16 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_clkinvkapwr_1".
+Warning:  cell sky130_fd_sc_hd__lpflow_clkinvkapwr_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_clkinvkapwr_2".
+Warning:  cell sky130_fd_sc_hd__lpflow_clkinvkapwr_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_clkinvkapwr_4".
+Warning:  cell sky130_fd_sc_hd__lpflow_clkinvkapwr_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_inputiso1n_1".
+Warning:  cell sky130_fd_sc_hd__lpflow_inputiso1n_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_inputiso0p_1".
+Warning:  cell sky130_fd_sc_hd__lpflow_inputiso0p_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_inputiso0n_1".
+Warning:  cell sky130_fd_sc_hd__lpflow_inputiso0n_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_decapkapwr_12".
+Warning:  cell sky130_fd_sc_hd__lpflow_decapkapwr_12 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_decapkapwr_8".
+Warning:  cell sky130_fd_sc_hd__lpflow_decapkapwr_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_decapkapwr_6".
+Warning:  cell sky130_fd_sc_hd__lpflow_decapkapwr_6 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_decapkapwr_4".
+Warning:  cell sky130_fd_sc_hd__lpflow_decapkapwr_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_decapkapwr_3".
+Warning:  cell sky130_fd_sc_hd__lpflow_decapkapwr_3 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_clkinvkapwr_16".
+Warning:  cell sky130_fd_sc_hd__lpflow_clkinvkapwr_16 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_clkinvkapwr_8".
+Warning:  cell sky130_fd_sc_hd__lpflow_clkinvkapwr_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_inputiso1p_1".
+Warning:  cell sky130_fd_sc_hd__lpflow_inputiso1p_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_inputisolatch_1".
+Warning:  cell sky130_fd_sc_hd__lpflow_inputisolatch_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_isobufsrc_1".
+Warning:  cell sky130_fd_sc_hd__lpflow_isobufsrc_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_isobufsrc_2".
+Warning:  cell sky130_fd_sc_hd__lpflow_isobufsrc_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_isobufsrc_4".
+Warning:  cell sky130_fd_sc_hd__lpflow_isobufsrc_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__lpflow_isobufsrc_8".
+Warning:  cell sky130_fd_sc_hd__lpflow_isobufsrc_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfrbp_2".
+Warning:  cell sky130_fd_sc_hd__dfrbp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfrtn_1".
+Warning:  cell sky130_fd_sc_hd__dfrtn_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfrtp_1".
+Warning:  cell sky130_fd_sc_hd__dfrtp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfrtp_2".
+Warning:  cell sky130_fd_sc_hd__dfrtp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfrtp_4".
+Warning:  cell sky130_fd_sc_hd__dfrtp_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfsbp_1".
+Warning:  cell sky130_fd_sc_hd__dfsbp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfsbp_2".
+Warning:  cell sky130_fd_sc_hd__dfsbp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfstp_1".
+Warning:  cell sky130_fd_sc_hd__dfstp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfstp_2".
+Warning:  cell sky130_fd_sc_hd__dfstp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfstp_4".
+Warning:  cell sky130_fd_sc_hd__dfstp_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfxtp_1".
+Warning:  cell sky130_fd_sc_hd__dfxtp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfxtp_2".
+Warning:  cell sky130_fd_sc_hd__dfxtp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__diode_2".
+Warning:  cell sky130_fd_sc_hd__diode_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlclkp_1".
+Warning:  cell sky130_fd_sc_hd__dlclkp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlclkp_2".
+Warning:  cell sky130_fd_sc_hd__dlclkp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlclkp_4".
+Warning:  cell sky130_fd_sc_hd__dlclkp_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlrbn_1".
+Warning:  cell sky130_fd_sc_hd__dlrbn_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfxbp_1".
+Warning:  cell sky130_fd_sc_hd__dfxbp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfxbp_2".
+Warning:  cell sky130_fd_sc_hd__dfxbp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfxtp_4".
+Warning:  cell sky130_fd_sc_hd__dfxtp_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlrbn_2".
+Warning:  cell sky130_fd_sc_hd__dlrbn_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlrbp_1".
+Warning:  cell sky130_fd_sc_hd__dlrbp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlrbp_2".
+Warning:  cell sky130_fd_sc_hd__dlrbp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlrtn_1".
+Warning:  cell sky130_fd_sc_hd__dlrtn_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlrtn_2".
+Warning:  cell sky130_fd_sc_hd__dlrtn_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlrtn_4".
+Warning:  cell sky130_fd_sc_hd__dlrtn_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlrtp_1".
+Warning:  cell sky130_fd_sc_hd__dlrtp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlrtp_2".
+Warning:  cell sky130_fd_sc_hd__dlrtp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlrtp_4".
+Warning:  cell sky130_fd_sc_hd__dlrtp_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlxbn_1".
+Warning:  cell sky130_fd_sc_hd__dlxbn_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlxbn_2".
+Warning:  cell sky130_fd_sc_hd__dlxbn_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlxbp_1".
+Warning:  cell sky130_fd_sc_hd__dlxbp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlxtn_1".
+Warning:  cell sky130_fd_sc_hd__dlxtn_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlxtn_2".
+Warning:  cell sky130_fd_sc_hd__dlxtn_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlxtn_4".
+Warning:  cell sky130_fd_sc_hd__dlxtn_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlxtp_1".
+Warning:  cell sky130_fd_sc_hd__dlxtp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlygate4sd1_1".
+Warning:  cell sky130_fd_sc_hd__dlygate4sd1_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlygate4sd2_1".
+Warning:  cell sky130_fd_sc_hd__dlygate4sd2_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlygate4sd3_1".
+Warning:  cell sky130_fd_sc_hd__dlygate4sd3_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlymetal6s2s_1".
+Warning:  cell sky130_fd_sc_hd__dlymetal6s2s_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlymetal6s4s_1".
+Warning:  cell sky130_fd_sc_hd__dlymetal6s4s_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dlymetal6s6s_1".
+Warning:  cell sky130_fd_sc_hd__dlymetal6s6s_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__ebufn_1".
+Warning:  cell sky130_fd_sc_hd__ebufn_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__ebufn_2".
+Warning:  cell sky130_fd_sc_hd__ebufn_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__ebufn_4".
+Warning:  cell sky130_fd_sc_hd__ebufn_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__ebufn_8".
+Warning:  cell sky130_fd_sc_hd__ebufn_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__edfxbp_1".
+Warning:  cell sky130_fd_sc_hd__edfxbp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__edfxtp_1".
+Warning:  cell sky130_fd_sc_hd__edfxtp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__einvn_0".
+Warning:  cell sky130_fd_sc_hd__einvn_0 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__einvn_1".
+Warning:  cell sky130_fd_sc_hd__einvn_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and3b_2".
+Warning:  cell sky130_fd_sc_hd__and3b_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and3b_4".
+Warning:  cell sky130_fd_sc_hd__and3b_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and4_1".
+Warning:  cell sky130_fd_sc_hd__and4_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and4_2".
+Warning:  cell sky130_fd_sc_hd__and4_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and4_4".
+Warning:  cell sky130_fd_sc_hd__and4_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and4b_1".
+Warning:  cell sky130_fd_sc_hd__and4b_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and4b_2".
+Warning:  cell sky130_fd_sc_hd__and4b_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and4b_4".
+Warning:  cell sky130_fd_sc_hd__and4b_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and4bb_1".
+Warning:  cell sky130_fd_sc_hd__and4bb_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and4bb_2".
+Warning:  cell sky130_fd_sc_hd__and4bb_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and4bb_4".
+Warning:  cell sky130_fd_sc_hd__and4bb_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__buf_1".
+Warning:  cell sky130_fd_sc_hd__buf_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__buf_2".
+Warning:  cell sky130_fd_sc_hd__buf_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__buf_4".
+Warning:  cell sky130_fd_sc_hd__buf_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__buf_6".
+Warning:  cell sky130_fd_sc_hd__buf_6 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__buf_8".
+Warning:  cell sky130_fd_sc_hd__buf_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__buf_12".
+Warning:  cell sky130_fd_sc_hd__buf_12 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__bufbuf_8".
+Warning:  cell sky130_fd_sc_hd__bufbuf_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__bufinv_8".
+Warning:  cell sky130_fd_sc_hd__bufinv_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkbuf_1".
+Warning:  cell sky130_fd_sc_hd__clkbuf_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkbuf_2".
+Warning:  cell sky130_fd_sc_hd__clkbuf_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__buf_16".
+Warning:  cell sky130_fd_sc_hd__buf_16 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__bufbuf_16".
+Warning:  cell sky130_fd_sc_hd__bufbuf_16 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__bufinv_16".
+Warning:  cell sky130_fd_sc_hd__bufinv_16 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkbuf_4".
+Warning:  cell sky130_fd_sc_hd__clkbuf_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkbuf_8".
+Warning:  cell sky130_fd_sc_hd__clkbuf_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkbuf_16".
+Warning:  cell sky130_fd_sc_hd__clkbuf_16 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkdlybuf4s15_1".
+Warning:  cell sky130_fd_sc_hd__clkdlybuf4s15_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkdlybuf4s15_2".
+Warning:  cell sky130_fd_sc_hd__clkdlybuf4s15_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkdlybuf4s18_1".
+Warning:  cell sky130_fd_sc_hd__clkdlybuf4s18_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkdlybuf4s18_2".
+Warning:  cell sky130_fd_sc_hd__clkdlybuf4s18_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkdlybuf4s25_1".
+Warning:  cell sky130_fd_sc_hd__clkdlybuf4s25_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkdlybuf4s25_2".
+Warning:  cell sky130_fd_sc_hd__clkdlybuf4s25_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__decap_3".
+Warning:  cell sky130_fd_sc_hd__decap_3 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkinvlp_4".
+Warning:  cell sky130_fd_sc_hd__clkinvlp_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkinvlp_2".
+Warning:  cell sky130_fd_sc_hd__clkinvlp_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkinv_16".
+Warning:  cell sky130_fd_sc_hd__clkinv_16 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkinv_8".
+Warning:  cell sky130_fd_sc_hd__clkinv_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkinv_4".
+Warning:  cell sky130_fd_sc_hd__clkinv_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkinv_2".
+Warning:  cell sky130_fd_sc_hd__clkinv_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkinv_1".
+Warning:  cell sky130_fd_sc_hd__clkinv_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkdlybuf4s50_2".
+Warning:  cell sky130_fd_sc_hd__clkdlybuf4s50_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__clkdlybuf4s50_1".
+Warning:  cell sky130_fd_sc_hd__clkdlybuf4s50_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__decap_4".
+Warning:  cell sky130_fd_sc_hd__decap_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__decap_6".
+Warning:  cell sky130_fd_sc_hd__decap_6 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__decap_8".
+Warning:  cell sky130_fd_sc_hd__decap_8 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__decap_12".
+Warning:  cell sky130_fd_sc_hd__decap_12 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfbbn_1".
+Warning:  cell sky130_fd_sc_hd__dfbbn_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfbbn_2".
+Warning:  cell sky130_fd_sc_hd__dfbbn_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfbbp_1".
+Warning:  cell sky130_fd_sc_hd__dfbbp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__dfrbp_1".
+Warning:  cell sky130_fd_sc_hd__dfrbp_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a31oi_2".
+Warning:  cell sky130_fd_sc_hd__a31oi_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a31oi_4".
+Warning:  cell sky130_fd_sc_hd__a31oi_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a32o_1".
+Warning:  cell sky130_fd_sc_hd__a32o_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a32o_2".
+Warning:  cell sky130_fd_sc_hd__a32o_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a32o_4".
+Warning:  cell sky130_fd_sc_hd__a32o_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a32oi_1".
+Warning:  cell sky130_fd_sc_hd__a32oi_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a32oi_2".
+Warning:  cell sky130_fd_sc_hd__a32oi_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a32oi_4".
+Warning:  cell sky130_fd_sc_hd__a32oi_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a41o_1".
+Warning:  cell sky130_fd_sc_hd__a41o_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a211oi_2".
+Warning:  cell sky130_fd_sc_hd__a211oi_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a211oi_1".
+Warning:  cell sky130_fd_sc_hd__a211oi_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a211o_4".
+Warning:  cell sky130_fd_sc_hd__a211o_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a211o_2".
+Warning:  cell sky130_fd_sc_hd__a211o_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a211o_1".
+Warning:  cell sky130_fd_sc_hd__a211o_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a41oi_4".
+Warning:  cell sky130_fd_sc_hd__a41oi_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a41oi_2".
+Warning:  cell sky130_fd_sc_hd__a41oi_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a41oi_1".
+Warning:  cell sky130_fd_sc_hd__a41oi_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a41o_4".
+Warning:  cell sky130_fd_sc_hd__a41o_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a41o_2".
+Warning:  cell sky130_fd_sc_hd__a41o_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a211oi_4".
+Warning:  cell sky130_fd_sc_hd__a211oi_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a221o_1".
+Warning:  cell sky130_fd_sc_hd__a221o_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a221o_2".
+Warning:  cell sky130_fd_sc_hd__a221o_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a221o_4".
+Warning:  cell sky130_fd_sc_hd__a221o_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a221oi_1".
+Warning:  cell sky130_fd_sc_hd__a221oi_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a221oi_2".
+Warning:  cell sky130_fd_sc_hd__a221oi_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a221oi_4".
+Warning:  cell sky130_fd_sc_hd__a221oi_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a222oi_1".
+Warning:  cell sky130_fd_sc_hd__a222oi_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a311o_1".
+Warning:  cell sky130_fd_sc_hd__a311o_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a311o_2".
+Warning:  cell sky130_fd_sc_hd__a311o_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a311o_4".
+Warning:  cell sky130_fd_sc_hd__a311o_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a311oi_1".
+Warning:  cell sky130_fd_sc_hd__a311oi_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a311oi_2".
+Warning:  cell sky130_fd_sc_hd__a311oi_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a311oi_4".
+Warning:  cell sky130_fd_sc_hd__a311oi_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a2111o_1".
+Warning:  cell sky130_fd_sc_hd__a2111o_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a2111o_2".
+Warning:  cell sky130_fd_sc_hd__a2111o_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a2111o_4".
+Warning:  cell sky130_fd_sc_hd__a2111o_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a2111oi_0".
+Warning:  cell sky130_fd_sc_hd__a2111oi_0 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a2111oi_1".
+Warning:  cell sky130_fd_sc_hd__a2111oi_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a2111oi_2".
+Warning:  cell sky130_fd_sc_hd__a2111oi_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and2_0".
+Warning:  cell sky130_fd_sc_hd__and2_0 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and2_1".
+Warning:  cell sky130_fd_sc_hd__and2_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and2_2".
+Warning:  cell sky130_fd_sc_hd__and2_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and2_4".
+Warning:  cell sky130_fd_sc_hd__and2_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and2b_1".
+Warning:  cell sky130_fd_sc_hd__and2b_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and2b_2".
+Warning:  cell sky130_fd_sc_hd__and2b_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and2b_4".
+Warning:  cell sky130_fd_sc_hd__and2b_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a2111oi_4".
+Warning:  cell sky130_fd_sc_hd__a2111oi_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and3_1".
+Warning:  cell sky130_fd_sc_hd__and3_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and3_2".
+Warning:  cell sky130_fd_sc_hd__and3_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and3_4".
+Warning:  cell sky130_fd_sc_hd__and3_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__and3b_1".
+Warning:  cell sky130_fd_sc_hd__and3b_1 already existed before reading GDS!
+Reading "sky130_ef_sc_hd__fill_4".
+Reading "sky130_ef_sc_hd__fill_2".
+Reading "sky130_ef_sc_hd__decap_80_12".
+Reading "sky130_fd_sc_hd__a2bb2o_1".
+Warning:  cell sky130_fd_sc_hd__a2bb2o_1 already existed before reading GDS!
+Reading "sky130_ef_sc_hd__fill_12".
+Reading "sky130_ef_sc_hd__fill_8".
+Reading "sky130_ef_sc_hd__decap_60_12".
+Reading "sky130_ef_sc_hd__decap_40_12".
+Reading "sky130_ef_sc_hd__decap_20_12".
+Reading "sky130_ef_sc_hd__decap_12".
+Reading "sky130_fd_sc_hd__a2bb2o_2".
+Warning:  cell sky130_fd_sc_hd__a2bb2o_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a2bb2o_4".
+Warning:  cell sky130_fd_sc_hd__a2bb2o_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a2bb2oi_1".
+Warning:  cell sky130_fd_sc_hd__a2bb2oi_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a2bb2oi_2".
+Warning:  cell sky130_fd_sc_hd__a2bb2oi_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a2bb2oi_4".
+Warning:  cell sky130_fd_sc_hd__a2bb2oi_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a21bo_1".
+Warning:  cell sky130_fd_sc_hd__a21bo_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a21bo_2".
+Warning:  cell sky130_fd_sc_hd__a21bo_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a21bo_4".
+Warning:  cell sky130_fd_sc_hd__a21bo_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a21boi_0".
+Warning:  cell sky130_fd_sc_hd__a21boi_0 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a21o_1".
+Warning:  cell sky130_fd_sc_hd__a21o_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a21boi_4".
+Warning:  cell sky130_fd_sc_hd__a21boi_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a21oi_2".
+Warning:  cell sky130_fd_sc_hd__a21oi_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a21oi_1".
+Warning:  cell sky130_fd_sc_hd__a21oi_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a21o_4".
+Warning:  cell sky130_fd_sc_hd__a21o_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a21o_2".
+Warning:  cell sky130_fd_sc_hd__a21o_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a22o_1".
+Warning:  cell sky130_fd_sc_hd__a22o_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a21oi_4".
+Warning:  cell sky130_fd_sc_hd__a21oi_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a21boi_2".
+Warning:  cell sky130_fd_sc_hd__a21boi_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a21boi_1".
+Warning:  cell sky130_fd_sc_hd__a21boi_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a22o_2".
+Warning:  cell sky130_fd_sc_hd__a22o_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a22o_4".
+Warning:  cell sky130_fd_sc_hd__a22o_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a22oi_1".
+Warning:  cell sky130_fd_sc_hd__a22oi_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a22oi_2".
+Warning:  cell sky130_fd_sc_hd__a22oi_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a22oi_4".
+Warning:  cell sky130_fd_sc_hd__a22oi_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a31o_1".
+Warning:  cell sky130_fd_sc_hd__a31o_1 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a31o_2".
+Warning:  cell sky130_fd_sc_hd__a31o_2 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a31o_4".
+Warning:  cell sky130_fd_sc_hd__a31o_4 already existed before reading GDS!
+Reading "sky130_fd_sc_hd__a31oi_1".
+Warning:  cell sky130_fd_sc_hd__a31oi_1 already existed before reading GDS!
+   Generating output for cell vedic
+GDSII file generated: /home/arumukamganesmoorthe/ME/digital_design/vedic_mul/layout/vedic_final.gds

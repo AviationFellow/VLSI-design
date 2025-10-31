@@ -1,0 +1,521 @@
+
+11. Printing statistics.
+
+=== $paramod\KoggeStoneAdder\WIDTH=s32'00000000000000000000000000100000 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      169        - wires
+      294        - wire bits
+        6        - public wires
+      131        - public wire bits
+        5        - ports
+       98        - port bits
+      196 1.17E+03 cells
+        1    7.507   sky130_fd_sc_hd__a211oi_1
+        1    7.507   sky130_fd_sc_hd__a21o_1
+        7   35.034   sky130_fd_sc_hd__a21oi_1
+        1    8.758   sky130_fd_sc_hd__a221oi_1
+        1    8.758   sky130_fd_sc_hd__a22o_1
+        1    7.507   sky130_fd_sc_hd__a22oi_1
+        2   17.517   sky130_fd_sc_hd__a311oi_1
+        7   43.792   sky130_fd_sc_hd__a31oi_1
+        1    8.758   sky130_fd_sc_hd__a41oi_1
+        7   43.792   sky130_fd_sc_hd__and2_0
+        4   15.014   sky130_fd_sc_hd__clkinv_1
+        5    31.28   sky130_fd_sc_hd__lpflow_inputiso1p_1
+        1    10.01   sky130_fd_sc_hd__maj3_1
+       38  142.637   sky130_fd_sc_hd__nand2_1
+        5    31.28   sky130_fd_sc_hd__nand2b_1
+       32  120.115   sky130_fd_sc_hd__nor2_1
+       11   68.816   sky130_fd_sc_hd__nor2b_1
+        2    10.01   sky130_fd_sc_hd__nor3_1
+        3   30.029   sky130_fd_sc_hd__o211a_1
+        4   30.029   sky130_fd_sc_hd__o211ai_1
+        3   22.522   sky130_fd_sc_hd__o21a_1
+       11   55.053   sky130_fd_sc_hd__o21ai_0
+        2   17.517   sky130_fd_sc_hd__o221ai_1
+        1    6.256   sky130_fd_sc_hd__o22ai_1
+        2   20.019   sky130_fd_sc_hd__o311a_1
+        1    8.758   sky130_fd_sc_hd__o311ai_0
+        2   17.517   sky130_fd_sc_hd__o31a_1
+        1    8.758   sky130_fd_sc_hd__o41ai_1
+        1    6.256   sky130_fd_sc_hd__or3_1
+       28  245.235   sky130_fd_sc_hd__xnor2_1
+       10   87.584   sky130_fd_sc_hd__xor2_1
+
+   Chip area for module '$paramod\KoggeStoneAdder\WIDTH=s32'00000000000000000000000000100000': 1173.625600
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== $paramod\setfa\N=s32'00000000000000000000000000000010 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        5        - wires
+       10        - wire bits
+        5        - public wires
+       10        - public wire bits
+        5        - ports
+       10        - port bits
+        2        - submodules
+        2        -   fa
+
+   Chip area for module '$paramod\setfa\N=s32'00000000000000000000000000000010': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== $paramod\setfa\N=s32'00000000000000000000000000000100 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        5        - wires
+       20        - wire bits
+        5        - public wires
+       20        - public wire bits
+        5        - ports
+       20        - port bits
+        4        - submodules
+        4        -   fa
+
+   Chip area for module '$paramod\setfa\N=s32'00000000000000000000000000000100': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== $paramod\setfa\N=s32'00000000000000000000000000000110 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        5        - wires
+       30        - wire bits
+        5        - public wires
+       30        - public wire bits
+        5        - ports
+       30        - port bits
+        6        - submodules
+        6        -   fa
+
+   Chip area for module '$paramod\setfa\N=s32'00000000000000000000000000000110': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== $paramod\setfa\N=s32'00000000000000000000000000001000 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        5        - wires
+       40        - wire bits
+        5        - public wires
+       40        - public wire bits
+        5        - ports
+       40        - port bits
+        8        - submodules
+        8        -   fa
+
+   Chip area for module '$paramod\setfa\N=s32'00000000000000000000000000001000': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== $paramod\setfa\N=s32'00000000000000000000000000001010 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        5        - wires
+       50        - wire bits
+        5        - public wires
+       50        - public wire bits
+        5        - ports
+       50        - port bits
+       10        - submodules
+       10        -   fa
+
+   Chip area for module '$paramod\setfa\N=s32'00000000000000000000000000001010': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== $paramod\setfa\N=s32'00000000000000000000000000001100 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        5        - wires
+       60        - wire bits
+        5        - public wires
+       60        - public wire bits
+        5        - ports
+       60        - port bits
+       12        - submodules
+       12        -   fa
+
+   Chip area for module '$paramod\setfa\N=s32'00000000000000000000000000001100': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== $paramod\setfa\N=s32'00000000000000000000000000001110 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        5        - wires
+       70        - wire bits
+        5        - public wires
+       70        - public wire bits
+        5        - ports
+       70        - port bits
+       14        - submodules
+       14        -   fa
+
+   Chip area for module '$paramod\setfa\N=s32'00000000000000000000000000001110': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== $paramod\setfa\N=s32'00000000000000000000000000010010 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        5        - wires
+       90        - wire bits
+        5        - public wires
+       90        - public wire bits
+        5        - ports
+       90        - port bits
+       18        - submodules
+       18        -   fa
+
+   Chip area for module '$paramod\setfa\N=s32'00000000000000000000000000010010': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== $paramod\setfa\N=s32'00000000000000000000000000010011 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        5        - wires
+       95        - wire bits
+        5        - public wires
+       95        - public wire bits
+        5        - ports
+       95        - port bits
+       19        - submodules
+       19        -   fa
+
+   Chip area for module '$paramod\setfa\N=s32'00000000000000000000000000010011': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== $paramod\setfa\N=s32'00000000000000000000000000010100 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        5        - wires
+      100        - wire bits
+        5        - public wires
+      100        - public wire bits
+        5        - ports
+      100        - port bits
+       20        - submodules
+       20        -   fa
+
+   Chip area for module '$paramod\setfa\N=s32'00000000000000000000000000010100': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== $paramod\setfa\N=s32'00000000000000000000000000011000 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        5        - wires
+      120        - wire bits
+        5        - public wires
+      120        - public wire bits
+        5        - ports
+      120        - port bits
+       24        - submodules
+       24        -   fa
+
+   Chip area for module '$paramod\setfa\N=s32'00000000000000000000000000011000': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== $paramod\setfa\N=s32'00000000000000000000000000011001 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        5        - wires
+      125        - wire bits
+        5        - public wires
+      125        - public wire bits
+        5        - ports
+      125        - port bits
+       25        - submodules
+       25        -   fa
+
+   Chip area for module '$paramod\setfa\N=s32'00000000000000000000000000011001': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== $paramod\setfa\N=s32'00000000000000000000000000011010 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        5        - wires
+      130        - wire bits
+        5        - public wires
+      130        - public wire bits
+        5        - ports
+      130        - port bits
+       26        - submodules
+       26        -   fa
+
+   Chip area for module '$paramod\setfa\N=s32'00000000000000000000000000011010': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== $paramod\setha\N=s32'00000000000000000000000000000011 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        4        - wires
+       12        - wire bits
+        4        - public wires
+       12        - public wire bits
+        4        - ports
+       12        - port bits
+        3        - submodules
+        3        -   ha
+
+   Chip area for module '$paramod\setha\N=s32'00000000000000000000000000000011': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== $paramod\setha\N=s32'00000000000000000000000000001000 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        4        - wires
+       32        - wire bits
+        4        - public wires
+       32        - public wire bits
+        4        - ports
+       32        - port bits
+        8        - submodules
+        8        -   ha
+
+   Chip area for module '$paramod\setha\N=s32'00000000000000000000000000001000': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== KSA32 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        5        - wires
+       98        - wire bits
+        5        - public wires
+       98        - public wire bits
+        5        - ports
+       98        - port bits
+        1        - submodules
+        1        -   $paramod\KoggeStoneAdder\WIDTH=s32'00000000000000000000000000100000
+
+   Chip area for module '\KSA32': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== dadda1 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      143        - wires
+      944        - wire bits
+       36        - public wires
+      837        - public wire bits
+        3        - ports
+       64        - port bits
+      364 1.67E+03 cells
+        4   20.019   sky130_fd_sc_hd__a21oi_1
+        1    6.256   sky130_fd_sc_hd__and2_0
+        2    7.507   sky130_fd_sc_hd__clkinv_1
+       37  138.883   sky130_fd_sc_hd__conb_1
+       30   187.68   sky130_fd_sc_hd__lpflow_isobufsrc_1
+        6   22.522   sky130_fd_sc_hd__nand2_1
+        2   12.512   sky130_fd_sc_hd__nand2b_1
+      227  852.067   sky130_fd_sc_hd__nor2_1
+        2   12.512   sky130_fd_sc_hd__nor4_1
+        8   40.038   sky130_fd_sc_hd__o21ai_0
+        8   60.058   sky130_fd_sc_hd__o31ai_1
+        2   17.517   sky130_fd_sc_hd__o41ai_1
+        2   12.512   sky130_fd_sc_hd__or3_1
+        6   45.043   sky130_fd_sc_hd__or4_1
+        2   17.517   sky130_fd_sc_hd__xnor2_1
+       25   218.96   sky130_fd_sc_hd__xor2_1
+       20        - submodules
+        1        -   $paramod\setfa\N=s32'00000000000000000000000000000010
+        1        -   $paramod\setfa\N=s32'00000000000000000000000000000100
+        1        -   $paramod\setfa\N=s32'00000000000000000000000000000110
+        2        -   $paramod\setfa\N=s32'00000000000000000000000000001000
+        1        -   $paramod\setfa\N=s32'00000000000000000000000000001010
+        1        -   $paramod\setfa\N=s32'00000000000000000000000000001100
+        1        -   $paramod\setfa\N=s32'00000000000000000000000000001110
+        1        -   $paramod\setfa\N=s32'00000000000000000000000000010010
+        1        -   $paramod\setfa\N=s32'00000000000000000000000000010011
+        1        -   $paramod\setfa\N=s32'00000000000000000000000000010100
+        1        -   $paramod\setfa\N=s32'00000000000000000000000000011000
+        1        -   $paramod\setfa\N=s32'00000000000000000000000000011001
+        1        -   $paramod\setfa\N=s32'00000000000000000000000000011010
+        2        -   $paramod\setha\N=s32'00000000000000000000000000000011
+        1        -   $paramod\setha\N=s32'00000000000000000000000000001000
+        2        -   KSA32
+        1        -   inv32bits
+
+   Chip area for module '\dadda1': 1671.603200
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== fa ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        5        - wires
+        5        - wire bits
+        5        - public wires
+        5        - public wire bits
+        5        - ports
+        5        - port bits
+        2   33.782 cells
+        1    10.01   sky130_fd_sc_hd__maj3_1
+        1   23.773   sky130_fd_sc_hd__xor3_1
+
+   Chip area for module '\fa': 33.782400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== ha ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        4        - wires
+        4        - wire bits
+        4        - public wires
+        4        - public wire bits
+        4        - ports
+        4        - port bits
+        2   15.014 cells
+        1    6.256   sky130_fd_sc_hd__and2_0
+        1    8.758   sky130_fd_sc_hd__xor2_1
+
+   Chip area for module '\ha': 15.014400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== inv32bits ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        3        - wires
+       65        - wire bits
+        3        - public wires
+       65        - public wire bits
+        3        - ports
+       65        - port bits
+       32  280.269 cells
+       32  280.269   sky130_fd_sc_hd__xor2_1
+
+   Chip area for module '\inv32bits': 280.268800
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+     1208 1.11E+04 dadda1
+        2   33.782   fa
+        2   33.782   fa
+        2   33.782   fa
+        2   33.782   fa
+        2   33.782   fa
+        2   33.782   fa
+        2   33.782   fa
+        2   33.782   fa
+        2   33.782   fa
+        2   33.782   fa
+        2   33.782   fa
+        2   33.782   fa
+        2   33.782   fa
+        2   15.014   ha
+        2   15.014   ha
+      196 1.17E+03   $paramod\KoggeStoneAdder\WIDTH=s32'00000000000000000000000000100000
+       32  280.269 inv32bits
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+     1612        - wires
+     3865        - wire bits
+     1179        - public wires
+     3432        - public wire bits
+     1144        - ports
+     2593        - port bits
+        -        - memories
+        -        - memory bits
+        -        - processes
+     1208 1.11E+04 cells
+        2   15.014   sky130_fd_sc_hd__a211oi_1
+        2   15.014   sky130_fd_sc_hd__a21o_1
+       18   90.086   sky130_fd_sc_hd__a21oi_1
+        2   17.517   sky130_fd_sc_hd__a221oi_1
+        2   17.517   sky130_fd_sc_hd__a22o_1
+        2   15.014   sky130_fd_sc_hd__a22oi_1
+        4   35.034   sky130_fd_sc_hd__a311oi_1
+       14   87.584   sky130_fd_sc_hd__a31oi_1
+        2   17.517   sky130_fd_sc_hd__a41oi_1
+       29  181.424   sky130_fd_sc_hd__and2_0
+       10   37.536   sky130_fd_sc_hd__clkinv_1
+       37  138.883   sky130_fd_sc_hd__conb_1
+       10    62.56   sky130_fd_sc_hd__lpflow_inputiso1p_1
+       30   187.68   sky130_fd_sc_hd__lpflow_isobufsrc_1
+      198 1.98E+03   sky130_fd_sc_hd__maj3_1
+       82  307.795   sky130_fd_sc_hd__nand2_1
+       12   75.072   sky130_fd_sc_hd__nand2b_1
+      291 1.09E+03   sky130_fd_sc_hd__nor2_1
+       22  137.632   sky130_fd_sc_hd__nor2b_1
+        4   20.019   sky130_fd_sc_hd__nor3_1
+        2   12.512   sky130_fd_sc_hd__nor4_1
+        6   60.058   sky130_fd_sc_hd__o211a_1
+        8   60.058   sky130_fd_sc_hd__o211ai_1
+        6   45.043   sky130_fd_sc_hd__o21a_1
+       30  150.144   sky130_fd_sc_hd__o21ai_0
+        4   35.034   sky130_fd_sc_hd__o221ai_1
+        2   12.512   sky130_fd_sc_hd__o22ai_1
+        4   40.038   sky130_fd_sc_hd__o311a_1
+        2   17.517   sky130_fd_sc_hd__o311ai_0
+        4   35.034   sky130_fd_sc_hd__o31a_1
+        8   60.058   sky130_fd_sc_hd__o31ai_1
+        4   35.034   sky130_fd_sc_hd__o41ai_1
+        4   25.024   sky130_fd_sc_hd__or3_1
+        6   45.043   sky130_fd_sc_hd__or4_1
+       58  507.987   sky130_fd_sc_hd__xnor2_1
+       91  797.014   sky130_fd_sc_hd__xor2_1
+      196 4.66E+03   sky130_fd_sc_hd__xor3_1
+       20 9.46E+03 submodules
+        1   67.565   $paramod\setfa\N=s32'00000000000000000000000000000010
+        1   135.13   $paramod\setfa\N=s32'00000000000000000000000000000100
+        1  202.694   $paramod\setfa\N=s32'00000000000000000000000000000110
+        2  540.518   $paramod\setfa\N=s32'00000000000000000000000000001000
+        1  337.824   $paramod\setfa\N=s32'00000000000000000000000000001010
+        1  405.389   $paramod\setfa\N=s32'00000000000000000000000000001100
+        1  472.954   $paramod\setfa\N=s32'00000000000000000000000000001110
+        1  608.083   $paramod\setfa\N=s32'00000000000000000000000000010010
+        1  641.866   $paramod\setfa\N=s32'00000000000000000000000000010011
+        1  675.648   $paramod\setfa\N=s32'00000000000000000000000000010100
+        1  810.778   $paramod\setfa\N=s32'00000000000000000000000000011000
+        1   844.56   $paramod\setfa\N=s32'00000000000000000000000000011001
+        1  878.342   $paramod\setfa\N=s32'00000000000000000000000000011010
+        2   90.086   $paramod\setha\N=s32'00000000000000000000000000000011
+        1  120.115   $paramod\setha\N=s32'00000000000000000000000000001000
+        2 2.35E+03   KSA32
+        1  280.269   inv32bits
+
+   Chip area for top module '\dadda1': 11130.675200
+     of which used for sequential elements: 0.000000 (0.00%)
+

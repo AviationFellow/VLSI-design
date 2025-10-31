@@ -1,0 +1,157 @@
+
+Magic 8.3 revision 552 - Compiled on Friday 19 September 2025 09:27:01 PM IST.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Processing system .magicrc file
+Using technology "sky130A", version 1.0.544-0-g4e7a1f4
+Reading LEF data from file /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef.
+This action cannot be undone.
+LEF read, Line 82 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 83 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 116 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 118 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 119 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 125 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 126 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 127 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 160 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 168 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 169 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 171 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 172 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 173 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 210 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 211 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 213 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 214 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 215 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 252 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 253 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 255 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 256 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 257 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 294 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 295 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read: Processed 801 lines.
+Reading LEF data from file /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef.
+This action cannot be undone.
+LEF read: Processed 56536 lines.
+Reading DEF data from file /home/arumukamganesmoorthe/ME/digital_design/vedic_mul/layout/vedic_routed.def.
+This action cannot be undone.
+  Processed 3 vias total.
+DEF read, Line 928 (Warning): Character in instance name converted to underscore.
+DEF read, Line 929 (Warning): Character in instance name converted to underscore.
+DEF read, Line 930 (Warning): Character in instance name converted to underscore.
+DEF read, Line 931 (Warning): Character in instance name converted to underscore.
+DEF read, Line 932 (Warning): Character in instance name converted to underscore.
+DEF read, Line 933 (Warning): Character in instance name converted to underscore.
+DEF read, Line 934 (Warning): Character in instance name converted to underscore.
+DEF read, Line 935 (Warning): Character in instance name converted to underscore.
+DEF read, Line 936 (Warning): Character in instance name converted to underscore.
+DEF read, Line 937 (Warning): Character in instance name converted to underscore.
+DEF read, Line 938 (Warning): Character in instance name converted to underscore.
+DEF read, Line 939 (Warning): Character in instance name converted to underscore.
+DEF read, Line 940 (Warning): Character in instance name converted to underscore.
+DEF read, Line 941 (Warning): Character in instance name converted to underscore.
+DEF read, Line 942 (Warning): Character in instance name converted to underscore.
+DEF read, Line 943 (Warning): Character in instance name converted to underscore.
+DEF read, Line 944 (Warning): Character in instance name converted to underscore.
+DEF read, Line 945 (Warning): Character in instance name converted to underscore.
+DEF read, Line 946 (Warning): Character in instance name converted to underscore.
+DEF read, Line 947 (Warning): Character in instance name converted to underscore.
+DEF read, Line 948 (Warning): Character in instance name converted to underscore.
+DEF read, Line 949 (Warning): Character in instance name converted to underscore.
+DEF read, Line 950 (Warning): Character in instance name converted to underscore.
+DEF read, Line 951 (Warning): Character in instance name converted to underscore.
+DEF read, Line 952 (Warning): Character in instance name converted to underscore.
+DEF read, Line 953 (Warning): Character in instance name converted to underscore.
+DEF read, Line 954 (Warning): Character in instance name converted to underscore.
+DEF read, Line 955 (Warning): Character in instance name converted to underscore.
+DEF read, Line 956 (Warning): Character in instance name converted to underscore.
+DEF read, Line 957 (Warning): Character in instance name converted to underscore.
+DEF read, Line 958 (Warning): Character in instance name converted to underscore.
+DEF read, Line 959 (Warning): Character in instance name converted to underscore.
+DEF read, Line 960 (Warning): Character in instance name converted to underscore.
+DEF read, Line 960 (Warning): Character in instance name converted to underscore.
+DEF read, Line 961 (Warning): Character in instance name converted to underscore.
+DEF read, Line 961 (Warning): Character in instance name converted to underscore.
+DEF read, Line 962 (Warning): Character in instance name converted to underscore.
+DEF read, Line 962 (Warning): Character in instance name converted to underscore.
+DEF read, Line 963 (Warning): Character in instance name converted to underscore.
+DEF read, Line 963 (Warning): Character in instance name converted to underscore.
+DEF read, Line 964 (Warning): Character in instance name converted to underscore.
+DEF read, Line 964 (Warning): Character in instance name converted to underscore.
+DEF read, Line 965 (Warning): Character in instance name converted to underscore.
+DEF read, Line 965 (Warning): Character in instance name converted to underscore.
+DEF read, Line 966 (Warning): Character in instance name converted to underscore.
+DEF read, Line 966 (Warning): Character in instance name converted to underscore.
+DEF read, Line 967 (Warning): Character in instance name converted to underscore.
+DEF read, Line 967 (Warning): Character in instance name converted to underscore.
+DEF read, Line 968 (Warning): Character in instance name converted to underscore.
+DEF read, Line 968 (Warning): Character in instance name converted to underscore.
+DEF read, Line 969 (Warning): Character in instance name converted to underscore.
+DEF read, Line 969 (Warning): Character in instance name converted to underscore.
+DEF read, Line 970 (Warning): Character in instance name converted to underscore.
+DEF read, Line 970 (Warning): Character in instance name converted to underscore.
+DEF read, Line 971 (Warning): Character in instance name converted to underscore.
+DEF read, Line 971 (Warning): Character in instance name converted to underscore.
+DEF read, Line 972 (Warning): Character in instance name converted to underscore.
+DEF read, Line 972 (Warning): Character in instance name converted to underscore.
+DEF read, Line 973 (Warning): Character in instance name converted to underscore.
+DEF read, Line 973 (Warning): Character in instance name converted to underscore.
+DEF read, Line 974 (Warning): Character in instance name converted to underscore.
+DEF read, Line 974 (Warning): Character in instance name converted to underscore.
+DEF read, Line 975 (Warning): Character in instance name converted to underscore.
+DEF read, Line 975 (Warning): Character in instance name converted to underscore.
+DEF read, Line 976 (Warning): Character in instance name converted to underscore.
+DEF read, Line 976 (Warning): Character in instance name converted to underscore.
+DEF read, Line 977 (Warning): Character in instance name converted to underscore.
+DEF read, Line 977 (Warning): Character in instance name converted to underscore.
+DEF read, Line 978 (Warning): Character in instance name converted to underscore.
+DEF read, Line 978 (Warning): Character in instance name converted to underscore.
+DEF read, Line 979 (Warning): Character in instance name converted to underscore.
+DEF read, Line 979 (Warning): Character in instance name converted to underscore.
+DEF read, Line 980 (Warning): Character in instance name converted to underscore.
+DEF read, Line 980 (Warning): Character in instance name converted to underscore.
+DEF read, Line 981 (Warning): Character in instance name converted to underscore.
+DEF read, Line 981 (Warning): Character in instance name converted to underscore.
+DEF read, Line 982 (Warning): Character in instance name converted to underscore.
+DEF read, Line 982 (Warning): Character in instance name converted to underscore.
+DEF read, Line 983 (Warning): Character in instance name converted to underscore.
+DEF read, Line 983 (Warning): Character in instance name converted to underscore.
+DEF read, Line 984 (Warning): Character in instance name converted to underscore.
+DEF read, Line 984 (Warning): Character in instance name converted to underscore.
+DEF read, Line 985 (Warning): Character in instance name converted to underscore.
+DEF read, Line 985 (Warning): Character in instance name converted to underscore.
+DEF read, Line 986 (Warning): Character in instance name converted to underscore.
+DEF read, Line 986 (Warning): Character in instance name converted to underscore.
+DEF read, Line 987 (Warning): Character in instance name converted to underscore.
+DEF read, Line 987 (Warning): Character in instance name converted to underscore.
+DEF read, Line 988 (Warning): Character in instance name converted to underscore.
+DEF read, Line 988 (Warning): Character in instance name converted to underscore.
+DEF read, Line 989 (Warning): Character in instance name converted to underscore.
+DEF read, Line 989 (Warning): Character in instance name converted to underscore.
+DEF read, Line 990 (Warning): Character in instance name converted to underscore.
+DEF read, Line 990 (Warning): Character in instance name converted to underscore.
+DEF read, Line 991 (Warning): Character in instance name converted to underscore.
+DEF read, Line 991 (Warning): Character in instance name converted to underscore.
+DEF read, Line 992 (Warning): Character in instance name converted to underscore.
+DEF read, Line 992 (Warning): Character in instance name converted to underscore.
+DEF read, Line 993 (Warning): Character in instance name converted to underscore.
+DEF read, Line 993 (Warning): Character in instance name converted to underscore.
+DEF read:  Further warnings will not be reported.
+  Processed 3898 subcell instances total.
+  Processed 64 pins total.
+  Processed 2 special nets total.
+  Processed 3197 nets total.
+DEF read: Processed 42143 lines.
+DEF Read: encountered 10209 warnings total.
+Cell vedic couldn't be read
+No such file or directory
+Creating new cell
+Total DRC violations: 0
+No DRC violations found!
