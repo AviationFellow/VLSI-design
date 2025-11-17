@@ -1,0 +1,149 @@
+OpenROAD v2.0-24548-g4fa65c3a24 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0227] LEF file: /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef, created 14 layers, 25 vias
+[WARNING ODB-0220] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef at line 2.
+
+[INFO ODB-0227] LEF file: /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef, created 437 library cells
+[INFO ODB-0127] Reading DEF file: /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/layout/booth_multiplier_cts.def
+[INFO ODB-0128] Design: booth_multiplier
+[INFO ODB-0130]     Created 68 pins.
+[INFO ODB-0131]     Created 749 components and 3990 component-terminals.
+[INFO ODB-0132]     Created 3 special nets and 2533 connections.
+[INFO ODB-0133]     Created 485 nets and 1408 connections.
+[INFO ODB-0134] Finished DEF file: /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/layout/booth_multiplier_cts.def
+[INFO GRT-0020] Min routing layer: met1
+[INFO GRT-0021] Max routing layer: met5
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer li1     Track-Pitch = 0.4600  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met1    Track-Pitch = 0.3400  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met2    Track-Pitch = 0.4600  line-2-Via Pitch: 0.3500
+[INFO GRT-0088] Layer met3    Track-Pitch = 0.6800  line-2-Via Pitch: 0.6150
+[INFO GRT-0088] Layer met4    Track-Pitch = 0.9200  line-2-Via Pitch: 1.0400
+[INFO GRT-0088] Layer met5    Track-Pitch = 3.4000  line-2-Via Pitch: 3.1100
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 1650
+[INFO GRT-0019] Found 68 clock nets.
+[WARNING GRT-0035] Pin clkbuf_0_clk_in/X is outside die area.
+[WARNING GRT-0035] Pin clkbuf_0_clk_in/X is outside die area.
+[WARNING GRT-0035] Pin clkbuf_0_clk_in/X is outside die area.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 99
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical            0             0          0.00%
+met1       Horizontal       5916          3510          40.67%
+met2       Vertical         4420          3788          14.30%
+met3       Horizontal       2958          2655          10.24%
+met4       Vertical         1802          1479          17.92%
+met5       Horizontal        578           544          5.88%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 2174
+[INFO GRT-0198] Via related Steiner nodes: 27
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 2654
+[INFO GRT-0112] Final usage 3D: 9251
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+li1                  0             0            0.00%             0 /  0 /  0
+met1              3510           621           17.69%             0 /  0 /  0
+met2              3788           616           16.26%             0 /  0 /  0
+met3              2655            52            1.96%             0 /  0 /  0
+met4              1479             0            0.00%             0 /  0 /  0
+met5               544             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total            11976          1289           10.76%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 14917 um
+[INFO GRT-0014] Routed nets: 432
+[INFO DRT-0149] Reading tech and libs.
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+
+Units:                1000
+Number of layers:     13
+Number of macros:     437
+Number of vias:       28
+Number of viarulegen: 25
+
+[INFO DRT-0150] Reading design.
+[ERROR DRT-0305] Net alu/add_sub_module/zero_ of signal type GROUND is not routable by TritonRoute. Move to special nets.
+DRT-0305
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+Startpoint: cntrl_gen0/_4_ (falling edge-triggered flip-flop clocked by clk)
+Endpoint: AQQ_1_register/A0_reg/_4_
+          (recovery check against falling-edge clock clk)
+Path Group: asynchronous
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   5.00    5.00   clock clk (fall edge)
+   0.00    5.00   clock network delay (ideal)
+   0.00    5.00 v cntrl_gen0/_4_/CLK_N (sky130_fd_sc_hd__dfrtn_1)
+   0.77    5.77 v cntrl_gen0/_4_/Q (sky130_fd_sc_hd__dfrtn_1)
+   2.58    8.35 ^ _4_/Y (sky130_fd_sc_hd__nand2b_1)
+   0.00    8.35 ^ AQQ_1_register/A0_reg/_4_/RESET_B (sky130_fd_sc_hd__dfrtn_1)
+           8.35   data arrival time
+
+  15.00   15.00   clock clk (fall edge)
+   0.00   15.00   clock network delay (ideal)
+  -0.05   14.95   clock uncertainty
+   0.00   14.95   clock reconvergence pessimism
+          14.95 v AQQ_1_register/A0_reg/_4_/CLK_N (sky130_fd_sc_hd__dfrtn_1)
+  -0.56   14.39   library recovery time
+          14.39   data required time
+---------------------------------------------------------
+          14.39   data required time
+          -8.35   data arrival time
+---------------------------------------------------------
+           6.04   slack (MET)
+
+
+Startpoint: c0/c0/_4_ (falling edge-triggered flip-flop clocked by clk)
+Endpoint: busy (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   5.00    5.00   clock clk (fall edge)
+   0.00    5.00   clock network delay (ideal)
+   0.00    5.00 v c0/c0/_4_/CLK_N (sky130_fd_sc_hd__dfrtn_1)
+   0.32    5.32 v c0/c0/_4_/Q (sky130_fd_sc_hd__dfrtn_1)
+   0.85    6.17 v _3_/X (sky130_fd_sc_hd__or4_1)
+   0.00    6.17 v busy (out)
+           6.17   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+  -0.05    9.95   clock uncertainty
+   0.00    9.95   clock reconvergence pessimism
+  -0.80    9.15   output external delay
+           9.15   data required time
+---------------------------------------------------------
+           9.15   data required time
+          -6.17   data arrival time
+---------------------------------------------------------
+           2.98   slack (MET)
+
+
+Design area 5650 u^2 47% utilization.

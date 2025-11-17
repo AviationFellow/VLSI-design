@@ -1,0 +1,209 @@
+OpenROAD v2.0-24548-g4fa65c3a24 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0227] LEF file: /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef, created 14 layers, 25 vias
+[WARNING ODB-0220] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef at line 2.
+
+[INFO ODB-0227] LEF file: /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef, created 437 library cells
+[INFO ODB-0127] Reading DEF file: /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/layout/booth_multiplier_placed.def
+[INFO ODB-0128] Design: booth_multiplier
+[INFO ODB-0130]     Created 68 pins.
+[INFO ODB-0131]     Created 710 components and 3756 component-terminals.
+[INFO ODB-0132]     Created 3 special nets and 2416 connections.
+[INFO ODB-0133]     Created 455 nets and 1339 connections.
+[INFO ODB-0134] Finished DEF file: /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/layout/booth_multiplier_placed.def
+[INFO CTS-0050] Root buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0051] Sink buffer is sky130_fd_sc_hd__clkbuf_4.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    sky130_fd_sc_hd__clkbuf_4
+                    sky130_fd_sc_hd__clkbuf_8
+                    sky130_fd_sc_hd__clkbuf_16
+[INFO CTS-0049] Characterization buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0007] Net "clk_in" found for clock "clk".
+[INFO CTS-0011]  Clock net "clk_in" for macros has 1 sinks.
+[INFO CTS-0011]  Clock net "clk_in_regs" for registers has 2 sinks.
+[INFO CTS-0011]  Clock net "clk" for macros has 1 sinks.
+[INFO CTS-0011]  Clock net "clk_regs" for registers has 2 sinks.
+[INFO CTS-0010]  Clock net "AQQ_1_register/clk" has 66 sinks.
+[WARNING CTS-0041] Net "AQQ_1_register\/Q_1_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/Q9_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/Q8_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/Q7_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/Q6_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/Q5_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/Q4_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/Q3_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/Q2_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/Q1_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/Q15_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/Q14_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/Q13_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/Q12_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/Q11_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/Q10_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/Q0_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/A9_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/A8_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/A7_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/A6_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/A5_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/A4_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/A3_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/A2_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/A1_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/A15_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/A14_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/A13_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/A12_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/A11_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/A10_reg\/_1_" has 1 sinks. Skipping...
+[WARNING CTS-0041] Net "AQQ_1_register\/A0_reg\/_1_" has 1 sinks. Skipping...
+[INFO CTS-0008] TritonCTS found 5 clock nets.
+[INFO CTS-0097] Characterization used 3 buffer(s) types.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net clk_in.
+[INFO CTS-0028]  Total number of sinks: 1.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0023]  Original sink region: [(111107, 104385), (111107, 104385)].
+[INFO CTS-0024]  Normalized sink region: [(8.16963, 7.67537), (8.16963, 7.67537)].
+[INFO CTS-0025]     Width:  0.0000.
+[INFO CTS-0026]     Height: 0.0000.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 1
+    Sub-region size: 0.0000 X 0.0000
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 1.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net clk_in_regs.
+[INFO CTS-0028]  Total number of sinks: 2.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0023]  Original sink region: [(103755, 96620), (104685, 98770)].
+[INFO CTS-0024]  Normalized sink region: [(7.62904, 7.10441), (7.69743, 7.2625)].
+[INFO CTS-0025]     Width:  0.0684.
+[INFO CTS-0026]     Height: 0.1581.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 1
+    Sub-region size: 0.0684 X 0.0790
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 2.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net clk.
+[INFO CTS-0028]  Total number of sinks: 1.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0023]  Original sink region: [(88522, 94050), (88522, 94050)].
+[INFO CTS-0024]  Normalized sink region: [(6.50897, 6.91544), (6.50897, 6.91544)].
+[INFO CTS-0025]     Width:  0.0000.
+[INFO CTS-0026]     Height: 0.0000.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 1
+    Sub-region size: 0.0000 X 0.0000
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 1.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net clk_regs.
+[INFO CTS-0028]  Total number of sinks: 2.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0023]  Original sink region: [(85815, 97070), (86745, 102060)].
+[INFO CTS-0024]  Normalized sink region: [(6.30993, 7.1375), (6.37831, 7.50441)].
+[INFO CTS-0025]     Width:  0.0684.
+[INFO CTS-0026]     Height: 0.3669.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 1
+    Sub-region size: 0.0684 X 0.1835
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 2.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net AQQ_1_register\/clk.
+[INFO CTS-0028]  Total number of sinks: 66.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0023]  Original sink region: [(30565, 15470), (104685, 97070)].
+[INFO CTS-0024]  Normalized sink region: [(2.24743, 1.1375), (7.69743, 7.1375)].
+[INFO CTS-0025]     Width:  5.4500.
+[INFO CTS-0026]     Height: 6.0000.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 33
+    Sub-region size: 5.4500 X 3.0000
+[INFO CTS-0034]     Segment length (rounded): 1.
+ Level 2
+    Direction: Horizontal
+    Sinks per sub-region: 17
+    Sub-region size: 2.7250 X 3.0000
+[INFO CTS-0034]     Segment length (rounded): 1.
+ Level 3
+    Direction: Vertical
+    Sinks per sub-region: 9
+    Sub-region size: 2.7250 X 1.5000
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 66.
+[INFO CTS-0018]     Created 2 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 2 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 1:1..
+[INFO CTS-0017]     Max level of the clock tree: 1.
+[INFO CTS-0018]     Created 3 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 3 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 1:2..
+[INFO CTS-0017]     Max level of the clock tree: 1.
+[INFO CTS-0018]     Created 2 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 2 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 1:1..
+[INFO CTS-0017]     Max level of the clock tree: 1.
+[INFO CTS-0018]     Created 3 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 3 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 1:2..
+[INFO CTS-0017]     Max level of the clock tree: 1.
+[INFO CTS-0018]     Created 9 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 9 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 6:1, 7:2, 8:3, 10:1, 12:1..
+[INFO CTS-0017]     Max level of the clock tree: 3.
+[INFO CTS-0124] Clock net "clk_in"
+[INFO CTS-0125]  Sinks 1
+[INFO CTS-0098] Clock net "clk_in_regs"
+[INFO CTS-0099]  Sinks 3
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 30.20 um
+[INFO CTS-0102]  Path depth 2 - 2
+[INFO CTS-0207]  Leaf load cells 9
+[INFO CTS-0124] Clock net "clk"
+[INFO CTS-0125]  Sinks 1
+[INFO CTS-0098] Clock net "clk_regs"
+[INFO CTS-0099]  Sinks 3
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 33.01 um
+[INFO CTS-0102]  Path depth 2 - 2
+[INFO CTS-0207]  Leaf load cells 9
+[INFO CTS-0098] Clock net "AQQ_1_register\/clk"
+[INFO CTS-0099]  Sinks 73
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 109.37 um
+[INFO CTS-0102]  Path depth 2 - 2
+[INFO CTS-0207]  Leaf load cells 9
+[WARNING EST-0018] wire capacitance for corner default is zero. Use the set_wire_rc command to set wire resistance and capacitance.
+[WARNING EST-0027] no estimated parasitics. Using wire load models.
+[INFO RSZ-0033] No hold violations found.

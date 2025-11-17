@@ -1,0 +1,3474 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.57+125 (git sha1 d5053033e, g++ 11.5.0 -fPIC -O3)
+
+yosys> # Read liberty file
+
+yosys> read_liberty -lib /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+1. Executing Liberty frontend: /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Imported 428 cell types from liberty file.
+
+yosys> 
+
+yosys> # Read Verilog RTL
+
+yosys> read_verilog /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/*.v
+
+2. Executing Verilog-2005 frontend: /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/A_Q_Q_1.v
+Parsing Verilog input from `/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/A_Q_Q_1.v' to AST representation.
+Generating RTLIL representation for module `\A_Q_Q_1'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/M_register.v
+Parsing Verilog input from `/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/M_register.v' to AST representation.
+Generating RTLIL representation for module `\M_register'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/add_sub.v
+Parsing Verilog input from `/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/add_sub.v' to AST representation.
+Generating RTLIL representation for module `\add_sub'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/and_xor.v
+Parsing Verilog input from `/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/and_xor.v' to AST representation.
+Generating RTLIL representation for module `\and_xor'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/black_cell.v
+Parsing Verilog input from `/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/black_cell.v' to AST representation.
+Generating RTLIL representation for module `\black_cell'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/booth_multiplier.v
+Parsing Verilog input from `/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/booth_multiplier.v' to AST representation.
+Generating RTLIL representation for module `\booth_multiplier'.
+Successfully finished Verilog frontend.
+
+8. Executing Verilog-2005 frontend: /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/counter.v
+Parsing Verilog input from `/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/counter.v' to AST representation.
+Generating RTLIL representation for module `\counter'.
+Successfully finished Verilog frontend.
+
+9. Executing Verilog-2005 frontend: /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/d_ff.v
+Parsing Verilog input from `/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/d_ff.v' to AST representation.
+Generating RTLIL representation for module `\d_ff'.
+Successfully finished Verilog frontend.
+
+10. Executing Verilog-2005 frontend: /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/grey_cell.v
+Parsing Verilog input from `/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/grey_cell.v' to AST representation.
+Generating RTLIL representation for module `\grey_cell'.
+Successfully finished Verilog frontend.
+
+11. Executing Verilog-2005 frontend: /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/kogge_stone_adder.v
+Parsing Verilog input from `/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/kogge_stone_adder.v' to AST representation.
+Generating RTLIL representation for module `\kogge_stone_adder'.
+Successfully finished Verilog frontend.
+
+12. Executing Verilog-2005 frontend: /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/mux2x1.v
+Parsing Verilog input from `/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/mux2x1.v' to AST representation.
+Generating RTLIL representation for module `\mux2x1'.
+Successfully finished Verilog frontend.
+
+yosys> 
+
+yosys> # Hierarchy check
+
+yosys> 
+
+yosys> hierarchy -check -auto-top
+
+13. Executing HIERARCHY pass (managing design hierarchy).
+
+13.1. Finding top of design hierarchy..
+root of   0 design levels: mux2x1              
+root of   1 design levels: kogge_stone_adder   
+root of   0 design levels: grey_cell           
+root of   0 design levels: d_ff                
+root of   1 design levels: counter             
+root of   3 design levels: booth_multiplier    
+root of   0 design levels: black_cell          
+root of   0 design levels: and_xor             
+root of   2 design levels: add_sub             
+root of   1 design levels: M_register          
+root of   1 design levels: A_Q_Q_1             
+Automatically selected booth_multiplier as design top module.
+
+13.2. Analyzing design hierarchy..
+Top module:  \booth_multiplier
+Used module:     \A_Q_Q_1
+Used module:         \d_ff
+Used module:         \mux2x1
+Used module:     \add_sub
+Used module:         \kogge_stone_adder
+Used module:             \grey_cell
+Used module:             \black_cell
+Used module:             \and_xor
+Used module:     \M_register
+Used module:     \counter
+
+13.3. Analyzing design hierarchy..
+Top module:  \booth_multiplier
+Used module:     \A_Q_Q_1
+Used module:         \d_ff
+Used module:         \mux2x1
+Used module:     \add_sub
+Used module:         \kogge_stone_adder
+Used module:             \grey_cell
+Used module:             \black_cell
+Used module:             \and_xor
+Used module:     \M_register
+Used module:     \counter
+Removed 0 unused modules.
+Mapping positional arguments of cell kogge_stone_adder.l5_gc0 (grey_cell).
+Mapping positional arguments of cell kogge_stone_adder.l4_bc0 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l4_gc7 (grey_cell).
+Mapping positional arguments of cell kogge_stone_adder.l4_gc6 (grey_cell).
+Mapping positional arguments of cell kogge_stone_adder.l4_gc5 (grey_cell).
+Mapping positional arguments of cell kogge_stone_adder.l4_gc4 (grey_cell).
+Mapping positional arguments of cell kogge_stone_adder.l4_gc3 (grey_cell).
+Mapping positional arguments of cell kogge_stone_adder.l4_gc2 (grey_cell).
+Mapping positional arguments of cell kogge_stone_adder.l4_gc1 (grey_cell).
+Mapping positional arguments of cell kogge_stone_adder.l4_gc0 (grey_cell).
+Mapping positional arguments of cell kogge_stone_adder.l3_bc8 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l3_bc7 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l3_bc6 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l3_bc5 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l3_bc4 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l3_bc3 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l3_bc2 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l3_bc1 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l3_bc0 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l3_gc3 (grey_cell).
+Mapping positional arguments of cell kogge_stone_adder.l3_gc2 (grey_cell).
+Mapping positional arguments of cell kogge_stone_adder.l3_gc1 (grey_cell).
+Mapping positional arguments of cell kogge_stone_adder.l3_gc0 (grey_cell).
+Mapping positional arguments of cell kogge_stone_adder.l2_bc12 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l2_bc11 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l2_bc10 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l2_bc9 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l2_bc8 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l2_bc7 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l2_bc6 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l2_bc5 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l2_bc4 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l2_bc3 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l2_bc2 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l2_bc1 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l2_bc0 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l2_gc1 (grey_cell).
+Mapping positional arguments of cell kogge_stone_adder.l2_gc0 (grey_cell).
+Mapping positional arguments of cell kogge_stone_adder.l1_bc14 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l1_bc13 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l1_bc12 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l1_bc11 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l1_bc10 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l1_bc9 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l1_bc8 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l1_bc7 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l1_bc6 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l1_bc5 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l1_bc4 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l1_bc3 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l1_bc2 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l1_bc1 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l1_bc0 (black_cell).
+Mapping positional arguments of cell kogge_stone_adder.l1_gc0 (grey_cell).
+Mapping positional arguments of cell kogge_stone_adder.ax15 (and_xor).
+Mapping positional arguments of cell kogge_stone_adder.ax14 (and_xor).
+Mapping positional arguments of cell kogge_stone_adder.ax13 (and_xor).
+Mapping positional arguments of cell kogge_stone_adder.ax12 (and_xor).
+Mapping positional arguments of cell kogge_stone_adder.ax11 (and_xor).
+Mapping positional arguments of cell kogge_stone_adder.ax10 (and_xor).
+Mapping positional arguments of cell kogge_stone_adder.ax9 (and_xor).
+Mapping positional arguments of cell kogge_stone_adder.ax8 (and_xor).
+Mapping positional arguments of cell kogge_stone_adder.ax7 (and_xor).
+Mapping positional arguments of cell kogge_stone_adder.ax6 (and_xor).
+Mapping positional arguments of cell kogge_stone_adder.ax5 (and_xor).
+Mapping positional arguments of cell kogge_stone_adder.ax4 (and_xor).
+Mapping positional arguments of cell kogge_stone_adder.ax3 (and_xor).
+Mapping positional arguments of cell kogge_stone_adder.ax2 (and_xor).
+Mapping positional arguments of cell kogge_stone_adder.ax1 (and_xor).
+Mapping positional arguments of cell kogge_stone_adder.ax0 (and_xor).
+Mapping positional arguments of cell counter.c4 (d_ff).
+Mapping positional arguments of cell counter.c3 (d_ff).
+Mapping positional arguments of cell counter.c2 (d_ff).
+Mapping positional arguments of cell counter.c1 (d_ff).
+Mapping positional arguments of cell counter.c0 (d_ff).
+Mapping positional arguments of cell booth_multiplier.AQQ_1_register (A_Q_Q_1).
+Mapping positional arguments of cell booth_multiplier.alu (add_sub).
+Mapping positional arguments of cell booth_multiplier.M_reg (M_register).
+Mapping positional arguments of cell booth_multiplier.c0 (counter).
+Mapping positional arguments of cell booth_multiplier.cntrl_gen0 (d_ff).
+Mapping positional arguments of cell M_register.genblk1[15].d_ureg0 (d_ff).
+Mapping positional arguments of cell M_register.genblk1[14].d_ureg0 (d_ff).
+Mapping positional arguments of cell M_register.genblk1[13].d_ureg0 (d_ff).
+Mapping positional arguments of cell M_register.genblk1[12].d_ureg0 (d_ff).
+Mapping positional arguments of cell M_register.genblk1[11].d_ureg0 (d_ff).
+Mapping positional arguments of cell M_register.genblk1[10].d_ureg0 (d_ff).
+Mapping positional arguments of cell M_register.genblk1[9].d_ureg0 (d_ff).
+Mapping positional arguments of cell M_register.genblk1[8].d_ureg0 (d_ff).
+Mapping positional arguments of cell M_register.genblk1[7].d_ureg0 (d_ff).
+Mapping positional arguments of cell M_register.genblk1[6].d_ureg0 (d_ff).
+Mapping positional arguments of cell M_register.genblk1[5].d_ureg0 (d_ff).
+Mapping positional arguments of cell M_register.genblk1[4].d_ureg0 (d_ff).
+Mapping positional arguments of cell M_register.genblk1[3].d_ureg0 (d_ff).
+Mapping positional arguments of cell M_register.genblk1[2].d_ureg0 (d_ff).
+Mapping positional arguments of cell M_register.genblk1[1].d_ureg0 (d_ff).
+Mapping positional arguments of cell M_register.genblk1[0].d_ureg0 (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.Q_1_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.Q0_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.Q0_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.Q1_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.Q1_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.Q2_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.Q2_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.Q3_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.Q3_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.Q4_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.Q4_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.Q5_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.Q5_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.Q6_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.Q6_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.Q7_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.Q7_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.Q8_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.Q8_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.Q9_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.Q9_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.Q10_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.Q10_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.Q11_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.Q11_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.Q12_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.Q12_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.Q13_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.Q13_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.Q14_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.Q14_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.Q15_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.Q15_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.A0_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.A0_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.A1_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.A1_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.A2_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.A2_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.A3_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.A3_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.A4_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.A4_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.A5_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.A5_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.A6_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.A6_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.A7_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.A7_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.A8_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.A8_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.A9_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.A9_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.A10_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.A10_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.A11_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.A11_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.A12_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.A12_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.A13_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.A13_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.A14_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.A14_sel (mux2x1).
+Mapping positional arguments of cell A_Q_Q_1.A15_reg (d_ff).
+Mapping positional arguments of cell A_Q_Q_1.A15_sel (mux2x1).
+
+yosys> #hierarchy -check -top booth_multiplier
+
+yosys> 
+
+yosys> # Generic synthesis
+
+yosys> synth -top booth_multiplier
+
+14. Executing SYNTH pass.
+
+14.1. Executing HIERARCHY pass (managing design hierarchy).
+
+14.1.1. Analyzing design hierarchy..
+Top module:  \booth_multiplier
+Used module:     \A_Q_Q_1
+Used module:         \d_ff
+Used module:         \mux2x1
+Used module:     \add_sub
+Used module:         \kogge_stone_adder
+Used module:             \grey_cell
+Used module:             \black_cell
+Used module:             \and_xor
+Used module:     \M_register
+Used module:     \counter
+
+14.1.2. Analyzing design hierarchy..
+Top module:  \booth_multiplier
+Used module:     \A_Q_Q_1
+Used module:         \d_ff
+Used module:         \mux2x1
+Used module:     \add_sub
+Used module:         \kogge_stone_adder
+Used module:             \grey_cell
+Used module:             \black_cell
+Used module:             \and_xor
+Used module:     \M_register
+Used module:     \counter
+Removed 0 unused modules.
+
+14.2. Executing PROC pass (convert processes to netlists).
+
+14.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+14.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/d_ff.v:9$36 in module d_ff.
+Removed a total of 0 dead cases.
+
+14.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 2 redundant assignments.
+Promoted 2 assignments to connections.
+
+14.2.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\d_ff.$proc$/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/d_ff.v:4$39'.
+  Set init value: \Q = 1'0
+  Set init value: \Qb = 1'1
+
+14.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst in `\d_ff.$proc$/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/d_ff.v:9$36'.
+
+14.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+14.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\d_ff.$proc$/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/d_ff.v:4$39'.
+Creating decoders for process `\d_ff.$proc$/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/d_ff.v:9$36'.
+     1/2: $0\Qb[0:0]
+     2/2: $0\Q[0:0]
+
+14.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+14.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\d_ff.\Q' using process `\d_ff.$proc$/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/d_ff.v:9$36'.
+  created $adff cell `$procdff$63' with negative edge clock and positive level reset.
+Creating register for signal `\d_ff.\Qb' using process `\d_ff.$proc$/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/d_ff.v:9$36'.
+  created $adff cell `$procdff$68' with negative edge clock and positive level reset.
+
+14.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+14.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `d_ff.$proc$/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/d_ff.v:4$39'.
+Removing empty process `d_ff.$proc$/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/rtl/d_ff.v:9$36'.
+Cleaned up 0 empty switches.
+
+14.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mux2x1.
+Optimizing module kogge_stone_adder.
+Optimizing module grey_cell.
+Optimizing module d_ff.
+<suppressed ~4 debug messages>
+Optimizing module counter.
+Optimizing module booth_multiplier.
+Optimizing module black_cell.
+Optimizing module and_xor.
+Optimizing module add_sub.
+Optimizing module M_register.
+Optimizing module A_Q_Q_1.
+
+14.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mux2x1.
+Optimizing module kogge_stone_adder.
+Optimizing module grey_cell.
+Optimizing module d_ff.
+Optimizing module counter.
+Optimizing module booth_multiplier.
+Optimizing module black_cell.
+Optimizing module and_xor.
+Optimizing module add_sub.
+Optimizing module M_register.
+Optimizing module A_Q_Q_1.
+
+14.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mux2x1..
+Finding unused cells or wires in module \kogge_stone_adder..
+Finding unused cells or wires in module \grey_cell..
+Finding unused cells or wires in module \d_ff..
+Finding unused cells or wires in module \counter..
+Finding unused cells or wires in module \booth_multiplier..
+Finding unused cells or wires in module \black_cell..
+Finding unused cells or wires in module \and_xor..
+Finding unused cells or wires in module \add_sub..
+Finding unused cells or wires in module \M_register..
+Finding unused cells or wires in module \A_Q_Q_1..
+Removed 4 unused cells and 62 unused wires.
+<suppressed ~14 debug messages>
+
+14.5. Executing CHECK pass (checking for obvious problems).
+Checking module A_Q_Q_1...
+Checking module M_register...
+Checking module add_sub...
+Checking module and_xor...
+Checking module black_cell...
+Checking module booth_multiplier...
+Checking module counter...
+Checking module d_ff...
+Checking module grey_cell...
+Checking module kogge_stone_adder...
+Checking module mux2x1...
+Found and reported 0 problems.
+
+14.6. Executing OPT pass (performing simple optimizations).
+
+14.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module A_Q_Q_1.
+Optimizing module M_register.
+Optimizing module add_sub.
+Optimizing module and_xor.
+Optimizing module black_cell.
+Optimizing module booth_multiplier.
+Optimizing module counter.
+Optimizing module d_ff.
+Optimizing module grey_cell.
+Optimizing module kogge_stone_adder.
+Optimizing module mux2x1.
+
+14.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\A_Q_Q_1'.
+Finding identical cells in module `\M_register'.
+Finding identical cells in module `\add_sub'.
+Finding identical cells in module `\and_xor'.
+Finding identical cells in module `\black_cell'.
+Finding identical cells in module `\booth_multiplier'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\counter'.
+Finding identical cells in module `\d_ff'.
+Finding identical cells in module `\grey_cell'.
+Finding identical cells in module `\kogge_stone_adder'.
+Finding identical cells in module `\mux2x1'.
+Removed a total of 1 cells.
+
+14.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \A_Q_Q_1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \M_register..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \add_sub..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \and_xor..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \black_cell..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \booth_multiplier..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \counter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \d_ff..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \grey_cell..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kogge_stone_adder..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \mux2x1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+14.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \A_Q_Q_1.
+  Optimizing cells in module \M_register.
+  Optimizing cells in module \add_sub.
+  Optimizing cells in module \and_xor.
+  Optimizing cells in module \black_cell.
+  Optimizing cells in module \booth_multiplier.
+  Optimizing cells in module \counter.
+  Optimizing cells in module \d_ff.
+  Optimizing cells in module \grey_cell.
+  Optimizing cells in module \kogge_stone_adder.
+  Optimizing cells in module \mux2x1.
+Performed a total of 0 changes.
+
+14.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\A_Q_Q_1'.
+Finding identical cells in module `\M_register'.
+Finding identical cells in module `\add_sub'.
+Finding identical cells in module `\and_xor'.
+Finding identical cells in module `\black_cell'.
+Finding identical cells in module `\booth_multiplier'.
+Finding identical cells in module `\counter'.
+Finding identical cells in module `\d_ff'.
+Finding identical cells in module `\grey_cell'.
+Finding identical cells in module `\kogge_stone_adder'.
+Finding identical cells in module `\mux2x1'.
+Removed a total of 0 cells.
+
+14.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \A_Q_Q_1..
+Finding unused cells or wires in module \M_register..
+Finding unused cells or wires in module \add_sub..
+Finding unused cells or wires in module \and_xor..
+Finding unused cells or wires in module \black_cell..
+Finding unused cells or wires in module \booth_multiplier..
+Finding unused cells or wires in module \counter..
+Finding unused cells or wires in module \d_ff..
+Finding unused cells or wires in module \grey_cell..
+Finding unused cells or wires in module \kogge_stone_adder..
+Finding unused cells or wires in module \mux2x1..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+14.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module A_Q_Q_1.
+Optimizing module M_register.
+Optimizing module add_sub.
+Optimizing module and_xor.
+Optimizing module black_cell.
+Optimizing module booth_multiplier.
+Optimizing module counter.
+Optimizing module d_ff.
+Optimizing module grey_cell.
+Optimizing module kogge_stone_adder.
+Optimizing module mux2x1.
+
+14.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+14.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \A_Q_Q_1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \M_register..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \add_sub..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \and_xor..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \black_cell..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \booth_multiplier..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \counter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \d_ff..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \grey_cell..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kogge_stone_adder..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \mux2x1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+14.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \A_Q_Q_1.
+  Optimizing cells in module \M_register.
+  Optimizing cells in module \add_sub.
+  Optimizing cells in module \and_xor.
+  Optimizing cells in module \black_cell.
+  Optimizing cells in module \booth_multiplier.
+  Optimizing cells in module \counter.
+  Optimizing cells in module \d_ff.
+  Optimizing cells in module \grey_cell.
+  Optimizing cells in module \kogge_stone_adder.
+  Optimizing cells in module \mux2x1.
+Performed a total of 0 changes.
+
+14.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\A_Q_Q_1'.
+Finding identical cells in module `\M_register'.
+Finding identical cells in module `\add_sub'.
+Finding identical cells in module `\and_xor'.
+Finding identical cells in module `\black_cell'.
+Finding identical cells in module `\booth_multiplier'.
+Finding identical cells in module `\counter'.
+Finding identical cells in module `\d_ff'.
+Finding identical cells in module `\grey_cell'.
+Finding identical cells in module `\kogge_stone_adder'.
+Finding identical cells in module `\mux2x1'.
+Removed a total of 0 cells.
+
+14.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \A_Q_Q_1..
+Finding unused cells or wires in module \M_register..
+Finding unused cells or wires in module \add_sub..
+Finding unused cells or wires in module \and_xor..
+Finding unused cells or wires in module \black_cell..
+Finding unused cells or wires in module \booth_multiplier..
+Finding unused cells or wires in module \counter..
+Finding unused cells or wires in module \d_ff..
+Finding unused cells or wires in module \grey_cell..
+Finding unused cells or wires in module \kogge_stone_adder..
+Finding unused cells or wires in module \mux2x1..
+
+14.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module A_Q_Q_1.
+Optimizing module M_register.
+Optimizing module add_sub.
+Optimizing module and_xor.
+Optimizing module black_cell.
+Optimizing module booth_multiplier.
+Optimizing module counter.
+Optimizing module d_ff.
+Optimizing module grey_cell.
+Optimizing module kogge_stone_adder.
+Optimizing module mux2x1.
+
+14.6.16. Finished fast OPT passes. (There is nothing left to do.)
+
+14.7. Executing FSM pass (extract and optimize FSM).
+
+14.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+14.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+14.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+14.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \A_Q_Q_1..
+Finding unused cells or wires in module \M_register..
+Finding unused cells or wires in module \add_sub..
+Finding unused cells or wires in module \and_xor..
+Finding unused cells or wires in module \black_cell..
+Finding unused cells or wires in module \booth_multiplier..
+Finding unused cells or wires in module \counter..
+Finding unused cells or wires in module \d_ff..
+Finding unused cells or wires in module \grey_cell..
+Finding unused cells or wires in module \kogge_stone_adder..
+Finding unused cells or wires in module \mux2x1..
+
+14.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+14.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+14.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+14.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+14.8. Executing OPT pass (performing simple optimizations).
+
+14.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module A_Q_Q_1.
+Optimizing module M_register.
+Optimizing module add_sub.
+Optimizing module and_xor.
+Optimizing module black_cell.
+Optimizing module booth_multiplier.
+Optimizing module counter.
+Optimizing module d_ff.
+Optimizing module grey_cell.
+Optimizing module kogge_stone_adder.
+Optimizing module mux2x1.
+
+14.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\A_Q_Q_1'.
+Finding identical cells in module `\M_register'.
+Finding identical cells in module `\add_sub'.
+Finding identical cells in module `\and_xor'.
+Finding identical cells in module `\black_cell'.
+Finding identical cells in module `\booth_multiplier'.
+Finding identical cells in module `\counter'.
+Finding identical cells in module `\d_ff'.
+Finding identical cells in module `\grey_cell'.
+Finding identical cells in module `\kogge_stone_adder'.
+Finding identical cells in module `\mux2x1'.
+Removed a total of 0 cells.
+
+14.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \A_Q_Q_1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \M_register..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \add_sub..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \and_xor..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \black_cell..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \booth_multiplier..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \counter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \d_ff..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \grey_cell..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kogge_stone_adder..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \mux2x1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+14.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \A_Q_Q_1.
+  Optimizing cells in module \M_register.
+  Optimizing cells in module \add_sub.
+  Optimizing cells in module \and_xor.
+  Optimizing cells in module \black_cell.
+  Optimizing cells in module \booth_multiplier.
+  Optimizing cells in module \counter.
+  Optimizing cells in module \d_ff.
+  Optimizing cells in module \grey_cell.
+  Optimizing cells in module \kogge_stone_adder.
+  Optimizing cells in module \mux2x1.
+Performed a total of 0 changes.
+
+14.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\A_Q_Q_1'.
+Finding identical cells in module `\M_register'.
+Finding identical cells in module `\add_sub'.
+Finding identical cells in module `\and_xor'.
+Finding identical cells in module `\black_cell'.
+Finding identical cells in module `\booth_multiplier'.
+Finding identical cells in module `\counter'.
+Finding identical cells in module `\d_ff'.
+Finding identical cells in module `\grey_cell'.
+Finding identical cells in module `\kogge_stone_adder'.
+Finding identical cells in module `\mux2x1'.
+Removed a total of 0 cells.
+
+14.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \A_Q_Q_1..
+Finding unused cells or wires in module \M_register..
+Finding unused cells or wires in module \add_sub..
+Finding unused cells or wires in module \and_xor..
+Finding unused cells or wires in module \black_cell..
+Finding unused cells or wires in module \booth_multiplier..
+Finding unused cells or wires in module \counter..
+Finding unused cells or wires in module \d_ff..
+Finding unused cells or wires in module \grey_cell..
+Finding unused cells or wires in module \kogge_stone_adder..
+Finding unused cells or wires in module \mux2x1..
+
+14.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module A_Q_Q_1.
+Optimizing module M_register.
+Optimizing module add_sub.
+Optimizing module and_xor.
+Optimizing module black_cell.
+Optimizing module booth_multiplier.
+Optimizing module counter.
+Optimizing module d_ff.
+Optimizing module grey_cell.
+Optimizing module kogge_stone_adder.
+Optimizing module mux2x1.
+
+14.8.9. Finished fast OPT passes. (There is nothing left to do.)
+
+14.9. Executing WREDUCE pass (reducing word size of cells).
+
+14.10. Executing PEEPOPT pass (run peephole optimizers).
+
+14.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \A_Q_Q_1..
+Finding unused cells or wires in module \M_register..
+Finding unused cells or wires in module \add_sub..
+Finding unused cells or wires in module \and_xor..
+Finding unused cells or wires in module \black_cell..
+Finding unused cells or wires in module \booth_multiplier..
+Finding unused cells or wires in module \counter..
+Finding unused cells or wires in module \d_ff..
+Finding unused cells or wires in module \grey_cell..
+Finding unused cells or wires in module \kogge_stone_adder..
+Finding unused cells or wires in module \mux2x1..
+
+14.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module A_Q_Q_1:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module M_register:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module add_sub:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module and_xor:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module black_cell:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module booth_multiplier:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module counter:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module d_ff:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module grey_cell:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module kogge_stone_adder:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module mux2x1:
+  created 0 $alu and 0 $macc cells.
+
+14.13. Executing SHARE pass (SAT-based resource sharing).
+
+14.14. Executing OPT pass (performing simple optimizations).
+
+14.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module A_Q_Q_1.
+Optimizing module M_register.
+Optimizing module add_sub.
+Optimizing module and_xor.
+Optimizing module black_cell.
+Optimizing module booth_multiplier.
+Optimizing module counter.
+Optimizing module d_ff.
+Optimizing module grey_cell.
+Optimizing module kogge_stone_adder.
+Optimizing module mux2x1.
+
+14.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\A_Q_Q_1'.
+Finding identical cells in module `\M_register'.
+Finding identical cells in module `\add_sub'.
+Finding identical cells in module `\and_xor'.
+Finding identical cells in module `\black_cell'.
+Finding identical cells in module `\booth_multiplier'.
+Finding identical cells in module `\counter'.
+Finding identical cells in module `\d_ff'.
+Finding identical cells in module `\grey_cell'.
+Finding identical cells in module `\kogge_stone_adder'.
+Finding identical cells in module `\mux2x1'.
+Removed a total of 0 cells.
+
+14.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \A_Q_Q_1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \M_register..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \add_sub..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \and_xor..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \black_cell..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \booth_multiplier..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \counter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \d_ff..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \grey_cell..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kogge_stone_adder..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \mux2x1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+14.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \A_Q_Q_1.
+  Optimizing cells in module \M_register.
+  Optimizing cells in module \add_sub.
+  Optimizing cells in module \and_xor.
+  Optimizing cells in module \black_cell.
+  Optimizing cells in module \booth_multiplier.
+  Optimizing cells in module \counter.
+  Optimizing cells in module \d_ff.
+  Optimizing cells in module \grey_cell.
+  Optimizing cells in module \kogge_stone_adder.
+  Optimizing cells in module \mux2x1.
+Performed a total of 0 changes.
+
+14.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\A_Q_Q_1'.
+Finding identical cells in module `\M_register'.
+Finding identical cells in module `\add_sub'.
+Finding identical cells in module `\and_xor'.
+Finding identical cells in module `\black_cell'.
+Finding identical cells in module `\booth_multiplier'.
+Finding identical cells in module `\counter'.
+Finding identical cells in module `\d_ff'.
+Finding identical cells in module `\grey_cell'.
+Finding identical cells in module `\kogge_stone_adder'.
+Finding identical cells in module `\mux2x1'.
+Removed a total of 0 cells.
+
+14.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \A_Q_Q_1..
+Finding unused cells or wires in module \M_register..
+Finding unused cells or wires in module \add_sub..
+Finding unused cells or wires in module \and_xor..
+Finding unused cells or wires in module \black_cell..
+Finding unused cells or wires in module \booth_multiplier..
+Finding unused cells or wires in module \counter..
+Finding unused cells or wires in module \d_ff..
+Finding unused cells or wires in module \grey_cell..
+Finding unused cells or wires in module \kogge_stone_adder..
+Finding unused cells or wires in module \mux2x1..
+
+14.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module A_Q_Q_1.
+Optimizing module M_register.
+Optimizing module add_sub.
+Optimizing module and_xor.
+Optimizing module black_cell.
+Optimizing module booth_multiplier.
+Optimizing module counter.
+Optimizing module d_ff.
+Optimizing module grey_cell.
+Optimizing module kogge_stone_adder.
+Optimizing module mux2x1.
+
+14.14.9. Finished fast OPT passes. (There is nothing left to do.)
+
+14.15. Executing MEMORY pass.
+
+14.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+14.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+14.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+14.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+14.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+14.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \A_Q_Q_1..
+Finding unused cells or wires in module \M_register..
+Finding unused cells or wires in module \add_sub..
+Finding unused cells or wires in module \and_xor..
+Finding unused cells or wires in module \black_cell..
+Finding unused cells or wires in module \booth_multiplier..
+Finding unused cells or wires in module \counter..
+Finding unused cells or wires in module \d_ff..
+Finding unused cells or wires in module \grey_cell..
+Finding unused cells or wires in module \kogge_stone_adder..
+Finding unused cells or wires in module \mux2x1..
+
+14.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+14.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+14.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \A_Q_Q_1..
+Finding unused cells or wires in module \M_register..
+Finding unused cells or wires in module \add_sub..
+Finding unused cells or wires in module \and_xor..
+Finding unused cells or wires in module \black_cell..
+Finding unused cells or wires in module \booth_multiplier..
+Finding unused cells or wires in module \counter..
+Finding unused cells or wires in module \d_ff..
+Finding unused cells or wires in module \grey_cell..
+Finding unused cells or wires in module \kogge_stone_adder..
+Finding unused cells or wires in module \mux2x1..
+
+14.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+14.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \A_Q_Q_1..
+Finding unused cells or wires in module \M_register..
+Finding unused cells or wires in module \add_sub..
+Finding unused cells or wires in module \and_xor..
+Finding unused cells or wires in module \black_cell..
+Finding unused cells or wires in module \booth_multiplier..
+Finding unused cells or wires in module \counter..
+Finding unused cells or wires in module \d_ff..
+Finding unused cells or wires in module \grey_cell..
+Finding unused cells or wires in module \kogge_stone_adder..
+Finding unused cells or wires in module \mux2x1..
+
+14.17. Executing OPT pass (performing simple optimizations).
+
+14.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module A_Q_Q_1.
+Optimizing module M_register.
+Optimizing module add_sub.
+Optimizing module and_xor.
+Optimizing module black_cell.
+Optimizing module booth_multiplier.
+Optimizing module counter.
+Optimizing module d_ff.
+Optimizing module grey_cell.
+Optimizing module kogge_stone_adder.
+<suppressed ~35 debug messages>
+Optimizing module mux2x1.
+
+14.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\A_Q_Q_1'.
+Finding identical cells in module `\M_register'.
+Finding identical cells in module `\add_sub'.
+Finding identical cells in module `\and_xor'.
+Finding identical cells in module `\black_cell'.
+Finding identical cells in module `\booth_multiplier'.
+Finding identical cells in module `\counter'.
+Finding identical cells in module `\d_ff'.
+Finding identical cells in module `\grey_cell'.
+Finding identical cells in module `\kogge_stone_adder'.
+Finding identical cells in module `\mux2x1'.
+Removed a total of 0 cells.
+
+14.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \A_Q_Q_1..
+Finding unused cells or wires in module \M_register..
+Finding unused cells or wires in module \add_sub..
+Finding unused cells or wires in module \and_xor..
+Finding unused cells or wires in module \black_cell..
+Finding unused cells or wires in module \booth_multiplier..
+Finding unused cells or wires in module \counter..
+Finding unused cells or wires in module \d_ff..
+Finding unused cells or wires in module \grey_cell..
+Finding unused cells or wires in module \kogge_stone_adder..
+Finding unused cells or wires in module \mux2x1..
+
+14.17.5. Finished fast OPT passes.
+
+14.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+14.19. Executing OPT pass (performing simple optimizations).
+
+14.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module A_Q_Q_1.
+Optimizing module M_register.
+Optimizing module add_sub.
+Optimizing module and_xor.
+Optimizing module black_cell.
+Optimizing module booth_multiplier.
+Optimizing module counter.
+Optimizing module d_ff.
+Optimizing module grey_cell.
+Optimizing module kogge_stone_adder.
+Optimizing module mux2x1.
+
+14.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\A_Q_Q_1'.
+Finding identical cells in module `\M_register'.
+Finding identical cells in module `\add_sub'.
+Finding identical cells in module `\and_xor'.
+Finding identical cells in module `\black_cell'.
+Finding identical cells in module `\booth_multiplier'.
+Finding identical cells in module `\counter'.
+Finding identical cells in module `\d_ff'.
+Finding identical cells in module `\grey_cell'.
+Finding identical cells in module `\kogge_stone_adder'.
+Finding identical cells in module `\mux2x1'.
+Removed a total of 0 cells.
+
+14.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \A_Q_Q_1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \M_register..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \add_sub..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \and_xor..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \black_cell..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \booth_multiplier..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \counter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \d_ff..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \grey_cell..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \kogge_stone_adder..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \mux2x1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+14.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \A_Q_Q_1.
+  Optimizing cells in module \M_register.
+  Optimizing cells in module \add_sub.
+  Optimizing cells in module \and_xor.
+  Optimizing cells in module \black_cell.
+  Optimizing cells in module \booth_multiplier.
+  Optimizing cells in module \counter.
+  Optimizing cells in module \d_ff.
+  Optimizing cells in module \grey_cell.
+  Optimizing cells in module \kogge_stone_adder.
+  Optimizing cells in module \mux2x1.
+Performed a total of 0 changes.
+
+14.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\A_Q_Q_1'.
+Finding identical cells in module `\M_register'.
+Finding identical cells in module `\add_sub'.
+Finding identical cells in module `\and_xor'.
+Finding identical cells in module `\black_cell'.
+Finding identical cells in module `\booth_multiplier'.
+Finding identical cells in module `\counter'.
+Finding identical cells in module `\d_ff'.
+Finding identical cells in module `\grey_cell'.
+Finding identical cells in module `\kogge_stone_adder'.
+Finding identical cells in module `\mux2x1'.
+Removed a total of 0 cells.
+
+14.19.6. Executing OPT_SHARE pass.
+
+14.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \A_Q_Q_1..
+Finding unused cells or wires in module \M_register..
+Finding unused cells or wires in module \add_sub..
+Finding unused cells or wires in module \and_xor..
+Finding unused cells or wires in module \black_cell..
+Finding unused cells or wires in module \booth_multiplier..
+Finding unused cells or wires in module \counter..
+Finding unused cells or wires in module \d_ff..
+Finding unused cells or wires in module \grey_cell..
+Finding unused cells or wires in module \kogge_stone_adder..
+Finding unused cells or wires in module \mux2x1..
+
+14.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module A_Q_Q_1.
+Optimizing module M_register.
+Optimizing module add_sub.
+Optimizing module and_xor.
+Optimizing module black_cell.
+Optimizing module booth_multiplier.
+Optimizing module counter.
+Optimizing module d_ff.
+Optimizing module grey_cell.
+Optimizing module kogge_stone_adder.
+Optimizing module mux2x1.
+
+14.19.10. Finished fast OPT passes. (There is nothing left to do.)
+
+14.20. Executing TECHMAP pass (map to technology primitives).
+
+14.20.1. Executing Verilog-2005 frontend: /home/arumukamganesmoorthe/yosys/share/techmap.v
+Parsing Verilog input from `/home/arumukamganesmoorthe/yosys/share/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `\$connect'.
+Generating RTLIL representation for module `\$input_port'.
+Successfully finished Verilog frontend.
+
+14.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $reduce_or.
+No more expansions possible.
+<suppressed ~132 debug messages>
+
+14.21. Executing OPT pass (performing simple optimizations).
+
+14.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module A_Q_Q_1.
+Optimizing module M_register.
+Optimizing module add_sub.
+Optimizing module and_xor.
+Optimizing module black_cell.
+Optimizing module booth_multiplier.
+Optimizing module counter.
+Optimizing module d_ff.
+Optimizing module grey_cell.
+Optimizing module kogge_stone_adder.
+Optimizing module mux2x1.
+
+14.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\A_Q_Q_1'.
+Finding identical cells in module `\M_register'.
+Finding identical cells in module `\add_sub'.
+Finding identical cells in module `\and_xor'.
+Finding identical cells in module `\black_cell'.
+Finding identical cells in module `\booth_multiplier'.
+Finding identical cells in module `\counter'.
+Finding identical cells in module `\d_ff'.
+Finding identical cells in module `\grey_cell'.
+Finding identical cells in module `\kogge_stone_adder'.
+Finding identical cells in module `\mux2x1'.
+Removed a total of 0 cells.
+
+14.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \A_Q_Q_1..
+Finding unused cells or wires in module \M_register..
+Finding unused cells or wires in module \add_sub..
+Finding unused cells or wires in module \and_xor..
+Finding unused cells or wires in module \black_cell..
+Finding unused cells or wires in module \booth_multiplier..
+Finding unused cells or wires in module \counter..
+Finding unused cells or wires in module \d_ff..
+Finding unused cells or wires in module \grey_cell..
+Finding unused cells or wires in module \kogge_stone_adder..
+Finding unused cells or wires in module \mux2x1..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+14.21.5. Finished fast OPT passes.
+
+14.22. Executing ABC pass (technology mapping using ABC).
+
+14.22.1. Extracting gate netlist of module `\A_Q_Q_1' to `<abc-temp-dir>/input.blif'..
+
+14.22.1.1. Executed ABC.
+Extracted 2 gates and 7 wires to a netlist network with 5 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 17 2025 23:50:06)
+ABC: abc 01> set abcout /dev/stdout
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-WnAyyz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: abc 04> echo "ABC_DONE"
+
+14.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        5
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+14.22.2. Extracting gate netlist of module `\M_register' to `<abc-temp-dir>/input.blif'..
+Don't call ABC as there is nothing to map.
+
+14.22.2.1. Executed ABC.
+Extracted 0 gates and 0 wires to a netlist network with 0 inputs and 0 outputs.
+Removing temp directory.
+
+14.22.3. Extracting gate netlist of module `\add_sub' to `<abc-temp-dir>/input.blif'..
+
+14.22.3.1. Executed ABC.
+Extracted 16 gates and 33 wires to a netlist network with 17 inputs and 16 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 17 2025 23:50:06)
+ABC: abc 01> set abcout /dev/stdout
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-WnAyyz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: abc 04> echo "ABC_DONE"
+
+14.22.3.2. Re-integrating ABC results.
+ABC RESULTS:               XOR cells:       16
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:       17
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+
+14.22.4. Extracting gate netlist of module `\and_xor' to `<abc-temp-dir>/input.blif'..
+
+14.22.4.1. Executed ABC.
+Extracted 2 gates and 4 wires to a netlist network with 2 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 17 2025 23:50:06)
+ABC: abc 01> set abcout /dev/stdout
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-WnAyyz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: abc 04> echo "ABC_DONE"
+
+14.22.4.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:               XOR cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        2
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+14.22.5. Extracting gate netlist of module `\black_cell' to `<abc-temp-dir>/input.blif'..
+
+14.22.5.1. Executed ABC.
+Extracted 3 gates and 7 wires to a netlist network with 4 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 17 2025 23:50:06)
+ABC: abc 01> set abcout /dev/stdout
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-WnAyyz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: abc 04> echo "ABC_DONE"
+
+14.22.5.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+14.22.6. Extracting gate netlist of module `\booth_multiplier' to `<abc-temp-dir>/input.blif'..
+
+14.22.6.1. Executed ABC.
+Extracted 12 gates and 22 wires to a netlist network with 10 inputs and 7 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 17 2025 23:50:06)
+ABC: abc 01> set abcout /dev/stdout
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-WnAyyz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: abc 04> echo "ABC_DONE"
+
+14.22.6.2. Re-integrating ABC results.
+ABC RESULTS:            ANDNOT cells:        3
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:                OR cells:        3
+ABC RESULTS:             ORNOT cells:        1
+ABC RESULTS:               XOR cells:        1
+ABC RESULTS:        internal signals:        5
+ABC RESULTS:           input signals:       10
+ABC RESULTS:          output signals:        7
+Removing temp directory.
+
+14.22.7. Extracting gate netlist of module `\counter' to `<abc-temp-dir>/input.blif'..
+Don't call ABC as there is nothing to map.
+
+14.22.7.1. Executed ABC.
+Extracted 0 gates and 0 wires to a netlist network with 0 inputs and 0 outputs.
+Removing temp directory.
+
+14.22.8. Extracting gate netlist of module `\d_ff' to `<abc-temp-dir>/input.blif'..
+
+14.22.8.1. Executed ABC.
+Extracted 1 gates and 2 wires to a netlist network with 1 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 17 2025 23:50:06)
+ABC: abc 01> set abcout /dev/stdout
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-WnAyyz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: abc 04> echo "ABC_DONE"
+
+14.22.8.2. Re-integrating ABC results.
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        1
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+14.22.9. Extracting gate netlist of module `\grey_cell' to `<abc-temp-dir>/input.blif'..
+
+14.22.9.1. Executed ABC.
+Extracted 2 gates and 5 wires to a netlist network with 3 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 17 2025 23:50:06)
+ABC: abc 01> set abcout /dev/stdout
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-WnAyyz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: abc 04> echo "ABC_DONE"
+
+14.22.9.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        3
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+14.22.10. Extracting gate netlist of module `\kogge_stone_adder' to `<abc-temp-dir>/input.blif'..
+
+14.22.10.1. Executed ABC.
+Extracted 16 gates and 48 wires to a netlist network with 32 inputs and 16 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 17 2025 23:50:06)
+ABC: abc 01> set abcout /dev/stdout
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-WnAyyz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: abc 04> echo "ABC_DONE"
+
+14.22.10.2. Re-integrating ABC results.
+ABC RESULTS:               XOR cells:       16
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:       32
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+
+14.22.11. Extracting gate netlist of module `\mux2x1' to `<abc-temp-dir>/input.blif'..
+
+14.22.11.1. Executed ABC.
+Extracted 1 gates and 4 wires to a netlist network with 3 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 17 2025 23:50:06)
+ABC: abc 01> set abcout /dev/stdout
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-WnAyyz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: abc 04> echo "ABC_DONE"
+
+14.22.11.2. Re-integrating ABC results.
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        3
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+Removing global temp directory.
+
+14.23. Executing OPT pass (performing simple optimizations).
+
+14.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module A_Q_Q_1.
+Optimizing module M_register.
+Optimizing module add_sub.
+Optimizing module and_xor.
+Optimizing module black_cell.
+Optimizing module booth_multiplier.
+Optimizing module counter.
+Optimizing module d_ff.
+Optimizing module grey_cell.
+Optimizing module kogge_stone_adder.
+Optimizing module mux2x1.
+
+14.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\A_Q_Q_1'.
+Finding identical cells in module `\M_register'.
+Finding identical cells in module `\add_sub'.
+Finding identical cells in module `\and_xor'.
+Finding identical cells in module `\black_cell'.
+Finding identical cells in module `\booth_multiplier'.
+Finding identical cells in module `\counter'.
+Finding identical cells in module `\d_ff'.
+Finding identical cells in module `\grey_cell'.
+Finding identical cells in module `\kogge_stone_adder'.
+Finding identical cells in module `\mux2x1'.
+Removed a total of 0 cells.
+
+14.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \A_Q_Q_1..
+Finding unused cells or wires in module \M_register..
+Finding unused cells or wires in module \add_sub..
+Finding unused cells or wires in module \and_xor..
+Finding unused cells or wires in module \black_cell..
+Finding unused cells or wires in module \booth_multiplier..
+Finding unused cells or wires in module \counter..
+Finding unused cells or wires in module \d_ff..
+Finding unused cells or wires in module \grey_cell..
+Finding unused cells or wires in module \kogge_stone_adder..
+Finding unused cells or wires in module \mux2x1..
+Removed 0 unused cells and 131 unused wires.
+<suppressed ~13 debug messages>
+
+14.23.5. Finished fast OPT passes.
+
+14.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `booth_multiplier'. Setting top module to booth_multiplier.
+
+14.24.1. Analyzing design hierarchy..
+Top module:  \booth_multiplier
+Used module:     \A_Q_Q_1
+Used module:         \d_ff
+Used module:         \mux2x1
+Used module:     \M_register
+Used module:     \add_sub
+Used module:         \kogge_stone_adder
+Used module:             \and_xor
+Used module:             \black_cell
+Used module:             \grey_cell
+Used module:     \counter
+
+14.24.2. Analyzing design hierarchy..
+Top module:  \booth_multiplier
+Used module:     \A_Q_Q_1
+Used module:         \d_ff
+Used module:         \mux2x1
+Used module:     \M_register
+Used module:     \add_sub
+Used module:         \kogge_stone_adder
+Used module:             \and_xor
+Used module:             \black_cell
+Used module:             \grey_cell
+Used module:     \counter
+Removed 0 unused modules.
+
+14.25. Printing statistics.
+
+=== A_Q_Q_1 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       15 wires
+      137 wire bits
+       15 public wires
+      137 public wire bits
+        9 ports
+       71 port bits
+        2 cells
+        1   $_AND_
+        1   $_MUX_
+       65 submodules
+       33   d_ff
+       32   mux2x1
+
+=== M_register ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        4 wires
+       34 wire bits
+        4 public wires
+       34 public wire bits
+        4 ports
+       34 port bits
+       16 submodules
+       16   d_ff
+
+=== add_sub ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        5 wires
+       65 wire bits
+        5 public wires
+       65 public wire bits
+        4 ports
+       49 port bits
+       16 cells
+       16   $_XOR_
+        1 submodules
+        1   kogge_stone_adder
+
+=== and_xor ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        4 wires
+        4 wire bits
+        4 public wires
+        4 public wire bits
+        4 ports
+        4 port bits
+        2 cells
+        1   $_AND_
+        1   $_XOR_
+
+=== black_cell ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        7 wires
+        7 wire bits
+        6 public wires
+        6 public wire bits
+        6 ports
+        6 port bits
+        3 cells
+        2   $_AND_
+        1   $_OR_
+
+=== booth_multiplier ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       20 wires
+      116 wire bits
+       18 public wires
+      114 public wire bits
+        7 ports
+       68 port bits
+        9 cells
+        3   $_ANDNOT_
+        1   $_NOT_
+        1   $_ORNOT_
+        3   $_OR_
+        1   $_XOR_
+        5 submodules
+        1   A_Q_Q_1
+        1   M_register
+        1   add_sub
+        1   counter
+        1   d_ff
+
+=== counter ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        4 wires
+       12 wire bits
+        4 public wires
+       12 public wire bits
+        3 ports
+        7 port bits
+        5 submodules
+        5   d_ff
+
+=== d_ff ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        6 wires
+        6 wire bits
+        5 public wires
+        5 public wire bits
+        5 ports
+        5 port bits
+        3 cells
+        1   $_DFF_NN0_
+        1   $_DFF_NN1_
+        1   $_NOT_
+
+=== grey_cell ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        5 wires
+        5 wire bits
+        4 public wires
+        4 public wire bits
+        4 ports
+        4 port bits
+        2 cells
+        1   $_AND_
+        1   $_OR_
+
+=== kogge_stone_adder ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       15 wires
+      210 wire bits
+       15 public wires
+      210 public wire bits
+        5 ports
+       50 port bits
+       16 cells
+       16   $_XOR_
+       70 submodules
+       16   and_xor
+       38   black_cell
+       16   grey_cell
+
+=== mux2x1 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        4 wires
+        4 wire bits
+        4 public wires
+        4 public wire bits
+        4 ports
+        4 port bits
+        1 cells
+        1   $_MUX_
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+      418 booth_multiplier
+        2 A_Q_Q_1
+        3   d_ff
+        1   mux2x1
+        3   d_ff
+       16 add_sub
+       16   kogge_stone_adder
+        2     and_xor
+        3     black_cell
+        2     grey_cell
+        3   d_ff
+        3 d_ff
+
+        +----------Count including submodules.
+        | 
+      931 wires
+     1442 wire bits
+      820 public wires
+     1331 public wire bits
+      791 ports
+     1038 port bits
+        - memories
+        - memory bits
+        - processes
+      418 cells
+        3   $_ANDNOT_
+      109   $_AND_
+       55   $_DFF_NN0_
+       55   $_DFF_NN1_
+       33   $_MUX_
+       56   $_NOT_
+        1   $_ORNOT_
+       57   $_OR_
+       49   $_XOR_
+        5 submodules
+        1   A_Q_Q_1
+        1   M_register
+        1   add_sub
+        1   counter
+        1   d_ff
+
+14.26. Executing CHECK pass (checking for obvious problems).
+Checking module A_Q_Q_1...
+Checking module M_register...
+Checking module add_sub...
+Checking module and_xor...
+Checking module black_cell...
+Checking module booth_multiplier...
+Checking module counter...
+Checking module d_ff...
+Checking module grey_cell...
+Checking module kogge_stone_adder...
+Checking module mux2x1...
+Found and reported 0 problems.
+
+yosys> 
+
+yosys> # Technology mapping to Sky130 cells
+
+yosys> dfflibmap -liberty /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+15. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_1 (noninv, pins=3, area=20.02) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtn_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_NN0_.
+  cell sky130_fd_sc_hd__dfrtp_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__edfxtp_1 (noninv, pins=4, area=30.03) is a direct match for cell type $_DFFE_PP_.
+  cell sky130_fd_sc_hd__dfbbn_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_NNN_.
+  cell sky130_fd_sc_hd__dfbbp_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_1 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    \sky130_fd_sc_hd__dfrtn_1 _DFF_NN0_ (.CLK_N( C), .D( D), .Q( Q), .RESET_B( R));
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_1 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    \sky130_fd_sc_hd__edfxtp_1 _DFFE_PP_ (.CLK( C), .D( D), .DE( E), .Q( Q));
+    \sky130_fd_sc_hd__dfbbn_1 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \sky130_fd_sc_hd__dfbbp_1 _DFFSR_PNN_ (.CLK( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+15.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+<suppressed ~24 debug messages>
+Mapping DFF cells in module `\A_Q_Q_1':
+Mapping DFF cells in module `\M_register':
+Mapping DFF cells in module `\add_sub':
+Mapping DFF cells in module `\and_xor':
+Mapping DFF cells in module `\black_cell':
+Mapping DFF cells in module `\booth_multiplier':
+Mapping DFF cells in module `\counter':
+Mapping DFF cells in module `\d_ff':
+  mapped 1 $_DFF_NN0_ cells to \sky130_fd_sc_hd__dfrtn_1 cells.
+  mapped 1 $_DFF_PN1_ cells to \sky130_fd_sc_hd__dfstp_2 cells.
+Mapping DFF cells in module `\grey_cell':
+Mapping DFF cells in module `\kogge_stone_adder':
+Mapping DFF cells in module `\mux2x1':
+
+yosys> 
+
+yosys> abc -liberty /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+16. Executing ABC pass (technology mapping using ABC).
+
+16.1. Extracting gate netlist of module `\A_Q_Q_1' to `<abc-temp-dir>/input.blif'..
+
+16.1.1. Executed ABC.
+Extracted 2 gates and 7 wires to a netlist network with 5 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 17 2025 23:50:06)
+ABC: abc 01> set abcout /dev/stdout
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.07 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__diode_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-stat+ strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: e cell "sky130_fd_sc_hd__einvn_0".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_8".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_bleeder_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__lpflow_inputisolatch_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_4".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib" has 334 cells (94 skipped: 63 seq; 13 tri-state; 18 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.10 sec
+ABC: Memory =   19.85 MB. Time =     0.10 sec
+ABC: Warning: Detected 9 multi-output cells (for example, "sky130_fd_sc_hd__fa_1").
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: abc 07> echo "ABC_DONE"
+
+16.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__and2_0 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__mux2_1 cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        5
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+16.2. Extracting gate netlist of module `\M_register' to `<abc-temp-dir>/input.blif'..
+Don't call ABC as there is nothing to map.
+
+16.2.1. Executed ABC.
+Extracted 0 gates and 0 wires to a netlist network with 0 inputs and 0 outputs.
+Removing temp directory.
+
+16.3. Extracting gate netlist of module `\add_sub' to `<abc-temp-dir>/input.blif'..
+
+16.3.1. Executed ABC.
+Extracted 16 gates and 33 wires to a netlist network with 17 inputs and 16 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 17 2025 23:50:06)
+ABC: abc 01> set abcout /dev/stdout
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.07 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__diode_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-stat+ strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: e cell "sky130_fd_sc_hd__einvn_0".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_8".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_bleeder_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__lpflow_inputisolatch_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_4".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib" has 334 cells (94 skipped: 63 seq; 13 tri-state; 18 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.10 sec
+ABC: Memory =   19.85 MB. Time =     0.10 sec
+ABC: Warning: Detected 9 multi-output cells (for example, "sky130_fd_sc_hd__fa_1").
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: abc 07> echo "ABC_DONE"
+
+16.3.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__xor2_1 cells:       16
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:       17
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+
+16.4. Extracting gate netlist of module `\and_xor' to `<abc-temp-dir>/input.blif'..
+
+16.4.1. Executed ABC.
+Extracted 2 gates and 4 wires to a netlist network with 2 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 17 2025 23:50:06)
+ABC: abc 01> set abcout /dev/stdout
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.07 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__diode_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-stat+ strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: e cell "sky130_fd_sc_hd__einvn_0".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_8".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_bleeder_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__lpflow_inputisolatch_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_4".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib" has 334 cells (94 skipped: 63 seq; 13 tri-state; 18 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.10 sec
+ABC: Memory =   19.85 MB. Time =     0.10 sec
+ABC: Warning: Detected 9 multi-output cells (for example, "sky130_fd_sc_hd__fa_1").
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: abc 07> echo "ABC_DONE"
+
+16.4.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__and2_0 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__xor2_1 cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        2
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+16.5. Extracting gate netlist of module `\black_cell' to `<abc-temp-dir>/input.blif'..
+
+16.5.1. Executed ABC.
+Extracted 3 gates and 7 wires to a netlist network with 4 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 17 2025 23:50:06)
+ABC: abc 01> set abcout /dev/stdout
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.07 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__diode_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-stat+ strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: e cell "sky130_fd_sc_hd__einvn_0".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_8".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_bleeder_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__lpflow_inputisolatch_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_4".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib" has 334 cells (94 skipped: 63 seq; 13 tri-state; 18 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.10 sec
+ABC: Memory =   19.85 MB. Time =     0.10 sec
+ABC: Warning: Detected 9 multi-output cells (for example, "sky130_fd_sc_hd__fa_1").
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: abc 07> echo "ABC_DONE"
+
+16.5.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__a21o_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and2_0 cells:        1
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+16.6. Extracting gate netlist of module `\booth_multiplier' to `<abc-temp-dir>/input.blif'..
+
+16.6.1. Executed ABC.
+Extracted 9 gates and 19 wires to a netlist network with 10 inputs and 7 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 17 2025 23:50:06)
+ABC: abc 01> set abcout /dev/stdout
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.07 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__diode_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-stat+ strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: e cell "sky130_fd_sc_hd__einvn_0".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_8".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_bleeder_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__lpflow_inputisolatch_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_4".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib" has 334 cells (94 skipped: 63 seq; 13 tri-state; 18 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.10 sec
+ABC: Memory =   19.85 MB. Time =     0.10 sec
+ABC: Warning: Detected 9 multi-output cells (for example, "sky130_fd_sc_hd__fa_1").
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: abc 07> echo "ABC_DONE"
+
+16.6.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__clkinv_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__lpflow_isobufsrc_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or4_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__xor2_1 cells:        1
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       10
+ABC RESULTS:          output signals:        7
+Removing temp directory.
+
+16.7. Extracting gate netlist of module `\counter' to `<abc-temp-dir>/input.blif'..
+Don't call ABC as there is nothing to map.
+
+16.7.1. Executed ABC.
+Extracted 0 gates and 0 wires to a netlist network with 0 inputs and 0 outputs.
+Removing temp directory.
+
+16.8. Extracting gate netlist of module `\d_ff' to `<abc-temp-dir>/input.blif'..
+
+16.8.1. Executed ABC.
+Extracted 2 gates and 4 wires to a netlist network with 2 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 17 2025 23:50:06)
+ABC: abc 01> set abcout /dev/stdout
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.07 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__diode_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-stat+ strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: e cell "sky130_fd_sc_hd__einvn_0".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_8".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_bleeder_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__lpflow_inputisolatch_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_4".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib" has 334 cells (94 skipped: 63 seq; 13 tri-state; 18 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.10 sec
+ABC: Memory =   19.85 MB. Time =     0.10 sec
+ABC: Warning: Detected 9 multi-output cells (for example, "sky130_fd_sc_hd__fa_1").
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: abc 07> echo "ABC_DONE"
+
+16.8.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__clkinv_1 cells:        2
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        2
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+16.9. Extracting gate netlist of module `\grey_cell' to `<abc-temp-dir>/input.blif'..
+
+16.9.1. Executed ABC.
+Extracted 2 gates and 5 wires to a netlist network with 3 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 17 2025 23:50:06)
+ABC: abc 01> set abcout /dev/stdout
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.07 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__diode_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-stat+ strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: e cell "sky130_fd_sc_hd__einvn_0".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_8".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_bleeder_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__lpflow_inputisolatch_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_4".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib" has 334 cells (94 skipped: 63 seq; 13 tri-state; 18 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.10 sec
+ABC: Memory =   19.85 MB. Time =     0.10 sec
+ABC: Warning: Detected 9 multi-output cells (for example, "sky130_fd_sc_hd__fa_1").
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: abc 07> echo "ABC_DONE"
+
+16.9.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__a21o_1 cells:        1
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        3
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+16.10. Extracting gate netlist of module `\kogge_stone_adder' to `<abc-temp-dir>/input.blif'..
+
+16.10.1. Executed ABC.
+Extracted 16 gates and 48 wires to a netlist network with 32 inputs and 16 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 17 2025 23:50:06)
+ABC: abc 01> set abcout /dev/stdout
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.07 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__diode_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-stat+ strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: e cell "sky130_fd_sc_hd__einvn_0".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_8".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_bleeder_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__lpflow_inputisolatch_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_4".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib" has 334 cells (94 skipped: 63 seq; 13 tri-state; 18 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.10 sec
+ABC: Memory =   19.85 MB. Time =     0.10 sec
+ABC: Warning: Detected 9 multi-output cells (for example, "sky130_fd_sc_hd__fa_1").
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: abc 07> echo "ABC_DONE"
+
+16.10.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__xor2_1 cells:       16
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:       32
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+
+16.11. Extracting gate netlist of module `\mux2x1' to `<abc-temp-dir>/input.blif'..
+
+16.11.1. Executed ABC.
+Extracted 1 gates and 4 wires to a netlist network with 3 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Sep 17 2025 23:50:06)
+ABC: abc 01> set abcout /dev/stdout
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.07 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__diode_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-stat+ strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: e cell "sky130_fd_sc_hd__einvn_0".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_8".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_bleeder_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__lpflow_inputisolatch_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_4".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib" has 334 cells (94 skipped: 63 seq; 13 tri-state; 18 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.10 sec
+ABC: Memory =   19.85 MB. Time =     0.10 sec
+ABC: Warning: Detected 9 multi-output cells (for example, "sky130_fd_sc_hd__fa_1").
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: abc 07> echo "ABC_DONE"
+
+16.11.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__mux2_1 cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        3
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+Removing global temp directory.
+
+yosys> 
+
+yosys> hilomap -hicell sky130_fd_sc_hd__conb_1 HI         -locell sky130_fd_sc_hd__conb_1 LO
+
+17. Executing HILOMAP pass (mapping to constant drivers).
+
+yosys>         
+
+yosys> # Force tie-off of all unconnected/constant nets
+
+yosys> setundef -zero
+
+18. Executing SETUNDEF pass (replace undef values with defined constants).
+
+yosys> 
+
+yosys> # Cleanup
+
+yosys> opt_clean
+
+19. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \A_Q_Q_1..
+Finding unused cells or wires in module \M_register..
+Finding unused cells or wires in module \add_sub..
+Finding unused cells or wires in module \and_xor..
+Finding unused cells or wires in module \black_cell..
+Finding unused cells or wires in module \booth_multiplier..
+Finding unused cells or wires in module \counter..
+Finding unused cells or wires in module \d_ff..
+Finding unused cells or wires in module \grey_cell..
+Finding unused cells or wires in module \kogge_stone_adder..
+Finding unused cells or wires in module \mux2x1..
+Removed 0 unused cells and 131 unused wires.
+<suppressed ~9 debug messages>
+
+yosys> clean
+
+yosys> 
+
+yosys> 
+
+yosys> # Write outputs
+
+yosys> write_verilog -noattr -noexpr /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/synth/booth_multiplier_netlist.v
+
+20. Executing Verilog backend.
+Dumping module `\A_Q_Q_1'.
+Dumping module `\M_register'.
+Dumping module `\add_sub'.
+Dumping module `\and_xor'.
+Dumping module `\black_cell'.
+Dumping module `\booth_multiplier'.
+Dumping module `\counter'.
+Dumping module `\d_ff'.
+Dumping module `\grey_cell'.
+Dumping module `\kogge_stone_adder'.
+Dumping module `\mux2x1'.
+
+yosys> write_json /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/synth/booth_multiplier_netlist.json
+
+21. Executing JSON backend.
+
+yosys> 
+
+yosys> # Generate statistics report
+
+yosys> tee -o /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/reports/synthesis_stats.rpt stat -liberty /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+22. Printing statistics.
+
+=== A_Q_Q_1 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       15        - wires
+      137        - wire bits
+       15        - public wires
+      137        - public wire bits
+        9        - ports
+       71        - port bits
+        2   17.517 cells
+        1    6.256   sky130_fd_sc_hd__and2_0
+        1   11.261   sky130_fd_sc_hd__mux2_1
+       65        - submodules
+       33        -   d_ff
+       32        -   mux2x1
+
+   Chip area for module '\A_Q_Q_1': 17.516800
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== M_register ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        4        - wires
+       34        - wire bits
+        4        - public wires
+       34        - public wire bits
+        4        - ports
+       34        - port bits
+       16        - submodules
+       16        -   d_ff
+
+   Chip area for module '\M_register': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== add_sub ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        5        - wires
+       65        - wire bits
+        5        - public wires
+       65        - public wire bits
+        4        - ports
+       49        - port bits
+       16  140.134 cells
+       16  140.134   sky130_fd_sc_hd__xor2_1
+        1        - submodules
+        1        -   kogge_stone_adder
+
+   Chip area for module '\add_sub': 140.134400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== and_xor ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        4        - wires
+        4        - wire bits
+        4        - public wires
+        4        - public wire bits
+        4        - ports
+        4        - port bits
+        2   15.014 cells
+        1    6.256   sky130_fd_sc_hd__and2_0
+        1    8.758   sky130_fd_sc_hd__xor2_1
+
+   Chip area for module '\and_xor': 15.014400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== black_cell ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        6        - ports
+        6        - port bits
+        2   13.763 cells
+        1    7.507   sky130_fd_sc_hd__a21o_1
+        1    6.256   sky130_fd_sc_hd__and2_0
+
+   Chip area for module '\black_cell': 13.763200
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== booth_multiplier ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       19        - wires
+      115        - wire bits
+       18        - public wires
+      114        - public wire bits
+        7        - ports
+       68        - port bits
+        8   46.294 cells
+        2    7.507   sky130_fd_sc_hd__clkinv_1
+        1    3.754   sky130_fd_sc_hd__conb_1
+        2   12.512   sky130_fd_sc_hd__lpflow_isobufsrc_1
+        1    6.256   sky130_fd_sc_hd__nand2b_1
+        1    7.507   sky130_fd_sc_hd__or4_1
+        1    8.758   sky130_fd_sc_hd__xor2_1
+        5        - submodules
+        1        -   A_Q_Q_1
+        1        -   M_register
+        1        -   add_sub
+        1        -   counter
+        1        -   d_ff
+
+   Chip area for module '\booth_multiplier': 46.294400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== counter ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        4        - wires
+       12        - wire bits
+        4        - public wires
+       12        - public wire bits
+        3        - ports
+        7        - port bits
+        5        - submodules
+        5        -   d_ff
+
+   Chip area for module '\counter': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== d_ff ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        7        - wires
+        7        - wire bits
+        5        - public wires
+        5        - public wire bits
+        5        - ports
+        5        - port bits
+        4   58.806 cells
+        2    7.507   sky130_fd_sc_hd__clkinv_1
+        1   25.024   sky130_fd_sc_hd__dfrtn_1
+        1   26.275   sky130_fd_sc_hd__dfstp_2
+
+   Chip area for module '\d_ff': 58.806400
+     of which used for sequential elements: 51.299200 (87.23%)
+
+=== grey_cell ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        4        - wires
+        4        - wire bits
+        4        - public wires
+        4        - public wire bits
+        4        - ports
+        4        - port bits
+        1    7.507 cells
+        1    7.507   sky130_fd_sc_hd__a21o_1
+
+   Chip area for module '\grey_cell': 7.507200
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== kogge_stone_adder ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       15        - wires
+      210        - wire bits
+       15        - public wires
+      210        - public wire bits
+        5        - ports
+       50        - port bits
+       16  140.134 cells
+       16  140.134   sky130_fd_sc_hd__xor2_1
+       70        - submodules
+       16        -   and_xor
+       38        -   black_cell
+       16        -   grey_cell
+
+   Chip area for module '\kogge_stone_adder': 140.134400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== mux2x1 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        4        - wires
+        4        - wire bits
+        4        - public wires
+        4        - public wire bits
+        4        - ports
+        4        - port bits
+        1   11.261 cells
+        1   11.261   sky130_fd_sc_hd__mux2_1
+
+   Chip area for module '\mux2x1': 11.260800
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+      418 4.82E+03 booth_multiplier
+        2   17.517 A_Q_Q_1
+        4   58.806   d_ff
+        1   11.261   mux2x1
+        4   58.806   d_ff
+       16  140.134 add_sub
+       16  140.134   kogge_stone_adder
+        2   15.014     and_xor
+        2   13.763     black_cell
+        1    7.507     grey_cell
+        4   58.806   d_ff
+        4   58.806 d_ff
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+      931        - wires
+     1442        - wire bits
+      820        - public wires
+     1331        - public wire bits
+      791        - ports
+     1038        - port bits
+        -        - memories
+        -        - memory bits
+        -        - processes
+      418 4.82E+03 cells
+       54  405.389   sky130_fd_sc_hd__a21o_1
+       55   344.08   sky130_fd_sc_hd__and2_0
+      112  420.403   sky130_fd_sc_hd__clkinv_1
+        1    3.754   sky130_fd_sc_hd__conb_1
+       55  1376.32   sky130_fd_sc_hd__dfrtn_1
+       55 1.45E+03   sky130_fd_sc_hd__dfstp_2
+        2   12.512   sky130_fd_sc_hd__lpflow_isobufsrc_1
+       33  371.606   sky130_fd_sc_hd__mux2_1
+        1    6.256   sky130_fd_sc_hd__nand2b_1
+        1    7.507   sky130_fd_sc_hd__or4_1
+       49  429.162   sky130_fd_sc_hd__xor2_1
+        5  4775.83 submodules
+        1 2.32E+03   A_Q_Q_1
+        1  940.902   M_register
+        1 1.16E+03   add_sub
+        1  294.032   counter
+        1 3.23E+03   d_ff
+
+   Chip area for top module '\booth_multiplier': 4822.124800
+     of which used for sequential elements: 2821.456000 (58.51%)
+
+
+yosys> 
+
+yosys> show -format png -prefix booth_multiplier_schematic booth_multiplier
+23. Generating Graphviz representation of design.
+Writing dot description to `booth_multiplier_schematic.dot'.
+Dumping module booth_multiplier to page 1.
+Exec: dot -Tpng 'booth_multiplier_schematic.dot' > 'booth_multiplier_schematic.png.new' && mv 'booth_multiplier_schematic.png.new' 'booth_multiplier_schematic.png'
+
+yosys> 
+
+yosys> exit
+
+End of script. Logfile hash: 4759eb683b, CPU: user 0.38s system 0.06s, MEM: 50.00 MB peak
+Yosys 0.57+125 (git sha1 d5053033e, g++ 11.5.0 -fPIC -O3)
+Time spent: 73% 2x abc (1 sec), 10% 1x show (0 sec), ...

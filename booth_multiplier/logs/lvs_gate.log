@@ -1,0 +1,112 @@
+Netgen 1.5.300 compiled on Friday 19 September 2025 09:59:35 PM IST
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Reading netlist file /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/layout/booth_multiplier_routed_clean.v
+Creating placeholder cell definition for module sky130_fd_sc_hd__clkinv_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__dfrtn_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__dfstp_2.
+Creating placeholder cell definition for module sky130_fd_sc_hd__mux2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__and2_0.
+Creating placeholder cell definition for module sky130_fd_sc_hd__or4_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nand2b_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__lpflow_isobufsrc_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__xor2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__conb_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a21o_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__clkbuf_16.
+Creating placeholder cell definition for module sky130_fd_sc_hd__clkbuf_4.
+Creating placeholder cell definition for module sky130_fd_sc_hd__clkinv_4.
+Creating placeholder cell definition for module sky130_fd_sc_hd__inv_8.
+Creating placeholder cell definition for module sky130_fd_sc_hd__inv_6.
+Creating placeholder cell definition for module sky130_fd_sc_hd__clkinvlp_2.
+Reading netlist file /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/layout/booth_multiplier_cts_clean.v
+Creating placeholder cell definition for module sky130_fd_sc_hd__clkinv_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__dfrtn_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__dfstp_2.
+Creating placeholder cell definition for module sky130_fd_sc_hd__mux2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__and2_0.
+Creating placeholder cell definition for module sky130_fd_sc_hd__or4_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nand2b_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__lpflow_isobufsrc_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__xor2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__conb_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__a21o_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__clkbuf_16.
+Creating placeholder cell definition for module sky130_fd_sc_hd__clkbuf_4.
+Creating placeholder cell definition for module sky130_fd_sc_hd__clkinv_4.
+Creating placeholder cell definition for module sky130_fd_sc_hd__inv_8.
+Creating placeholder cell definition for module sky130_fd_sc_hd__inv_6.
+Creating placeholder cell definition for module sky130_fd_sc_hd__clkinvlp_2.
+
+Reading setup file /home/arumukamganesmoorthe/tools/open_pdks/sky130/sky130A/libs.tech/netgen/sky130A_setup.tcl
+
+Comparison output logged to file /home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/reports/lvs_gate_level.txt
+Logging to file "/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/reports/lvs_gate_level.txt" enabled
+Circuit sky130_fd_sc_hd__clkinv_1 contains no devices.
+Circuit sky130_fd_sc_hd__dfrtn_1 contains no devices.
+Circuit sky130_fd_sc_hd__dfstp_2 contains no devices.
+Circuit sky130_fd_sc_hd__mux2_1 contains no devices.
+Circuit sky130_fd_sc_hd__and2_0 contains no devices.
+Circuit sky130_fd_sc_hd__or4_1 contains no devices.
+Circuit sky130_fd_sc_hd__nand2b_1 contains no devices.
+Circuit sky130_fd_sc_hd__lpflow_isobufsrc_1 contains no devices.
+Circuit sky130_fd_sc_hd__xor2_1 contains no devices.
+Circuit sky130_fd_sc_hd__conb_1 contains no devices.
+Circuit sky130_fd_sc_hd__a21o_1 contains no devices.
+Circuit sky130_fd_sc_hd__clkbuf_16 contains no devices.
+Circuit sky130_fd_sc_hd__clkbuf_4 contains no devices.
+Circuit sky130_fd_sc_hd__clkinv_4 contains no devices.
+Circuit sky130_fd_sc_hd__inv_8 contains no devices.
+Circuit sky130_fd_sc_hd__inv_6 contains no devices.
+Circuit sky130_fd_sc_hd__clkinvlp_2 contains no devices.
+
+Contents of circuit 1:  Circuit: 'booth_multiplier'
+Circuit booth_multiplier contains 457 device instances.
+  Class: sky130_fd_sc_hd__inv_6 instances:   1
+  Class: sky130_fd_sc_hd__inv_8 instances:   2
+  Class: sky130_fd_sc_hd__clkinvlp_2 instances:   1
+  Class: sky130_fd_sc_hd__clkbuf_4 instances:   2
+  Class: sky130_fd_sc_hd__dfstp_2 instances:  55
+  Class: sky130_fd_sc_hd__a21o_1 instances:  54
+  Class: sky130_fd_sc_hd__clkinv_1 instances: 112
+  Class: sky130_fd_sc_hd__clkinv_4 instances:   3
+  Class: sky130_fd_sc_hd__or4_1 instances:   1
+  Class: sky130_fd_sc_hd__lpflow_isobufsrc_1 instances:   2
+  Class: sky130_fd_sc_hd__mux2_1 instances:  33
+  Class: sky130_fd_sc_hd__and2_0 instances:  55
+  Class: sky130_fd_sc_hd__dfrtn_1 instances:  55
+  Class: sky130_fd_sc_hd__xor2_1 instances:  49
+  Class: sky130_fd_sc_hd__conb_1 instances:   1
+  Class: sky130_fd_sc_hd__clkbuf_16 instances:  30
+  Class: sky130_fd_sc_hd__nand2b_1 instances:   1
+Circuit contains 483 nets.
+Contents of circuit 2:  Circuit: 'booth_multiplier'
+Circuit booth_multiplier contains 457 device instances.
+  Class: sky130_fd_sc_hd__inv_6 instances:   1
+  Class: sky130_fd_sc_hd__inv_8 instances:   2
+  Class: sky130_fd_sc_hd__clkinvlp_2 instances:   1
+  Class: sky130_fd_sc_hd__clkbuf_4 instances:   2
+  Class: sky130_fd_sc_hd__dfstp_2 instances:  55
+  Class: sky130_fd_sc_hd__a21o_1 instances:  54
+  Class: sky130_fd_sc_hd__clkinv_1 instances: 112
+  Class: sky130_fd_sc_hd__clkinv_4 instances:   3
+  Class: sky130_fd_sc_hd__or4_1 instances:   1
+  Class: sky130_fd_sc_hd__lpflow_isobufsrc_1 instances:   2
+  Class: sky130_fd_sc_hd__mux2_1 instances:  33
+  Class: sky130_fd_sc_hd__and2_0 instances:  55
+  Class: sky130_fd_sc_hd__dfrtn_1 instances:  55
+  Class: sky130_fd_sc_hd__xor2_1 instances:  49
+  Class: sky130_fd_sc_hd__conb_1 instances:   1
+  Class: sky130_fd_sc_hd__clkbuf_16 instances:  30
+  Class: sky130_fd_sc_hd__nand2b_1 instances:   1
+Circuit contains 483 nets.
+
+Circuit 1 contains 457 devices, Circuit 2 contains 457 devices.
+Circuit 1 contains 483 nets,    Circuit 2 contains 483 nets.
+
+
+Final result: 
+Circuits match uniquely.
+.
+Logging to file "/home/arumukamganesmoorthe/ME/digital_design/booth_multiplier/reports/lvs_gate_level.txt" disabled
+LVS Done.

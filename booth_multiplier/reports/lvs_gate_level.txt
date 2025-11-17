@@ -1,0 +1,333 @@
+
+Circuit 1 cell sky130_fd_sc_hd__clkinv_1 and Circuit 2 cell sky130_fd_sc_hd__clkinv_1 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__clkinv_1 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__clkinv_1 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__clkinv_1       |Circuit 2: sky130_fd_sc_hd__clkinv_1       
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+Y                                          |Y                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__clkinv_1 and sky130_fd_sc_hd__clkinv_1 are equivalent.
+
+Circuit 1 cell sky130_fd_sc_hd__dfrtn_1 and Circuit 2 cell sky130_fd_sc_hd__dfrtn_1 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__dfrtn_1 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__dfrtn_1 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__dfrtn_1        |Circuit 2: sky130_fd_sc_hd__dfrtn_1        
+-------------------------------------------|-------------------------------------------
+CLK_N                                      |CLK_N                                      
+D                                          |D                                          
+RESET_B                                    |RESET_B                                    
+Q                                          |Q                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__dfrtn_1 and sky130_fd_sc_hd__dfrtn_1 are equivalent.
+
+Circuit 1 cell sky130_fd_sc_hd__dfstp_2 and Circuit 2 cell sky130_fd_sc_hd__dfstp_2 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__dfstp_2 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__dfstp_2 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__dfstp_2        |Circuit 2: sky130_fd_sc_hd__dfstp_2        
+-------------------------------------------|-------------------------------------------
+CLK                                        |CLK                                        
+D                                          |D                                          
+SET_B                                      |SET_B                                      
+Q                                          |Q                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__dfstp_2 and sky130_fd_sc_hd__dfstp_2 are equivalent.
+
+Circuit 1 cell sky130_fd_sc_hd__mux2_1 and Circuit 2 cell sky130_fd_sc_hd__mux2_1 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__mux2_1 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__mux2_1 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__mux2_1         |Circuit 2: sky130_fd_sc_hd__mux2_1         
+-------------------------------------------|-------------------------------------------
+A0                                         |A0                                         
+A1                                         |A1                                         
+S                                          |S                                          
+X                                          |X                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__mux2_1 and sky130_fd_sc_hd__mux2_1 are equivalent.
+
+Circuit 1 cell sky130_fd_sc_hd__and2_0 and Circuit 2 cell sky130_fd_sc_hd__and2_0 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__and2_0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__and2_0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__and2_0         |Circuit 2: sky130_fd_sc_hd__and2_0         
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+X                                          |X                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__and2_0 and sky130_fd_sc_hd__and2_0 are equivalent.
+
+Circuit 1 cell sky130_fd_sc_hd__or4_1 and Circuit 2 cell sky130_fd_sc_hd__or4_1 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__or4_1 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__or4_1 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__or4_1          |Circuit 2: sky130_fd_sc_hd__or4_1          
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+C                                          |C                                          
+D                                          |D                                          
+X                                          |X                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__or4_1 and sky130_fd_sc_hd__or4_1 are equivalent.
+
+Circuit 1 cell sky130_fd_sc_hd__nand2b_1 and Circuit 2 cell sky130_fd_sc_hd__nand2b_1 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__nand2b_1 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__nand2b_1 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__nand2b_1       |Circuit 2: sky130_fd_sc_hd__nand2b_1       
+-------------------------------------------|-------------------------------------------
+A_N                                        |A_N                                        
+B                                          |B                                          
+Y                                          |Y                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__nand2b_1 and sky130_fd_sc_hd__nand2b_1 are equivalent.
+
+Circuit 1 cell sky130_fd_sc_hd__lpflow_isobufsrc_1 and Circuit 2 cell sky130_fd_sc_hd__lpflow_isobufsrc_1 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__lpflow_isobufsrc_1 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__lpflow_isobufsrc_1 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__lpflow_isobufs |Circuit 2: sky130_fd_sc_hd__lpflow_isobufs 
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+SLEEP                                      |SLEEP                                      
+X                                          |X                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__lpflow_isobufsrc_1 and sky130_fd_sc_hd__lpflow_isobufsrc_1 are equivalent.
+
+Circuit 1 cell sky130_fd_sc_hd__xor2_1 and Circuit 2 cell sky130_fd_sc_hd__xor2_1 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__xor2_1 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__xor2_1 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__xor2_1         |Circuit 2: sky130_fd_sc_hd__xor2_1         
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+X                                          |X                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__xor2_1 and sky130_fd_sc_hd__xor2_1 are equivalent.
+
+Circuit 1 cell sky130_fd_sc_hd__conb_1 and Circuit 2 cell sky130_fd_sc_hd__conb_1 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__conb_1 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__conb_1 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__conb_1         |Circuit 2: sky130_fd_sc_hd__conb_1         
+-------------------------------------------|-------------------------------------------
+HI                                         |HI                                         
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__conb_1 and sky130_fd_sc_hd__conb_1 are equivalent.
+
+Circuit 1 cell sky130_fd_sc_hd__a21o_1 and Circuit 2 cell sky130_fd_sc_hd__a21o_1 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__a21o_1 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__a21o_1 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__a21o_1         |Circuit 2: sky130_fd_sc_hd__a21o_1         
+-------------------------------------------|-------------------------------------------
+A1                                         |A1                                         
+A2                                         |A2                                         
+B1                                         |B1                                         
+X                                          |X                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__a21o_1 and sky130_fd_sc_hd__a21o_1 are equivalent.
+
+Circuit 1 cell sky130_fd_sc_hd__clkbuf_16 and Circuit 2 cell sky130_fd_sc_hd__clkbuf_16 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__clkbuf_16 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__clkbuf_16 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__clkbuf_16      |Circuit 2: sky130_fd_sc_hd__clkbuf_16      
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+X                                          |X                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__clkbuf_16 and sky130_fd_sc_hd__clkbuf_16 are equivalent.
+
+Circuit 1 cell sky130_fd_sc_hd__clkbuf_4 and Circuit 2 cell sky130_fd_sc_hd__clkbuf_4 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__clkbuf_4 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__clkbuf_4 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__clkbuf_4       |Circuit 2: sky130_fd_sc_hd__clkbuf_4       
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__clkbuf_4 and sky130_fd_sc_hd__clkbuf_4 are equivalent.
+
+Circuit 1 cell sky130_fd_sc_hd__clkinv_4 and Circuit 2 cell sky130_fd_sc_hd__clkinv_4 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__clkinv_4 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__clkinv_4 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__clkinv_4       |Circuit 2: sky130_fd_sc_hd__clkinv_4       
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__clkinv_4 and sky130_fd_sc_hd__clkinv_4 are equivalent.
+
+Circuit 1 cell sky130_fd_sc_hd__inv_8 and Circuit 2 cell sky130_fd_sc_hd__inv_8 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__inv_8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__inv_8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__inv_8          |Circuit 2: sky130_fd_sc_hd__inv_8          
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__inv_8 and sky130_fd_sc_hd__inv_8 are equivalent.
+
+Circuit 1 cell sky130_fd_sc_hd__inv_6 and Circuit 2 cell sky130_fd_sc_hd__inv_6 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__inv_6 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__inv_6 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__inv_6          |Circuit 2: sky130_fd_sc_hd__inv_6          
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__inv_6 and sky130_fd_sc_hd__inv_6 are equivalent.
+
+Circuit 1 cell sky130_fd_sc_hd__clkinvlp_2 and Circuit 2 cell sky130_fd_sc_hd__clkinvlp_2 are black boxes.
+Warning: Equate pins:  cell sky130_fd_sc_hd__clkinvlp_2 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_sc_hd__clkinvlp_2 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__clkinvlp_2     |Circuit 2: sky130_fd_sc_hd__clkinvlp_2     
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__clkinvlp_2 and sky130_fd_sc_hd__clkinvlp_2 are equivalent.
+
+Subcircuit summary:
+Circuit 1: booth_multiplier                |Circuit 2: booth_multiplier                
+-------------------------------------------|-------------------------------------------
+sky130_fd_sc_hd__clkinv_1 (112)            |sky130_fd_sc_hd__clkinv_1 (112)            
+sky130_fd_sc_hd__dfrtn_1 (55)              |sky130_fd_sc_hd__dfrtn_1 (55)              
+sky130_fd_sc_hd__dfstp_2 (55)              |sky130_fd_sc_hd__dfstp_2 (55)              
+sky130_fd_sc_hd__mux2_1 (33)               |sky130_fd_sc_hd__mux2_1 (33)               
+sky130_fd_sc_hd__and2_0 (55)               |sky130_fd_sc_hd__and2_0 (55)               
+sky130_fd_sc_hd__or4_1 (1)                 |sky130_fd_sc_hd__or4_1 (1)                 
+sky130_fd_sc_hd__nand2b_1 (1)              |sky130_fd_sc_hd__nand2b_1 (1)              
+sky130_fd_sc_hd__lpflow_isobufsrc_1 (2)    |sky130_fd_sc_hd__lpflow_isobufsrc_1 (2)    
+sky130_fd_sc_hd__xor2_1 (49)               |sky130_fd_sc_hd__xor2_1 (49)               
+sky130_fd_sc_hd__conb_1 (1)                |sky130_fd_sc_hd__conb_1 (1)                
+sky130_fd_sc_hd__a21o_1 (54)               |sky130_fd_sc_hd__a21o_1 (54)               
+sky130_fd_sc_hd__clkbuf_16 (30)            |sky130_fd_sc_hd__clkbuf_16 (30)            
+sky130_fd_sc_hd__clkbuf_4 (2)              |sky130_fd_sc_hd__clkbuf_4 (2)              
+sky130_fd_sc_hd__clkinv_4 (3)              |sky130_fd_sc_hd__clkinv_4 (3)              
+sky130_fd_sc_hd__inv_8 (2)                 |sky130_fd_sc_hd__inv_8 (2)                 
+sky130_fd_sc_hd__inv_6 (1)                 |sky130_fd_sc_hd__inv_6 (1)                 
+sky130_fd_sc_hd__clkinvlp_2 (1)            |sky130_fd_sc_hd__clkinvlp_2 (1)            
+Number of devices: 457                     |Number of devices: 457                     
+Number of nets: 483                        |Number of nets: 483                        
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: booth_multiplier                |Circuit 2: booth_multiplier                
+-------------------------------------------|-------------------------------------------
+op[31]                                     |op[31]                                     
+op[0]                                      |op[0]                                      
+multiplier[8]                              |multiplier[8]                              
+multiplier[5]                              |multiplier[5]                              
+multiplier[4]                              |multiplier[4]                              
+multiplier[3]                              |multiplier[3]                              
+multiplier[2]                              |multiplier[2]                              
+multiplier[7]                              |multiplier[7]                              
+multiplier[9]                              |multiplier[9]                              
+multiplier[1]                              |multiplier[1]                              
+multiplier[15]                             |multiplier[15]                             
+multiplier[11]                             |multiplier[11]                             
+multiplier[13]                             |multiplier[13]                             
+multiplier[14]                             |multiplier[14]                             
+multiplier[10]                             |multiplier[10]                             
+multiplier[6]                              |multiplier[6]                              
+multiplier[12]                             |multiplier[12]                             
+multiplier[0]                              |multiplier[0]                              
+busy                                       |busy                                       
+op[16]                                     |op[16]                                     
+op[18]                                     |op[18]                                     
+op[17]                                     |op[17]                                     
+op[20]                                     |op[20]                                     
+op[21]                                     |op[21]                                     
+op[22]                                     |op[22]                                     
+op[19]                                     |op[19]                                     
+op[30]                                     |op[30]                                     
+op[29]                                     |op[29]                                     
+op[27]                                     |op[27]                                     
+op[28]                                     |op[28]                                     
+op[26]                                     |op[26]                                     
+op[24]                                     |op[24]                                     
+op[25]                                     |op[25]                                     
+op[23]                                     |op[23]                                     
+op[5]                                      |op[5]                                      
+op[4]                                      |op[4]                                      
+op[6]                                      |op[6]                                      
+op[12]                                     |op[12]                                     
+op[13]                                     |op[13]                                     
+op[7]                                      |op[7]                                      
+op[11]                                     |op[11]                                     
+op[14]                                     |op[14]                                     
+op[15]                                     |op[15]                                     
+op[10]                                     |op[10]                                     
+op[2]                                      |op[2]                                      
+op[9]                                      |op[9]                                      
+op[3]                                      |op[3]                                      
+op[8]                                      |op[8]                                      
+op[1]                                      |op[1]                                      
+multiplicand[0]                            |multiplicand[0]                            
+multiplicand[15]                           |multiplicand[15]                           
+multiplicand[8]                            |multiplicand[8]                            
+multiplicand[9]                            |multiplicand[9]                            
+multiplicand[7]                            |multiplicand[7]                            
+multiplicand[4]                            |multiplicand[4]                            
+multiplicand[5]                            |multiplicand[5]                            
+multiplicand[6]                            |multiplicand[6]                            
+multiplicand[3]                            |multiplicand[3]                            
+multiplicand[2]                            |multiplicand[2]                            
+multiplicand[1]                            |multiplicand[1]                            
+multiplicand[14]                           |multiplicand[14]                           
+multiplicand[13]                           |multiplicand[13]                           
+multiplicand[10]                           |multiplicand[10]                           
+multiplicand[11]                           |multiplicand[11]                           
+multiplicand[12]                           |multiplicand[12]                           
+mrst                                       |mrst                                       
+read                                       |read                                       
+clk_in                                     |clk_in                                     
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes booth_multiplier and booth_multiplier are equivalent.
+
+Final result: Circuits match uniquely.
+.

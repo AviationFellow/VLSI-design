@@ -1,0 +1,8 @@
+Clock clk
+   2.19 source latency M_reg/genblk1[0].d_ureg0/_4_/CLK_N v
+  -1.16 target latency AQQ_1_register/A10_reg/_4_/CLK_N v
+   0.05 clock uncertainty
+   0.00 CRPR
+--------------
+   1.08 setup skew
+

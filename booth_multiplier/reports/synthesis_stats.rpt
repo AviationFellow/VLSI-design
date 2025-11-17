@@ -1,0 +1,267 @@
+
+22. Printing statistics.
+
+=== A_Q_Q_1 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       15        - wires
+      137        - wire bits
+       15        - public wires
+      137        - public wire bits
+        9        - ports
+       71        - port bits
+        2   17.517 cells
+        1    6.256   sky130_fd_sc_hd__and2_0
+        1   11.261   sky130_fd_sc_hd__mux2_1
+       65        - submodules
+       33        -   d_ff
+       32        -   mux2x1
+
+   Chip area for module '\A_Q_Q_1': 17.516800
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== M_register ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        4        - wires
+       34        - wire bits
+        4        - public wires
+       34        - public wire bits
+        4        - ports
+       34        - port bits
+       16        - submodules
+       16        -   d_ff
+
+   Chip area for module '\M_register': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== add_sub ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        5        - wires
+       65        - wire bits
+        5        - public wires
+       65        - public wire bits
+        4        - ports
+       49        - port bits
+       16  140.134 cells
+       16  140.134   sky130_fd_sc_hd__xor2_1
+        1        - submodules
+        1        -   kogge_stone_adder
+
+   Chip area for module '\add_sub': 140.134400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== and_xor ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        4        - wires
+        4        - wire bits
+        4        - public wires
+        4        - public wire bits
+        4        - ports
+        4        - port bits
+        2   15.014 cells
+        1    6.256   sky130_fd_sc_hd__and2_0
+        1    8.758   sky130_fd_sc_hd__xor2_1
+
+   Chip area for module '\and_xor': 15.014400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== black_cell ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        6        - ports
+        6        - port bits
+        2   13.763 cells
+        1    7.507   sky130_fd_sc_hd__a21o_1
+        1    6.256   sky130_fd_sc_hd__and2_0
+
+   Chip area for module '\black_cell': 13.763200
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== booth_multiplier ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       19        - wires
+      115        - wire bits
+       18        - public wires
+      114        - public wire bits
+        7        - ports
+       68        - port bits
+        8   46.294 cells
+        2    7.507   sky130_fd_sc_hd__clkinv_1
+        1    3.754   sky130_fd_sc_hd__conb_1
+        2   12.512   sky130_fd_sc_hd__lpflow_isobufsrc_1
+        1    6.256   sky130_fd_sc_hd__nand2b_1
+        1    7.507   sky130_fd_sc_hd__or4_1
+        1    8.758   sky130_fd_sc_hd__xor2_1
+        5        - submodules
+        1        -   A_Q_Q_1
+        1        -   M_register
+        1        -   add_sub
+        1        -   counter
+        1        -   d_ff
+
+   Chip area for module '\booth_multiplier': 46.294400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== counter ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        4        - wires
+       12        - wire bits
+        4        - public wires
+       12        - public wire bits
+        3        - ports
+        7        - port bits
+        5        - submodules
+        5        -   d_ff
+
+   Chip area for module '\counter': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== d_ff ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        7        - wires
+        7        - wire bits
+        5        - public wires
+        5        - public wire bits
+        5        - ports
+        5        - port bits
+        4   58.806 cells
+        2    7.507   sky130_fd_sc_hd__clkinv_1
+        1   25.024   sky130_fd_sc_hd__dfrtn_1
+        1   26.275   sky130_fd_sc_hd__dfstp_2
+
+   Chip area for module '\d_ff': 58.806400
+     of which used for sequential elements: 51.299200 (87.23%)
+
+=== grey_cell ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        4        - wires
+        4        - wire bits
+        4        - public wires
+        4        - public wire bits
+        4        - ports
+        4        - port bits
+        1    7.507 cells
+        1    7.507   sky130_fd_sc_hd__a21o_1
+
+   Chip area for module '\grey_cell': 7.507200
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== kogge_stone_adder ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       15        - wires
+      210        - wire bits
+       15        - public wires
+      210        - public wire bits
+        5        - ports
+       50        - port bits
+       16  140.134 cells
+       16  140.134   sky130_fd_sc_hd__xor2_1
+       70        - submodules
+       16        -   and_xor
+       38        -   black_cell
+       16        -   grey_cell
+
+   Chip area for module '\kogge_stone_adder': 140.134400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== mux2x1 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        4        - wires
+        4        - wire bits
+        4        - public wires
+        4        - public wire bits
+        4        - ports
+        4        - port bits
+        1   11.261 cells
+        1   11.261   sky130_fd_sc_hd__mux2_1
+
+   Chip area for module '\mux2x1': 11.260800
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+      418 4.82E+03 booth_multiplier
+        2   17.517 A_Q_Q_1
+        4   58.806   d_ff
+        1   11.261   mux2x1
+        4   58.806   d_ff
+       16  140.134 add_sub
+       16  140.134   kogge_stone_adder
+        2   15.014     and_xor
+        2   13.763     black_cell
+        1    7.507     grey_cell
+        4   58.806   d_ff
+        4   58.806 d_ff
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+      931        - wires
+     1442        - wire bits
+      820        - public wires
+     1331        - public wire bits
+      791        - ports
+     1038        - port bits
+        -        - memories
+        -        - memory bits
+        -        - processes
+      418 4.82E+03 cells
+       54  405.389   sky130_fd_sc_hd__a21o_1
+       55   344.08   sky130_fd_sc_hd__and2_0
+      112  420.403   sky130_fd_sc_hd__clkinv_1
+        1    3.754   sky130_fd_sc_hd__conb_1
+       55  1376.32   sky130_fd_sc_hd__dfrtn_1
+       55 1.45E+03   sky130_fd_sc_hd__dfstp_2
+        2   12.512   sky130_fd_sc_hd__lpflow_isobufsrc_1
+       33  371.606   sky130_fd_sc_hd__mux2_1
+        1    6.256   sky130_fd_sc_hd__nand2b_1
+        1    7.507   sky130_fd_sc_hd__or4_1
+       49  429.162   sky130_fd_sc_hd__xor2_1
+        5  4775.83 submodules
+        1 2.32E+03   A_Q_Q_1
+        1  940.902   M_register
+        1 1.16E+03   add_sub
+        1  294.032   counter
+        1 3.23E+03   d_ff
+
+   Chip area for top module '\booth_multiplier': 4822.124800
+     of which used for sequential elements: 2821.456000 (58.51%)
+
